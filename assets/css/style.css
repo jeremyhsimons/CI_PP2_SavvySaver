@@ -80,6 +80,20 @@ footer > ul > li > a {
     font-size: 150%;
 }
 
+#start-button {
+    margin: auto;
+    background-color: #1d1b1b;
+    width: 170px;
+    padding: 2%;
+}
+
+#start-button > a {
+    text-decoration: none;
+    color: #A4C3BF;
+    text-align: center;
+    font-size: 160%;
+    text-transform: uppercase;
+}
 
 
 /*Styles for the calculator*/
