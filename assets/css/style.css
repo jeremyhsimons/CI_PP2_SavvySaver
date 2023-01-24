@@ -99,9 +99,11 @@ footer > ul > li > a {
 
 /*Styles for the calculator*/
 
+/*Calculator header style rules*/
+
 #header-calculator {
     background: url(../images/calculate-money.jpg) no-repeat top center #1D1B1B;
-    background-size: 180%;
+    background-size: 150%;
     background-attachment: fixed;
     height: 35vh;
     padding-top: 10%;
@@ -109,7 +111,7 @@ footer > ul > li > a {
 
 #header-calculator-container {
     background-color: #1D1B1B;
-    padding: 5%;
+    padding: 20px;
     margin: auto;
     width: 300px;
 }
@@ -122,5 +124,55 @@ footer > ul > li > a {
     text-align: center;
 }
 
+/*Calculator form style rules*/
+
+#form-section {
+    background-color: #433D39;
+    padding: 2%;
+}
+
+#form-container {
+    background-color: #1d1b1b;
+    border: 2px solid #A4C3BF;
+    padding: 2%;
+    margin: auto;
+}
+
+#form-container > p {
+    color: #ebeecd;
+    font-size: 120%;
+    font-weight: 700;
+}
+
+#calculator-form {
+    text-align: center;
+    padding: 20px;
+}
+
+#calculator-form > input {
+    border: 1px solid #ebeecd;
+    width: 100px;
+    margin: 10px, 0px;
+}
+
+#calculator-form > label {
+    color: #ebeecd;
+    font-size: 80%;
+    margin: 10px, 0px;
+}
 
 /*Styles for the faq */
+
+/*Media Queries*/
+
+@media screen and (min-width: 600px) {
+    .data-field-left{
+        float: left;
+        width: 40%;
+    }
+
+    .data-field-left{
+        float: right;
+        width: 40%;
+    }
+}
