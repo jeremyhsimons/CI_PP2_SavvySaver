@@ -1,15 +1,16 @@
+//Event listener to pre-populate the calculator form when the DOM loads.
+
 document.addEventListener("DOMContentLoaded", function fillForm() {
     let fields = document.getElementsByTagName('input');
-    //fields[0].value = 1000;
     let placeholders = [1500, 200, 50, 100, 150, 300, 1, 12, 100]
 
     for (let i = 0; i <= placeholders.length; i++) {
         fields[i].value = placeholders[i];
     }
-
-    
+    console.log("form load successful!")
 })
 
+//Event listener to 
 
 
 /**
