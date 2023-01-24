@@ -100,9 +100,26 @@ footer > ul > li > a {
 /*Styles for the calculator*/
 
 #header-calculator {
-    background: url(../images/calculate-money.jpg) no-repeat center center #1D1B1B;
-    background-size: 120%;
+    background: url(../images/calculate-money.jpg) no-repeat top center #1D1B1B;
+    background-size: 180%;
     background-attachment: fixed;
+    height: 35vh;
+    padding-top: 10%;
+}
+
+#header-calculator-container {
+    background-color: #1D1B1B;
+    padding: 5%;
+    margin: auto;
+    width: 300px;
+}
+
+#header-calculator-container > h2 {
+    font-size: 120%;
+}
+
+#header-calculator-container > p {
+    text-align: center;
 }
 
 
