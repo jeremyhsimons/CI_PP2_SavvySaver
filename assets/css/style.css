@@ -13,6 +13,17 @@ body {
     font-weight: 400;
 }
 
+header {
+    padding: 2.5%;
+    color: #A4C3BF;
+}
+
+h1, h2 {
+    font-weight: 700;
+    margin: auto;
+    text-align: center;
+}
+
 footer {
     position: fixed;
     left: 0;
@@ -39,6 +50,37 @@ footer > ul > li > a {
 }
 
 /*Styles for the landing page*/
+
+#header-home {
+    background-color: #1d1b1b;
+}
+
+#header-home > h1 {
+    font-size: 300%;
+}
+
+#instructions {
+    width: 100%;
+    background-color: red;
+    height: 100vh;
+    padding-top: 10%;
+}
+
+.instruction {
+    margin: auto;
+    background-color: #433D39;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 5%;
+    width: 300px;
+}
+
+.instruction > p {
+    color: #ebeecd;
+    font-size: 150%;
+}
+
+
 
 /*Styles for the calculator*/
 
