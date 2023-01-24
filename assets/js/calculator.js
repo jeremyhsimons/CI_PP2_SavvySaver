@@ -10,16 +10,17 @@ document.addEventListener("DOMContentLoaded", function fillForm() {
     console.log("form load successful!")
 })
 
-//Event listener to 
-
+//Event listener to handle the form submission
+let calculate = document.getElementById('calc-submit');
+calculate.addEventListener('click', getInputs);
 
 /**
  * A function to get all the user's inputs from the form and store them
  * in an array called inputs.
  * This function is called by form submission event.
  */
-function getInputs() {
-
+function getInputs(event) {
+    alert("hello world");
 }
 
 /**
