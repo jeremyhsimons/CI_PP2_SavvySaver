@@ -144,21 +144,45 @@ footer > ul > li > a {
     font-weight: 700;
 }
 
+#form-container > h3 {
+    color: #ebeecd;
+    font-size: 120%;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 #calculator-form {
     text-align: center;
     padding: 20px;
 }
 
 #calculator-form > input {
-    border: 1px solid #ebeecd;
-    width: 100px;
-    margin: 10px, 0px;
+    border: 2px solid #433D39;
+    background-color: #A4C3BF;
+    width: 90px;
+    padding: 5px;
 }
 
 #calculator-form > label {
     color: #ebeecd;
-    font-size: 80%;
-    margin: 10px, 0px;
+    font-size: 100%;
+}
+
+#calculator-form > hr {
+    color: #ebeecd;
+    border: 2px solid #ebeecd;
+}
+
+#calculator-form > button {
+    width: 150px;
+    background-color: #ebeecd;
+    color: #1D1B1B;
+    text-transform: uppercase;
+    font-size: 120%;
+    font-weight: 700;
+    padding: 5px;
+    border: 3px solid #433D39;
 }
 
 /*Styles for the faq */
