@@ -61,7 +61,8 @@ footer > ul > li > a {
 
 #instructions {
     width: 100%;
-    background-color: red;
+    background: url(../images/coin-jar.jpg) no-repeat center center, #1D1B1B;
+    background-size: 100%;
     height: 100vh;
     padding-top: 10%;
 }
@@ -98,6 +99,11 @@ footer > ul > li > a {
 
 /*Styles for the calculator*/
 
+#header-calculator {
+    background: url(../images/calculate-money.jpg) no-repeat center center #1D1B1B;
+    background-size: 120%;
+    background-attachment: fixed;
+}
 
 
 /*Styles for the faq */
