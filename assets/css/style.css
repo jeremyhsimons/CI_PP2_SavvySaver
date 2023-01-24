@@ -2,6 +2,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
 /*Styles common to all pages*/
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #292d41;
+    text-align: center;
+}
+
+footer > ul {
+    list-style: none;
+    padding: 1%;
+}
+
+footer > ul > li {
+    display: inline;
+    padding: 5%;
+    color: #ebeecd;
+}
+
+footer > ul > li > a {
+    text-decoration: none;
+    color: #ebeecd;
+}
 
 /*Styles for the landing page*/
 
