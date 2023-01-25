@@ -2,12 +2,18 @@
 
 document.addEventListener("DOMContentLoaded", function fillForm() {
     let fields = document.getElementsByTagName('input');
-    let placeholders = [1500, 200, 50, 100, 150, 300, 1, 12, 100]
+    let placeholders = [1500, 200, 50, 100, 150, 300, 1, 12, 100];
 
-    for (let i = 0; i <= placeholders.length; i++) {
-        fields[i].value = placeholders[i];
-    }
-    console.log("form load successful!")
+    fields[0].value = placeholders[0];
+    fields[1].value = placeholders[1];
+    fields[2].value = placeholders[2];
+    fields[3].value = placeholders[3];
+    fields[4].value = placeholders[4];
+    fields[5].value = placeholders[5];
+    fields[6].value = placeholders[6];
+    fields[7].value = placeholders[7];
+    fields[8].value = placeholders[8];
+
 })
 
 //Event listener to handle the form submission
@@ -20,7 +26,19 @@ calculate.addEventListener('click', getInputs);
  * This function is called by form submission event.
  */
 function getInputs(event) {
-    alert("hello world");
+    event.preventDefault();
+    let Inputs = [];
+    let fields = document.getElementsByTagName('input');
+
+
+   // for (let j = 0; j <= fields.length; j++) {
+   //  Inputs.push(fields[j].value);
+   // }
+    
+
+    alert(fields[0].value);
+
+   
 }
 
 /**
