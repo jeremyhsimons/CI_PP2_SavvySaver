@@ -27,17 +27,20 @@ calculate.addEventListener('click', getInputs);
  */
 function getInputs(event) {
     event.preventDefault();
-    let Inputs = [];
+    let inputs = [];
     let fields = document.getElementsByTagName('input');
 
+    inputs.push(fields[0].value);
+    inputs.push(fields[1].value);
+    inputs.push(fields[2].value);
+    inputs.push(fields[3].value);
+    inputs.push(fields[4].value);
+    inputs.push(fields[5].value);
+    inputs.push(fields[6].value);
+    inputs.push(fields[7].value);
+    inputs.push(fields[8].value); 
 
-   // for (let j = 0; j <= fields.length; j++) {
-   //  Inputs.push(fields[j].value);
-   // }
-    
-
-    alert(fields[0].value);
-
+    console.log(inputs);
    
 }
 
