@@ -193,9 +193,43 @@ footer > ul > li > a {
 
 /*Results section style rules*/
 #results {
-    background: url(../images/budget-money.jpg);
-
+    background: url(../images/budget-money.jpg) no-repeat center center, #ebeecd;
+    background-size: 400%;
+    background-attachment: fixed;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
+.results-main {
+    margin: auto;
+    max-width: 300px;
+    background-color: #292d41;
+    color: #ebeecd;
+    text-align: center;
+    padding: 10px;
+}
+
+.results-main > h2 {
+    font-size: 120%;
+}
+
+.results-main > ul {
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.results-main > ul > li {
+    font-size: 85%;
+}
+
+.results-main > p {
+    text-decoration: underline;
+    font-size: 85%;
+    margin-top: 10px;
+}
+
+
 
 #changes {
     background-color: #ebeecd;
