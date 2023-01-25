@@ -208,7 +208,7 @@ function checkRecommemndations() {
 
     // A check to see how high charitable giving is.
     let charity = inputs[4];
-    if (charity > pay / 10) {
+    if (charity > (pay / 10)) {
         html = `<p>Well done for being generous!
             Your charitable giving is well over 10% of your 
             monthly income. A giving rate of 10% is a proven
@@ -216,7 +216,7 @@ function checkRecommemndations() {
             Consider giivng less away if you want to save more.</p>`;
         addOkRecommendation();
         console.log("ok charity");
-    } else if (charity < pay / 10) {
+    } else if (charity <= (pay / 10)) {
         html = `<p>Your giving is within the recommended 10% of 
             your total monthly income. It is more than acceptable to
             give more than 10%, but you won't save as much.</p>`;
@@ -224,7 +224,7 @@ function checkRecommemndations() {
         console.log("good charity");
     } else {
         alert(`Unknown value ${charity} Please fill in the form and try again.`);
-        throw `Unknown value ${charity}`;
+        //throw `Unknown value ${charity}`;
     }
 
     // A check to see if other expenses exceed rent/mortgage payments.
