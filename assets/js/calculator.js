@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function fillForm() {
 let calculate = document.getElementById('calc-submit');
 calculate.addEventListener('click', getInputs);
 
-let printResult = document.getElementById('print');
-calculate.addEventListener('click', printPageResult);
+//let printResult = document.getElementById('print');
+//calculate.addEventListener('click', printPageResult);
 
 /**
  * A function to get all the user's inputs from the form and store them
@@ -88,15 +88,15 @@ function checkSaving(actualSaving) {
     let html = `<p></p>`;
     function addResults() {
         let resultsDiv = document.createElement('div')
-        resultsMain.classList.add('results-main')
-        resultsMain.innerHTML = html;
+        resultsDiv.classList.add('results-main')
+        resultsDiv.innerHTML = html;
         let resultsMain = document.getElementById('results');
         resultsMain.appendChild(resultsDiv);
     }
 
     if (actualSaving >= inputs[8]) {
         html = `<h2>RESULTS:</h2>
-                <h3>Congratulations! You will meet your savings goal of £${input[8]}.</h3>
+                <h3>Congratulations! You will meet your savings goal of £${inputs[8]}.</h3>
                 <p>With a:</p>
                 <ul>
                     <li>Monthly income of £${inputs[0]}</li>
@@ -105,13 +105,30 @@ function checkSaving(actualSaving) {
                     <li>Monthly utilities bill of £${inputs[3]}</li>
                     <li>Monthly charitable giving of £${inputs[4]}</li>
                     <li>Monthly expenses of £${inputs[5]}</li>
-                    <li>Bank interest rate of ${inputs[6]%}</li>
+                    <li>Bank interest rate of ${inputs[6]}%</li>
                     <li>Over ${inputs[7]} months</li>
                 </ul>
                 <h3>You will save £${actualSaving}!</h3>`
-        alert("Congratulations! You will meet your savings goal");
+        addResults();
+        console.log("results: saving success.")
     } else if (actualSaving < inputs[8]) {
-        alert("Sorry, you will not meet your savings target. Here are some suggestions for how to meet it:");
+        html = `<h2>RESULTS:</h2>
+                <h3>Sorry, you will not meet your savings goal of £${inputs[8]}.</h3>
+                <p>With a:</p>
+                <ul>
+                    <li>Monthly income of £${inputs[0]}</li>
+                    <li>Monthly rent/mortgage payment of £${inputs[1]}</li>
+                    <li>Monthly car cost of £${inputs[2]}</li>
+                    <li>Monthly utilities bill of £${inputs[3]}</li>
+                    <li>Monthly charitable giving of £${inputs[4]}</li>
+                    <li>Monthly expenses of £${inputs[5]}</li>
+                    <li>Bank interest rate of ${inputs[6]}%</li>
+                    <li>Over ${inputs[7]} months</li>
+                </ul>
+                <h3>You will only save £${actualSaving}!
+                Here are some suggestions for how to meet your target:</h3>`
+        addResults();
+        console.log("results: saving failure.")
         calcSavingChanges(actualSaving);
     } else {
         // Code for error handling borrowed from LoveMaths walkthrough.
@@ -257,7 +274,7 @@ function checkRecommemndations() {
     }
 
     //clears the data so that the user can resubmit with new data.
-    inputs = [];
+    //inputs = [];
 }
 
 function printPageResult () {
