@@ -214,13 +214,13 @@ function checkRecommemndations() {
             monthly income. A giving rate of 10% is a proven
             amount for sustainable generosity.
             Consider giivng less away if you want to save more.</p>`;
-        addOkRecommendation
+        addOkRecommendation();
         console.log("ok charity");
     } else if (charity < pay / 10) {
         html = `<p>Your giving is within the recommended 10% of 
             your total monthly income. It is more than acceptable to
             give more than 10%, but you won't save as much.</p>`;
-        addGoodRecommendation
+        addGoodRecommendation();
         console.log("good charity");
     } else {
         alert(`Unknown value ${rent} Please fill in the form and try again.`);
