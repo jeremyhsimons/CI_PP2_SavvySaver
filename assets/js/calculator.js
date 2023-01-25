@@ -139,6 +139,24 @@ function checkRecommemndations() {
         recommendationDiv.appendChild(recommendation);
     }
 
+    function addOkRecommendation () {
+        let recommendation = document.createElement('div')
+        recommendation.classList.add('ok')
+        recommendation.innerHTML = html;
+        let recommendationDiv = document.getElementById('recommendations');
+        recommendationDiv.appendChild(recommendation);
+    }
+
+    function addBadRecommendation () {
+        let recommendation = document.createElement('div')
+        recommendation.classList.add('bad')
+        recommendation.innerHTML = html;
+        let recommendationDiv = document.getElementById('recommendations');
+        recommendationDiv.appendChild(recommendation);
+    }
+
+
+
     // first check to see if rent is under 25% of the income, or over 50%.
     let rent = inputs[1];
     let pay = inputs [0];
@@ -147,10 +165,21 @@ function checkRecommemndations() {
     console.log(pay);
 
     if (rent > (pay / 4) && rent < (pay / 2)) {
+        html = `<p>Your rent/mortgage is a little high. 
+            It's recommended that your accommodation payments 
+            do not exceed 25% of your take-home pay.</p>`;
+        addOkRecommendation();
         console.log("Your rent/mortgage is a little high. It's recommended that your accommodation payments do not exceed 25% of your take-home pay.")
     } else if (rent > pay / 2) {
+        html = `<p>Your rent/mortgage is VERY high. 
+            It's recommended that your accommodation payments do not exceed 
+            25% of your take-home payYou should look for an alternative deal 
+            or increase your income as soon as possible.</p>`;
+        addBadRecommendation();
         console.log("Your rent/mortgage is VERY high. It's recommended that your accommodation payments do not exceed 25% of your take-home payYou should look for an alternative deal or increase your income as soon as possible.")
     } else if (rent < pay / 4) {
+        html = `<p>Your rent/mortgage payments are 
+            healthy proportional to your income.</p>`;
         addGoodRecommendation();
         console.log("Your rent/mortgage payments are healthy proportional to your income.")
     } else {
