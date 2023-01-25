@@ -70,13 +70,12 @@ function calcSaving(inputs) {
 
         let actualSaving = total / 1000;
 
-        //code on line 75 is adapted from a suggestion by Brian Ustas on
+        //code on line directly below this comment is adapted from a 
+        //suggestion by Brian Ustas on
         //Stack Overflow about how to round numbers to 2dp reliably.
         //See credits section of readme for link to page.
         actualSaving = Math.round((actualSaving + Number.EPSILON) * 100) / 100;
-
         console.log(actualSaving);
-
         checkSaving(actualSaving);
     }
 }
@@ -86,9 +85,13 @@ function calcSaving(inputs) {
  * is greater than or equal to the savings goal.
  */
 function checkSaving(actualSaving) {
-    function addRecommendation {
+    function addRecommendation (html) {
         let recommendation = document.createElement('div')
+        recommendation.classList.add()
+
     }
+
+    let html = `<p></p>`;
 
     if (actualSaving >= inputs[8]) {
         alert("Congratulations! You will meet your savings goal");
@@ -97,7 +100,7 @@ function checkSaving(actualSaving) {
         calcSavingChanges(actualSaving);
     } else {
         // Code for error handling borrowed from LoveMaths walkthrough.
-        alert(`Unknown value ${actualSaving} Please try again.`);
+        alert(`Unknown value ${actualSaving} Please fill in the form and try again.`);
         throw `Unknown value ${actualSaving}`
     }
     //inputs = [];
@@ -125,6 +128,18 @@ function calcSavingChanges() {
  * This function is called after the Inputs array is filled.
  */
 function checkRecommemndations() {
+
+    let html = `<p>Hello world</p>`;
+    // functions to add a div child to the DOM after results are generated.
+    function addGoodRecommendation () {
+        let recommendation = document.createElement('div')
+        recommendation.classList.add('good')
+        recommendation.appendChild(html);
+        let recommendationDiv = document.getElementById('recommendations');
+        recommendationDiv.appendChild(recommendation);
+    }
+
+    // first check to see if rent is under 25% of the income, or over 50%.
     let rent = inputs[1];
     let pay = inputs [0];
 
@@ -135,11 +150,14 @@ function checkRecommemndations() {
         console.log("Your rent/mortgage is a little high. It's recommended that your accommodation payments do not exceed 25% of your take-home pay.")
     } else if (rent > pay / 2) {
         console.log("Your rent/mortgage is VERY high. It's recommended that your accommodation payments do not exceed 25% of your take-home payYou should look for an alternative deal or increase your income as soon as possible.")
-    } else {
+    } else if (rent < pay / 4) {
         console.log("Your rent/mortgage payments are healthy proportional to your income.")
+    } else {
+        alert(`Unknown value ${rent} Please fill in the form and try again.`);
+        throw `Unknown value ${rent}`
     }
 
-
+    //clears the data so that the user can resubmit with new data.
     inputs = [];
 }
 
