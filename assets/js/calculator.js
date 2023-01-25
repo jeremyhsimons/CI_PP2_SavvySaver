@@ -53,22 +53,32 @@ function getInputs(event) {
  */
 function calcSaving(inputs) {
 
-    let monthlySum = (inputs[0] - inputs[1] - inputs[2] - inputs[3] - inputs[4] - inputs[5]) * 1000;
-    let interest = (1 + inputs[6] / 100) * 1000;
-    let total = 0;
+    if (inputs[7] < 1) {
+        alert("You need to enter a valid number of months to the timescale field.")
+    } else {
 
-    let i = 0
+        let monthlySum = (inputs[0] - inputs[1] - inputs[2] - inputs[3] - inputs[4] - inputs[5]) * 1000;
+        let interest = (1 + inputs[6] / 100) * 1000;
+        let total = 0;
 
-    do {
-        total = (total + monthlySum) * interest;
-    } while (i <= inputs[7]);
+        let i = 1
 
-    let actualSaving = total / 1000;
+        do {
+            i = i + 1;
+            total = ((total + monthlySum) * interest) / 1000;
+        } while (i <= inputs[7]);
 
-    console.log(actualSaving);
+        let actualSaving = total / 1000;
 
-    checkSaving(actualSaving);
+        //code on line 75 is adapted from a suggestion by Brian Ustas on
+        //Stack Overflow about how to round numbers to 2dp reliably.
+        //See credits section of readme for link to page.
+        actualSaving = Math.round((actualSaving + Number.EPSILON) * 100) / 100;
 
+        console.log(actualSaving);
+
+        checkSaving(actualSaving);
+    }
 }
 
 /**
