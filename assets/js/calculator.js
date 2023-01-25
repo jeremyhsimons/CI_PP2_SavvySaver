@@ -101,7 +101,7 @@ function checkSaving(actualSaving) {
     } else {
         // Code for error handling borrowed from LoveMaths walkthrough.
         alert(`Unknown value ${actualSaving} Please fill in the form and try again.`);
-        throw `Unknown value ${actualSaving}`
+        throw `Unknown value ${actualSaving}`;
     }
     //inputs = [];
 }
@@ -157,7 +157,7 @@ function checkRecommemndations() {
 
 
 
-    // first check to see if rent is under 25% of the income, or over 50%.
+    // A check to see if rent is under 25% of the income, or over 50%.
     let rent = inputs[1];
     let pay = inputs [0];
 
@@ -169,22 +169,62 @@ function checkRecommemndations() {
             It's recommended that your accommodation payments 
             do not exceed 25% of your take-home pay.</p>`;
         addOkRecommendation();
-        console.log("Your rent/mortgage is a little high. It's recommended that your accommodation payments do not exceed 25% of your take-home pay.")
+        console.log("ok rent")
     } else if (rent > pay / 2) {
         html = `<p>Your rent/mortgage is VERY high. 
             It's recommended that your accommodation payments do not exceed 
             25% of your take-home payYou should look for an alternative deal 
             or increase your income as soon as possible.</p>`;
         addBadRecommendation();
-        console.log("Your rent/mortgage is VERY high. It's recommended that your accommodation payments do not exceed 25% of your take-home payYou should look for an alternative deal or increase your income as soon as possible.")
+        console.log("bad rent")
     } else if (rent < pay / 4) {
         html = `<p>Your rent/mortgage payments are 
             healthy proportional to your income.</p>`;
         addGoodRecommendation();
-        console.log("Your rent/mortgage payments are healthy proportional to your income.")
+        console.log("good rent")
     } else {
         alert(`Unknown value ${rent} Please fill in the form and try again.`);
-        throw `Unknown value ${rent}`
+        throw `Unknown value ${rent}`;
+    }
+
+    // A check to see if utilities are over 300.
+    let utilities = inputs[3];
+    if (utilities > 300) {
+        html = `<p>Your utilities bill is a quite high. 
+            The average utilities cost for UK households is 
+            around £300. Consider getting a better deal, or
+            find ways to cut down on your usage.</p>`;
+        addOkRecommendation();
+        console.log("ok utilites");
+    } else if (utilities < 300) {
+        html = `<p>Your utilities bill is below
+            the UK average.</p>`;
+        addGoodRecommendation();
+        console.log("good utilities");
+    } else {
+        alert(`Unknown value ${utilities} Please fill in the form and try again.`);
+        throw `Unknown value ${utilities}`;
+    }
+
+    // A check to see how high charitable giving is.
+    let charity = inputs[4];
+    if (charity > pay / 10) {
+        html = `<p>Well done for being generous!
+            Your charitable giving is well over 10% of your 
+            monthly income. A giving rate of 10% is a proven
+            amount for sustainable generosity.
+            Consider giivng less away if you want to save more.</p>`;
+        addOkRecommendation
+        console.log("ok charity");
+    } else if (charity < pay / 10) {
+        html = `<p>Your giving is within the recommended 10% of 
+            your total monthly income. It is more than acceptable to
+            give more than 10%, but you won't save as much.</p>`;
+        addGoodRecommendation
+        console.log("good charity");
+    } else {
+        alert(`Unknown value ${rent} Please fill in the form and try again.`);
+        throw `Unknown value ${rent}`;
     }
 
     //clears the data so that the user can resubmit with new data.
