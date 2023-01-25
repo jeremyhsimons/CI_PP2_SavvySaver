@@ -161,9 +161,6 @@ function checkRecommemndations() {
     let rent = inputs[1];
     let pay = inputs [0];
 
-    console.log(rent);
-    console.log(pay);
-
     if (rent > (pay / 4) && rent < (pay / 2)) {
         html = `<p>Your rent/mortgage is a little high. 
             It's recommended that your accommodation payments 
