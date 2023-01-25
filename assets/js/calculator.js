@@ -134,7 +134,7 @@ function checkRecommemndations() {
     function addGoodRecommendation () {
         let recommendation = document.createElement('div')
         recommendation.classList.add('good')
-        recommendation.appendChild(html);
+        recommendation.innerHTML = html;
         let recommendationDiv = document.getElementById('recommendations');
         recommendationDiv.appendChild(recommendation);
     }
@@ -151,6 +151,7 @@ function checkRecommemndations() {
     } else if (rent > pay / 2) {
         console.log("Your rent/mortgage is VERY high. It's recommended that your accommodation payments do not exceed 25% of your take-home payYou should look for an alternative deal or increase your income as soon as possible.")
     } else if (rent < pay / 4) {
+        addGoodRecommendation();
         console.log("Your rent/mortgage payments are healthy proportional to your income.")
     } else {
         alert(`Unknown value ${rent} Please fill in the form and try again.`);
