@@ -41,7 +41,7 @@ footer > ul {
 
 footer > ul > li {
     display: inline;
-    padding: 5%;
+    padding: 3%;
     color: #ebeecd;
 }
 
@@ -185,6 +185,64 @@ footer > ul > li > a {
     font-weight: 700;
     padding: 5px;
     border: 3px solid #433D39;
+}
+
+/*Results section style rules*/
+#results {
+    background: url(../images/budget-money.jpg);
+
+}
+
+#changes {
+    background-color: #ebeecd;
+    padding-top: 20px;
+}
+
+#recommendations {
+    background-color: #433D39;
+    padding-top: 20px;
+}
+
+.good {
+    width: 300px;
+    margin: auto;
+    background-color: lightgreen;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid darkgreen;
+}
+
+.good > p {
+    padding: 5px;
+    color: darkgreen;
+}
+
+.ok {
+    width: 300px;
+    margin: auto;
+    background-color: lightgoldenrodyellow;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid orange;
+}
+
+.ok > p {
+    padding: 5px;
+    color: maroon;
+}
+
+.bad {
+    width: 300px;
+    margin: auto;
+    background-color: lightcoral;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid darkred;
+}
+
+.bad > p {
+    padding: 5px;
+    color: darkred;
 }
 
 /*Styles for the faq */

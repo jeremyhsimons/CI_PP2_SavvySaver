@@ -224,7 +224,7 @@ function checkRecommemndations() {
         console.log("good charity");
     } else {
         alert(`Unknown value ${charity} Please fill in the form and try again.`);
-        //throw `Unknown value ${charity}`;
+        throw `Unknown value ${charity}`;
     }
 
     // A check to see if other expenses exceed rent/mortgage payments.
