@@ -43,15 +43,31 @@ function getInputs(event) {
     inputs.push(fields[7].value);
     inputs.push(fields[8].value); 
 
-    console.log(inputs);
-   
+    calcSaving(inputs);
+
 }
 
 /**
  * A function to calculate the user's projected savings.
  * This function is called after the the inputs array is filled.
  */
-function calcSaving() {
+function calcSaving(inputs) {
+
+    let monthlySum = (inputs[0] - inputs[1] - inputs[2] - inputs[3] - inputs[4] - inputs[5]) * 1000;
+    let interest = (1 + inputs[6] / 100) * 1000;
+    let total = 0;
+
+    let i = 0
+
+    do {
+        total = (total + monthlySum) * interest;
+    } while (i <= inputs[7]);
+
+    let actualSaving = total / 1000;
+
+    console.log(actualSaving);
+
+    checkSaving(actualSaving);
 
 }
 
