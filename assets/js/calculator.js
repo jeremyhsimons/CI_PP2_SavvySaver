@@ -155,8 +155,6 @@ function checkRecommemndations() {
         recommendationDiv.appendChild(recommendation);
     }
 
-
-
     // A check to see if rent is under 25% of the income, or over 50%.
     let rent = inputs[1];
     let pay = inputs [0];
@@ -248,5 +246,5 @@ function checkRecommemndations() {
 }
 
 function printPageResult () {
-
+    window.print();
 }
