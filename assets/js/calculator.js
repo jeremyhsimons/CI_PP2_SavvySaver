@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function fillForm() {
     let fields = document.getElementsByTagName('input');
-    let placeholders = [1500, 200, 50, 100, 150, 300, 1, 12, 100];
+    let placeholders = [1500, 200, 50, 100, 150, 300, 1, 12, 8000];
 
     fields[0].value = placeholders[0];
     fields[1].value = placeholders[1];
@@ -28,9 +28,10 @@ calculate.addEventListener('click', printResult);
  * in an array called inputs.
  * This function is called by form submission event.
  */
+let inputs = [];
+
 function getInputs(event) {
     event.preventDefault();
-    let inputs = [];
     let fields = document.getElementsByTagName('input');
 
     inputs.push(fields[0].value);
@@ -85,8 +86,19 @@ function calcSaving(inputs) {
  * A function to check whether the user's projected saving
  * is greater than or equal to the savings goal.
  */
-function checkSaving() {
-
+function checkSaving(actualSaving) {
+    if (actualSaving >= inputs[8]) {
+        alert("You will exceed your savings goal");
+    } else if (actualSaving === inputs) {
+        alert("You will meet your savings goal exactly.");
+    } else if (actualSaving < inputs[8]) {
+        alert("Sorry you will not meet your savings target. Here are some suggestions for how to meet it:");
+        calcSavingChanges(actualSaving);
+    } else {
+        // Code for error handling borrowed from LoveMaths walkthrough.
+        alert(`Unknown value ${actualSaving}. Please try again`);
+        throw `Unknown value ${actualSaving}`
+    }
 }
 
 /**
