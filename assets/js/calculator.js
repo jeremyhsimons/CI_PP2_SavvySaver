@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", function fillForm() {
 let calculate = document.getElementById('calc-submit');
 calculate.addEventListener('click', getInputs);
 
+let printResult = document.getElementById('print');
+calculate.addEventListener('click', printResult);
+
 /**
  * A function to get all the user's inputs from the form and store them
  * in an array called inputs.
@@ -82,5 +85,9 @@ function calcSavingChanges() {
  * This function is called after the Inputs array is filled.
  */
 function checkRecommemndations() {
+
+}
+
+function printPageResult () {
 
 }
