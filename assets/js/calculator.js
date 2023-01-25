@@ -223,8 +223,27 @@ function checkRecommemndations() {
         addGoodRecommendation();
         console.log("good charity");
     } else {
-        alert(`Unknown value ${rent} Please fill in the form and try again.`);
-        throw `Unknown value ${rent}`;
+        alert(`Unknown value ${charity} Please fill in the form and try again.`);
+        throw `Unknown value ${charity}`;
+    }
+
+    // A check to see if other expenses exceed rent/mortgage payments.
+    let expense = inputs[5];
+    if (expense > rent) {
+        html = `<p>Your expenses currently exceed your rent/mortgage payments.
+            Your biggest expense should usually be for housing.
+            If you want to save money more effectively 
+            you need to look for ways to cut back on your monthly costs.</p>`
+        addBadRecommendation();
+        console.log("bad expense")
+    } else if (expense < rent) {
+        html = `<p>Your expenses are currently at a healthy level proportional
+        to your rent/mortgage payments.</p>`;
+        addGoodRecommendation();
+        console.log("good expenses");
+    } else {
+        alert(`Unknown value ${expense} Please fill in the form and try again.`);
+        throw `Unknown value ${expense}`;
     }
 
     //clears the data so that the user can resubmit with new data.
