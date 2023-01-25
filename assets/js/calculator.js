@@ -44,6 +44,7 @@ function getInputs(event) {
     inputs.push(fields[8].value); 
 
     calcSaving(inputs);
+    checkRecommemndations();
 }
 
 /**
@@ -85,6 +86,10 @@ function calcSaving(inputs) {
  * is greater than or equal to the savings goal.
  */
 function checkSaving(actualSaving) {
+    function addRecommendation {
+        let recommendation = document.createElement('div')
+    }
+
     if (actualSaving >= inputs[8]) {
         alert("Congratulations! You will meet your savings goal");
     } else if (actualSaving < inputs[8]) {
@@ -95,16 +100,16 @@ function checkSaving(actualSaving) {
         alert(`Unknown value ${actualSaving} Please try again.`);
         throw `Unknown value ${actualSaving}`
     }
-    inputs = [];
+    //inputs = [];
 }
 
 /**
- * A function that loops through the user's inputs and calculates
- * the revised inputs needed for the user to meet their
+ * A function that goes through the user's inputs and calculates
+ * the revised figures needed for the user to meet their
  * savings goal.
  * 
  * This function is only called if the checkSaving function finds
- * that the user's savings are below the goal.
+ * that the user's savings are below the user's goal.
  */
 function calcSavingChanges() {
 
@@ -120,7 +125,22 @@ function calcSavingChanges() {
  * This function is called after the Inputs array is filled.
  */
 function checkRecommemndations() {
+    let rent = inputs[1];
+    let pay = inputs [0];
 
+    console.log(rent);
+    console.log(pay);
+
+    if (rent > (pay / 4) && rent < (pay / 2)) {
+        console.log("Your rent/mortgage is a little high. It's recommended that your accommodation payments do not exceed 25% of your take-home pay.")
+    } else if (rent > pay / 2) {
+        console.log("Your rent/mortgage is VERY high. It's recommended that your accommodation payments do not exceed 25% of your take-home payYou should look for an alternative deal or increase your income as soon as possible.")
+    } else {
+        console.log("Your rent/mortgage payments are healthy proportional to your income.")
+    }
+
+
+    inputs = [];
 }
 
 function printPageResult () {
