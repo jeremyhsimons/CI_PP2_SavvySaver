@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function fillForm() {
     fields[6].value = placeholders[6];
     fields[7].value = placeholders[7];
     fields[8].value = placeholders[8];
-
 })
 
 //Event listener to handle the form submission
@@ -45,7 +44,6 @@ function getInputs(event) {
     inputs.push(fields[8].value); 
 
     calcSaving(inputs);
-
 }
 
 /**
@@ -88,17 +86,16 @@ function calcSaving(inputs) {
  */
 function checkSaving(actualSaving) {
     if (actualSaving >= inputs[8]) {
-        alert("You will exceed your savings goal");
-    } else if (actualSaving === inputs) {
-        alert("You will meet your savings goal exactly.");
+        alert("Congratulations! You will meet your savings goal");
     } else if (actualSaving < inputs[8]) {
-        alert("Sorry you will not meet your savings target. Here are some suggestions for how to meet it:");
+        alert("Sorry, you will not meet your savings target. Here are some suggestions for how to meet it:");
         calcSavingChanges(actualSaving);
     } else {
         // Code for error handling borrowed from LoveMaths walkthrough.
-        alert(`Unknown value ${actualSaving}. Please try again`);
+        alert(`Unknown value ${actualSaving} Please try again.`);
         throw `Unknown value ${actualSaving}`
     }
+    inputs = [];
 }
 
 /**
