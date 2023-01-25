@@ -20,7 +20,7 @@ let calculate = document.getElementById('calc-submit');
 calculate.addEventListener('click', getInputs);
 
 let printResult = document.getElementById('print');
-calculate.addEventListener('click', printResult);
+calculate.addEventListener('click', printPageResult);
 
 /**
  * A function to get all the user's inputs from the form and store them
@@ -85,15 +85,30 @@ function calcSaving(inputs) {
  * is greater than or equal to the savings goal.
  */
 function checkSaving(actualSaving) {
-    function addRecommendation (html) {
-        let recommendation = document.createElement('div')
-        recommendation.classList.add()
-
+    let html = `<p></p>`;
+    function addResults() {
+        let resultsDiv = document.createElement('div')
+        resultsMain.classList.add('results-main')
+        resultsMain.innerHTML = html;
+        let resultsMain = document.getElementById('results');
+        resultsMain.appendChild(resultsDiv);
     }
 
-    let html = `<p></p>`;
-
     if (actualSaving >= inputs[8]) {
+        html = `<h2>RESULTS:</h2>
+                <h3>Congratulations! You will meet your savings goal of £${input[8]}.</h3>
+                <p>With a:</p>
+                <ul>
+                    <li>Monthly income of £${inputs[0]}</li>
+                    <li>Monthly rent/mortgage payment of £${inputs[1]}</li>
+                    <li>Monthly car cost of £${inputs[2]}</li>
+                    <li>Monthly utilities bill of £${inputs[3]}</li>
+                    <li>Monthly charitable giving of £${inputs[4]}</li>
+                    <li>Monthly expenses of £${inputs[5]}</li>
+                    <li>Bank interest rate of ${inputs[6]%}</li>
+                    <li>Over ${inputs[7]} months</li>
+                </ul>
+                <h3>You will save £${actualSaving}!</h3>`
         alert("Congratulations! You will meet your savings goal");
     } else if (actualSaving < inputs[8]) {
         alert("Sorry, you will not meet your savings target. Here are some suggestions for how to meet it:");
