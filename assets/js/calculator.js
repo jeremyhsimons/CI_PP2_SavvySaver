@@ -78,7 +78,7 @@ function validateInputs () {
 
     let costs = parseInt(inputs[1]) + parseInt(inputs[2]) + parseInt(inputs[3]) + parseInt(inputs[4]) + parseInt(inputs[5]);
     if (inputs[0] < costs) {
-        alert('Your costs are higher than your income. You will not save any money. Please make sure your costs are lower than your income and try again.');
+        alert('Your costs are higher than your income. You will not save ANY money. Please make sure your costs are lower than your income and try again.');
         inputs = [];
     } else {
         calcSaving(inputs);
