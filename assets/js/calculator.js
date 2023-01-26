@@ -108,7 +108,7 @@ function checkSaving(actualSaving) {
                     <li>Bank interest rate of ${inputs[6]}%</li>
                     <li>Over ${inputs[7]} months</li>
                 </ul>
-                <h3>You will save £${actualSaving}!</h3>`
+                <h3>You will save <em>£${actualSaving}</em></h3>`
         addResults();
         console.log("results: saving success.")
     } else if (actualSaving < inputs[8]) {
@@ -125,7 +125,7 @@ function checkSaving(actualSaving) {
                     <li>Bank interest rate of ${inputs[6]}%</li>
                     <li>Over ${inputs[7]} months</li>
                 </ul>
-                <h3>You will only save £${actualSaving}!
+                <h3>You will only save <em>£${actualSaving}.</em>
                 Here are some suggestions for how to meet your target:</h3>`
         addResults();
         console.log("results: saving failure.")
@@ -146,7 +146,7 @@ function checkSaving(actualSaving) {
  * This function is only called if the checkSaving function finds
  * that the user's savings are below the user's goal.
  */
-function calcSavingChanges() {
+function calcSavingChanges(actualSaving) {
 
     let changeTitleText = "CHANGES YOU COULD MAKE TO YOUR SAVING PLAN:";
     let changeText = `<p></p>`;
@@ -171,17 +171,42 @@ function calcSavingChanges() {
     let monthlySum = (inputs[0] - inputs[1] - inputs[2] - inputs[3] - inputs[4] - inputs[5]) * 1000;
     let interest = (1 + inputs[6] / 100) * 1000;
     let goalTotal = inputs[8] * 1000; 
-    let k = 0
+    let k = 0;
 
     do {
         k += 1;
         goalTotal = (goalTotal / interest) * 1000 - monthlySum;
     } while (goalTotal > 0);
 
-    changeText = `<p>If you save for ${k} months you will achieve your goal.</p>`;
+    changeText = `<p>If you save for <strong>${k}</strong> months you will achieve your goal.</p>`;
     addChangeTitle();
     addChange();
 
+    // code to check how much the user would need to cut from total expenses.
+    goalTotal = inputs[8] * 1000;
+    let goalMonthlySum = (goalTotal/interest/inputs[7]) * 1000;
+    let deficit = (goalMonthlySum - monthlySum) / 1000;
+    //Brian Ustas code.
+    deficit = Math.round((deficit + Number.EPSILON) * 100) / 100;
+
+    changeText = `<p>Alternatively, you could try to cut your total monthly costs. 
+                 You would need to save <strong>£${deficit}</strong> per month in addition to what you
+                 currently save in order to meet your goal.</p>`
+    addChange();
+
+    // code to check what interest they have earned vs what interest they need to earn
+    // to achieve their savings goal.
+    let goalInterestEarned = (goalTotal - (inputs[7] * monthlySum)) / 1000;
+    let actualInterestEarned = actualSaving - (inputs[7] * monthlySum) / 1000 ;
+    // Brian Ustas code.
+    actualInterestEarned = Math.round((actualInterestEarned + Number.EPSILON) * 100) / 100;
+
+    changeText = `<p>Alternatively, you could try to cut your total monthly costs. 
+    You would need to save <strong>£${deficit}</strong> per month in addition to what you
+    currently save in order to meet your goal.</p>`
+    addChange();
+
+    console.log(actualInterestEarned);
 }
 
 /**
