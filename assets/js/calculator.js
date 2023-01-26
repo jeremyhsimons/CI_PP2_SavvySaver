@@ -13,16 +13,14 @@ document.addEventListener("DOMContentLoaded", function fillForm() {
     fields[6].value = placeholders[6];
     fields[7].value = placeholders[7];
     fields[8].value = placeholders[8];
-
-    clearDom();
 })
 
 //Event listener to handle the form submission
 let calculate = document.getElementById('calc-submit');
 calculate.addEventListener('click', getInputs);
 
-//let resetForm = document.getElementById('reset');
-//resetForm.addEventListener('click', fillForm);
+let resetForm = document.getElementById('reset');
+resetForm.addEventListener('click', clearDom);
 
 let printResult = document.getElementById('print');
 printResult.addEventListener('click', printPageResult);
@@ -50,7 +48,13 @@ function getInputs(event) {
     inputs.push(fields[8].value); 
 
     clearDom();
+
+    //A test to see if inputs are valid.
+    if (inputs[0] === 0 || inputs[7] === 0 || inputs[8] === 0) {
+        alert('You cannot calculate your savings if you do not have an income, a timeframe, or a savings goal. Please try again.')
+    } else {
     calcSaving(inputs);
+    }
 }
 
 /**
