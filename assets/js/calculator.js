@@ -48,12 +48,32 @@ function getInputs(event) {
     inputs.push(fields[8].value); 
 
     clearDom();
+    validateInputs(inputs)
 
-    //A test to see if inputs are valid.
-    if (inputs[0] === 0 || inputs[7] === 0 || inputs[8] === 0) {
-        alert('You cannot calculate your savings if you do not have an income, a timeframe, or a savings goal. Please try again.')
+}
+
+/**
+ * A function that checks whether the user has added fields that
+ * are invalid, and alert them if so.
+ * 
+ * The user's inputs must pass this validation for the calculator 
+ * to work.
+ */
+function validateInputs () {
+    for (let h = 0; h <= inputs.length; h++) {
+        if (inputs[h] === "" || inputs[h] === null) {
+            alert('You cannot submit this form with an empty field. Please try again.');
+            inputs = []
+        } else {
+            console.log(`${inputs[h]} is a number`);
+        }
+    }
+
+    if (inputs[7] === 0 || inputs[8] === 0) {
+        alert('You cannot calculate your savings if you do not have a timeframe, or a savings goal. Please try again.')
+        inputs = [];
     } else {
-    calcSaving(inputs);
+        calcSaving(inputs);
     }
 }
 
@@ -63,31 +83,27 @@ function getInputs(event) {
  */
 function calcSaving(inputs) {
 
-    if (inputs[7] < 1) {
-        alert("You need to enter a valid number of months to the timescale field.")
-    } else {
+    let monthlySum = (inputs[0] - inputs[1] - inputs[2] - inputs[3] - inputs[4] - inputs[5]) * 1000;
+    let interest = (1 + inputs[6] / 100) * 1000;
+    let total = 0;
 
-        let monthlySum = (inputs[0] - inputs[1] - inputs[2] - inputs[3] - inputs[4] - inputs[5]) * 1000;
-        let interest = (1 + inputs[6] / 100) * 1000;
-        let total = 0;
+    let i = 1
 
-        let i = 1
+    do {
+        i += 1;
+        total = ((total + monthlySum) * interest) / 1000;
+    } while (i <= inputs[7]);
 
-        do {
-            i += 1;
-            total = ((total + monthlySum) * interest) / 1000;
-        } while (i <= inputs[7]);
+    let actualSaving = total / 1000;
 
-        let actualSaving = total / 1000;
-
-        //code on line directly below this comment is adapted from a 
-        //suggestion by Brian Ustas on
-        //Stack Overflow about how to round numbers to 2dp reliably.
-        //See credits section of readme for link to page.
-        actualSaving = Math.round((actualSaving + Number.EPSILON) * 100) / 100;
-        console.log(actualSaving);
-        checkSaving(actualSaving);
-    }
+    //code on line directly below this comment is adapted from a 
+    //suggestion by Brian Ustas on
+    //Stack Overflow about how to round numbers to 2dp reliably.
+    //See credits section of readme for link to page.
+    actualSaving = Math.round((actualSaving + Number.EPSILON) * 100) / 100;
+    console.log(actualSaving);
+    checkSaving(actualSaving);
+    
 }
 
 /**
@@ -279,7 +295,7 @@ function checkRecommemndations() {
         addRecommendationTitle();
         addBadRecommendation();
         console.log("bad rent")
-    } else if (rent < pay / 4) {
+    } else if (rent < pay / 4 || rent === 0) {
         html = `<p>Your rent/mortgage payments are 
             healthy proportional to your income.</p>`;
         addRecommendationTitle();
@@ -287,6 +303,7 @@ function checkRecommemndations() {
         console.log("good rent")
     } else {
         alert(`Unknown value ${rent} Please fill in the form and try again.`);
+        inputs = [];
         throw `Unknown value ${rent}`;
     }
 
@@ -299,13 +316,14 @@ function checkRecommemndations() {
             find ways to cut down on your usage.</p>`;
         addOkRecommendation();
         console.log("ok utilites");
-    } else if (utilities < 300) {
+    } else if (utilities < 300 || utilities === 0) {
         html = `<p>Your utilities bill is below
             the UK average.</p>`;
         addGoodRecommendation();
         console.log("good utilities");
     } else {
         alert(`Unknown value ${utilities} Please fill in the form and try again.`);
+        inputs = [];
         throw `Unknown value ${utilities}`;
     }
 
@@ -319,7 +337,7 @@ function checkRecommemndations() {
             Consider giivng less away if you want to save more.</p>`;
         addOkRecommendation();
         console.log("ok charity");
-    } else if (charity <= (pay / 10)) {
+    } else if (charity <= (pay / 10) || charity === 0) {
         html = `<p>Your giving is within the recommended 10% of 
             your total monthly income. It is more than acceptable to
             give more than 10%, but you won't save as much.</p>`;
@@ -327,6 +345,7 @@ function checkRecommemndations() {
         console.log("good charity");
     } else {
         alert(`Unknown value ${charity} Please fill in the form and try again.`);
+        inputs = [];
         throw `Unknown value ${charity}`;
     }
 
@@ -339,13 +358,14 @@ function checkRecommemndations() {
             you need to look for ways to cut back on your monthly costs.</p>`
         addBadRecommendation();
         console.log("bad expense")
-    } else if (expense < rent) {
+    } else if (expense <= rent || expense === 0) {
         html = `<p>Your expenses are currently at a healthy level proportional
         to your rent/mortgage payments.</p>`;
         addGoodRecommendation();
         console.log("good expenses");
     } else {
         alert(`Unknown value ${expense} Please fill in the form and try again.`);
+        inputs = [];
         throw `Unknown value ${expense}`;
     }
 
