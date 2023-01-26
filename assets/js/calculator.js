@@ -43,6 +43,7 @@ function getInputs(event) {
     inputs.push(fields[7].value);
     inputs.push(fields[8].value); 
 
+    clearDom();
     calcSaving(inputs);
     checkRecommemndations();
 }
@@ -277,6 +278,20 @@ function checkRecommemndations() {
     //inputs = [];
 }
 
+/** 
+ * A function to clear the DOM of any generated html 
+ * to prevent cloned content. 
+ */
+function clearDom() {
+    document.getElementById('results').innerHTML = "";
+    document.getElementById('changes').innerHTML = "";
+    document.getElementById('recommendations').innerHTML = "";
+}
+
+/**
+ * A function allowing the user to print their results
+ * and save their financial insights.
+ */
 function printPageResult () {
     window.print();
 }
