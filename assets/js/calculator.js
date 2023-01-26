@@ -36,6 +36,7 @@ let inputs = [];
 function getInputs(event) {
     event.preventDefault();
     let fields = document.getElementsByTagName('input');
+    inputs = []
 
     inputs.push(fields[0].value);
     inputs.push(fields[1].value);
@@ -68,9 +69,8 @@ function validateInputs () {
             console.log(`${inputs[h]} is a number`);
         }
     }
-
-    if (inputs[7] === 0 || inputs[8] === 0) {
-        alert('You cannot calculate your savings if you do not have a timeframe, or a savings goal. Please try again.')
+    if (inputs[0] < (1/100) || inputs[7] < 1 || inputs [8] < 1) {
+        alert ('You cannot calculate your savings without an income, timeframe, or a goal. Please enter valid numbers.');
         inputs = [];
     } else {
         calcSaving(inputs);
