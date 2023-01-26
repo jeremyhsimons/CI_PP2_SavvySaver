@@ -45,7 +45,6 @@ function getInputs(event) {
 
     clearDom();
     calcSaving(inputs);
-    checkRecommemndations();
 }
 
 /**
@@ -65,7 +64,7 @@ function calcSaving(inputs) {
         let i = 1
 
         do {
-            i = i + 1;
+            i += 1;
             total = ((total + monthlySum) * interest) / 1000;
         } while (i <= inputs[7]);
 
@@ -136,7 +135,7 @@ function checkSaving(actualSaving) {
         alert(`Unknown value ${actualSaving} Please fill in the form and try again.`);
         throw `Unknown value ${actualSaving}`;
     }
-    //inputs = [];
+    checkRecommemndations();
 }
 
 /**
@@ -148,6 +147,40 @@ function checkSaving(actualSaving) {
  * that the user's savings are below the user's goal.
  */
 function calcSavingChanges() {
+
+    let changeTitleText = "CHANGES YOU COULD MAKE TO YOUR SAVING PLAN:";
+    let changeText = `<p></p>`;
+    let changeSection = document.getElementById('changes');
+
+    function addChangeTitle() {
+        let changeTitle = document.createElement('h2');
+        changeTitle.classList.add('change-title');
+        changeTitle.innerHTML = changeTitleText;
+        changeSection.appendChild(changeTitle);
+    }
+
+    function addChange() {
+        let newChange = document.createElement('div');
+        newChange.classList.add('change-text');
+        newChange.innerHTML = changeText;
+        changeSection.appendChild(newChange);
+    }
+
+    // code to check how many months needed to reach the savings goal
+    // at current rate of saving. k = no. of months.
+    let monthlySum = (inputs[0] - inputs[1] - inputs[2] - inputs[3] - inputs[4] - inputs[5]) * 1000;
+    let interest = (1 + inputs[6] / 100) * 1000;
+    let goalTotal = inputs[8] * 1000; 
+    let k = 0
+
+    do {
+        k += 1;
+        goalTotal = (goalTotal / interest) * 1000 - monthlySum;
+    } while (goalTotal > 0);
+
+    changeText = `<p>If you save for ${k} months you will achieve your goal.</p>`;
+    addChangeTitle();
+    addChange();
 
 }
 
@@ -162,14 +195,14 @@ function calcSavingChanges() {
  */
 function checkRecommemndations() {
 
-    let html = `<p>Hello world</p>`;
+    let html = `<p></p>`;
+    let recommendationDiv = document.getElementById('recommendations');
     // functions to add a div child to the DOM after results are generated.
     
     function addRecommendationTitle() {
         let recTitle = document.createElement('h2');
         recTitle.classList.add('rec-title');
         recTitle.innerHTML = `RECOMMENDATIONS:`;
-        let recommendationDiv = document.getElementById('recommendations');
         recommendationDiv.appendChild(recTitle);
     }
     
@@ -177,7 +210,6 @@ function checkRecommemndations() {
         let recommendation = document.createElement('div');
         recommendation.classList.add('good');
         recommendation.innerHTML = html;
-        let recommendationDiv = document.getElementById('recommendations');
         recommendationDiv.appendChild(recommendation);
     }
 
@@ -185,7 +217,6 @@ function checkRecommemndations() {
         let recommendation = document.createElement('div');
         recommendation.classList.add('ok');
         recommendation.innerHTML = html;
-        let recommendationDiv = document.getElementById('recommendations');
         recommendationDiv.appendChild(recommendation);
     }
 
@@ -193,7 +224,6 @@ function checkRecommemndations() {
         let recommendation = document.createElement('div');
         recommendation.classList.add('bad');
         recommendation.innerHTML = html;
-        let recommendationDiv = document.getElementById('recommendations');
         recommendationDiv.appendChild(recommendation);
     }
 
@@ -211,7 +241,7 @@ function checkRecommemndations() {
     } else if (rent > pay / 2) {
         html = `<p>Your rent/mortgage is VERY high. 
             It's recommended that your accommodation payments do not exceed 
-            25% of your take-home payYou should look for an alternative deal 
+            25% of your take-home pay. You should look for an alternative deal 
             or increase your income as soon as possible.</p>`;
         addRecommendationTitle();
         addBadRecommendation();

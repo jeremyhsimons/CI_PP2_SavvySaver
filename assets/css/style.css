@@ -210,7 +210,7 @@ footer > ul > li > a {
 }
 
 .results-main > h2 {
-    font-size: 120%;
+    font-size: 200%;
 }
 
 .results-main > ul {
@@ -234,6 +234,8 @@ footer > ul > li > a {
 #changes {
     background-color: #ebeecd;
     padding-top: 20px;
+    border-top: 2px solid #A4C3BF;
+    border-bottom: 2px solid #A4C3BF;
 }
 
 #recommendations {
@@ -241,7 +243,7 @@ footer > ul > li > a {
     padding-top: 20px;
 }
 
- {
+.rec-title {
     font-size: 150%;
     color: #ebeecd;
 }
