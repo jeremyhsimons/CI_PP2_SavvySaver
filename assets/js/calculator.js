@@ -164,25 +164,34 @@ function checkRecommemndations() {
 
     let html = `<p>Hello world</p>`;
     // functions to add a div child to the DOM after results are generated.
+    
+    function addRecommendationTitle() {
+        let recTitle = document.createElement('h2');
+        recTitle.classList.add('rec-title');
+        recTitle.innerHTML = `RECOMMENDATIONS:`;
+        let recommendationDiv = document.getElementById('recommendations');
+        recommendationDiv.appendChild(recTitle);
+    }
+    
     function addGoodRecommendation () {
-        let recommendation = document.createElement('div')
-        recommendation.classList.add('good')
+        let recommendation = document.createElement('div');
+        recommendation.classList.add('good');
         recommendation.innerHTML = html;
         let recommendationDiv = document.getElementById('recommendations');
         recommendationDiv.appendChild(recommendation);
     }
 
     function addOkRecommendation () {
-        let recommendation = document.createElement('div')
-        recommendation.classList.add('ok')
+        let recommendation = document.createElement('div');
+        recommendation.classList.add('ok');
         recommendation.innerHTML = html;
         let recommendationDiv = document.getElementById('recommendations');
         recommendationDiv.appendChild(recommendation);
     }
 
     function addBadRecommendation () {
-        let recommendation = document.createElement('div')
-        recommendation.classList.add('bad')
+        let recommendation = document.createElement('div');
+        recommendation.classList.add('bad');
         recommendation.innerHTML = html;
         let recommendationDiv = document.getElementById('recommendations');
         recommendationDiv.appendChild(recommendation);
@@ -193,24 +202,24 @@ function checkRecommemndations() {
     let pay = inputs [0];
 
     if (rent > (pay / 4) && rent < (pay / 2)) {
-        html = `<h2>RECOMMENDATIONS:</h2>
-            <p>Your rent/mortgage is a little high. 
+        html = `<p>Your rent/mortgage is a little high. 
             It's recommended that your accommodation payments 
             do not exceed 25% of your take-home pay.</p>`;
+        addRecommendationTitle();
         addOkRecommendation();
         console.log("ok rent")
     } else if (rent > pay / 2) {
-        html = `<h2>RECOMMENDATIONS:</h2>
-            <p>Your rent/mortgage is VERY high. 
+        html = `<p>Your rent/mortgage is VERY high. 
             It's recommended that your accommodation payments do not exceed 
             25% of your take-home payYou should look for an alternative deal 
             or increase your income as soon as possible.</p>`;
+        addRecommendationTitle();
         addBadRecommendation();
         console.log("bad rent")
     } else if (rent < pay / 4) {
-        html = `<h2>RECOMMENDATIONS:</h2>
-            <p>Your rent/mortgage payments are 
+        html = `<p>Your rent/mortgage payments are 
             healthy proportional to your income.</p>`;
+        addRecommendationTitle();
         addGoodRecommendation();
         console.log("good rent")
     } else {
