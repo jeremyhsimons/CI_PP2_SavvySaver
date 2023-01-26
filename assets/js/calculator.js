@@ -73,6 +73,14 @@ function validateInputs () {
         alert ('You cannot calculate your savings without an income, timeframe, or a goal. Please enter valid numbers.');
         inputs = [];
     } else {
+        console.log('No erroneous zeros.')
+    }
+
+    let costs = inputs[1] + inputs[2] + inputs[3] + inputs[4] + inputs[5];
+    if (costs > inputs[0]) {
+        alert('Your costs are higher than your income. You will not save any money. Please make sure your costs are lower than your income and try again.');
+        inputs = []
+    } else {
         calcSaving(inputs);
     }
 }
