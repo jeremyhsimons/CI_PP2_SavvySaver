@@ -33,7 +33,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 200px;
+    height: 40px;
     background-color: #292d41;
     text-align: center;
     padding: 10px;
@@ -197,6 +197,10 @@ footer > ul > li > a {
 }
 
 /*Results section style rules*/
+
+#clear-div {
+    height: 60px;
+}
 
 #results {
     background: url(../images/budget-money.jpg) no-repeat center center, #ebeecd;
