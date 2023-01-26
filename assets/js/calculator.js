@@ -208,8 +208,6 @@ function calcSavingChanges(actualSaving) {
                   <strong>£${goalInterestEarned}.</strong> Consider changing your
                   bank account to get a better interest rate deal.</p>`
     addChange();
-
-    console.log(actualInterestEarned);
 }
 
 /**

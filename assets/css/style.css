@@ -239,6 +239,21 @@ footer > ul > li > a {
     border-bottom: 4px solid #A4C3BF;
 }
 
+.change-title {
+    color: #1D1B1B;
+}
+
+.change-text {
+    margin: auto;
+    background-color: #1D1B1B;
+    border: 4px solid #A4C3BF;
+    color: #ebeecd;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 250px;
+    padding: 10px;
+}
+
 #recommendations {
     background-color: #433D39;
     padding-top: 20px;
