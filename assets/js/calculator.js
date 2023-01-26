@@ -275,7 +275,7 @@ function checkRecommemndations() {
     }
 
     //clears the data so that the user can resubmit with new data.
-    //inputs = [];
+    inputs = [];
 }
 
 /** 
