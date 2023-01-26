@@ -201,9 +201,12 @@ function calcSavingChanges(actualSaving) {
     // Brian Ustas code.
     actualInterestEarned = Math.round((actualInterestEarned + Number.EPSILON) * 100) / 100;
 
-    changeText = `<p>Alternatively, you could try to cut your total monthly costs. 
-    You would need to save <strong>£${deficit}</strong> per month in addition to what you
-    currently save in order to meet your goal.</p>`
+    changeText = `<p>Additionally, with your current bank account 
+                  you are only earning <strong>£${actualInterestEarned}</strong>
+                  in interest. If you wanted to achieve your savings goal by increasing
+                  interest earnings, you would need to earn 
+                  <strong>£${goalInterestEarned}.</strong> Consider changing your
+                  bank account to get a better interest rate deal.</p>`
     addChange();
 
     console.log(actualInterestEarned);
