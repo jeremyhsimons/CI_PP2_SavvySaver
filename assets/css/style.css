@@ -181,7 +181,8 @@ footer > ul > li > a {
 }
 
 #calculator-form > button {
-    width: 150px;
+    min-width: 150px;
+    max-width: 300px;
     background-color: #ebeecd;
     color: #1D1B1B;
     text-transform: uppercase;

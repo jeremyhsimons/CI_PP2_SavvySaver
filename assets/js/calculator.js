@@ -73,15 +73,16 @@ function validateInputs () {
         alert ('You cannot calculate your savings without an income, timeframe, or a goal. Please enter valid numbers.');
         inputs = [];
     } else {
-        console.log('No erroneous zeros.')
+        console.log('No erroneous zeros.');
     }
 
-    let costs = inputs[1] + inputs[2] + inputs[3] + inputs[4] + inputs[5];
-    if (costs > inputs[0]) {
+    let costs = parseInt(inputs[1]) + parseInt(inputs[2]) + parseInt(inputs[3]) + parseInt(inputs[4]) + parseInt(inputs[5]);
+    if (inputs[0] < costs) {
         alert('Your costs are higher than your income. You will not save any money. Please make sure your costs are lower than your income and try again.');
-        inputs = []
+        inputs = [];
     } else {
         calcSaving(inputs);
+        console.log('Income > costs OK');
     }
 }
 
@@ -361,7 +362,7 @@ function checkRecommemndations() {
     let expense = inputs[5];
     if (expense > rent) {
         html = `<p>Your expenses currently exceed your rent/mortgage payments.
-            Your biggest expense should usually be for housing.
+            Your biggest expense is expercted to be for housing.
             If you want to save money more effectively 
             you need to look for ways to cut back on your monthly costs.</p>`
         addBadRecommendation();
