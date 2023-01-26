@@ -193,20 +193,23 @@ function checkRecommemndations() {
     let pay = inputs [0];
 
     if (rent > (pay / 4) && rent < (pay / 2)) {
-        html = `<p>Your rent/mortgage is a little high. 
+        html = `<h2>RECOMMENDATIONS:</h2>
+            <p>Your rent/mortgage is a little high. 
             It's recommended that your accommodation payments 
             do not exceed 25% of your take-home pay.</p>`;
         addOkRecommendation();
         console.log("ok rent")
     } else if (rent > pay / 2) {
-        html = `<p>Your rent/mortgage is VERY high. 
+        html = `<h2>RECOMMENDATIONS:</h2>
+            <p>Your rent/mortgage is VERY high. 
             It's recommended that your accommodation payments do not exceed 
             25% of your take-home payYou should look for an alternative deal 
             or increase your income as soon as possible.</p>`;
         addBadRecommendation();
         console.log("bad rent")
     } else if (rent < pay / 4) {
-        html = `<p>Your rent/mortgage payments are 
+        html = `<h2>RECOMMENDATIONS:</h2>
+            <p>Your rent/mortgage payments are 
             healthy proportional to your income.</p>`;
         addGoodRecommendation();
         console.log("good rent")
