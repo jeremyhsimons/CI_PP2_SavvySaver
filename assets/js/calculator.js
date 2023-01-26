@@ -13,22 +13,28 @@ document.addEventListener("DOMContentLoaded", function fillForm() {
     fields[6].value = placeholders[6];
     fields[7].value = placeholders[7];
     fields[8].value = placeholders[8];
+
+    clearDom();
 })
 
 //Event listener to handle the form submission
 let calculate = document.getElementById('calc-submit');
 calculate.addEventListener('click', getInputs);
 
-//let printResult = document.getElementById('print');
-//calculate.addEventListener('click', printPageResult);
+//let resetForm = document.getElementById('reset');
+//resetForm.addEventListener('click', fillForm);
+
+let printResult = document.getElementById('print');
+printResult.addEventListener('click', printPageResult);
+
+let inputs = [];
 
 /**
  * A function to get all the user's inputs from the form and store them
  * in an array called inputs.
+ * 
  * This function is called by form submission event.
  */
-let inputs = [];
-
 function getInputs(event) {
     event.preventDefault();
     let fields = document.getElementsByTagName('input');
@@ -213,9 +219,6 @@ function calcSavingChanges(actualSaving) {
 /**
  * A function that checks each of the user's inputs against
  * pre-determined recommended figures and outputs HMTL accordingly.
- * 
- * E.g. If the user's rent > 25% of monthly income
- * a warning will appear suggesting that they minimise this cost.
  * 
  * This function is called after the Inputs array is filled.
  */
