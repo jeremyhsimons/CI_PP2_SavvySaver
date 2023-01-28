@@ -27,9 +27,6 @@ resetForm.addEventListener('click', clearDom);
 let printResult = document.getElementById('print');
 printResult.addEventListener('click', printPageResult);
 
-//Keeping user's inputs after form print
-window.addEventListener('afterprint', retainData);
-
 let inputs = [];
 
 /**
@@ -417,8 +414,10 @@ function printPageResult() {
     document.body.innerHTML = pageContent;
 }
 
-window.addEventListener('afterprint', retainData);
-
+/**
+ * A function to refill the form with the users
+ * data when they close the print dialog.
+ */
 function retainData() {
-  alert('hello!');
+
 }
