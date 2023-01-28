@@ -401,5 +401,12 @@ function clearDom() {
  * and save their financial insights.
  */
 function printPageResult () {
+//Original function just used window.print().
+//This more elegant solution was found on
+//codexworld.com. Link to article in readme.
+    let printContent = document.getElementById('result-container');
+    let pageContent = document.body.innerHTML;
+    document.body.innerHTML = printContent;
     window.print();
+    document.body.innerHTML = pageContent;
 }
