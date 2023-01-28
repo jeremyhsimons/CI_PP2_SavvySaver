@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function fillForm() {
 let calculate = document.getElementById('calc-submit');
 calculate.addEventListener('click', getInputs);
 
-let resetForm = document.getElementById('reset');
+let resetForm = document.getElementById('reset-form');
 resetForm.addEventListener('click', clearDom);
 
 let printResult = document.getElementById('print');
@@ -400,11 +400,12 @@ function clearDom() {
  * A function allowing the user to print their results
  * and save their financial insights.
  */
-function printPageResult () {
+
+function printPageResult() {
 //Original function just used window.print().
 //This more elegant solution was found on
 //codexworld.com. Link to article in readme.
-    let printContent = document.getElementById('result-container');
+    let printContent = document.getElementById('result-container').innerHTML;
     let pageContent = document.body.innerHTML;
     document.body.innerHTML = printContent;
     window.print();
