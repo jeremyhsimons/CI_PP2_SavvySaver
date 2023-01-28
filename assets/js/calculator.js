@@ -14,16 +14,21 @@ document.addEventListener("DOMContentLoaded", function fillForm() {
     fields[7].value = placeholders[7];
     fields[8].value = placeholders[8];
 })
-
-//Event listener to handle the form submission
+//EVENT LISTENERS
+//Form submission
 let calculate = document.getElementById('calc-submit');
 calculate.addEventListener('click', getInputs);
 
+//Reset form
 let resetForm = document.getElementById('reset-form');
 resetForm.addEventListener('click', clearDom);
 
+//Print results
 let printResult = document.getElementById('print');
 printResult.addEventListener('click', printPageResult);
+
+//Keeping user's inputs after form print
+window.addEventListener('afterprint', retainData);
 
 let inputs = [];
 
@@ -410,4 +415,10 @@ function printPageResult() {
     document.body.innerHTML = printContent;
     window.print();
     document.body.innerHTML = pageContent;
+}
+
+window.addEventListener('afterprint', retainData);
+
+function retainData() {
+  alert('hello!');
 }
