@@ -378,6 +378,10 @@ function checkRecommemndations() {
         throw `Unknown value ${expense}`;
     }
 
+    //Auto scrolls the user down to the results section of the page.
+    let resultContainer = document.getElementById('result-container');
+    resultContainer.scrollIntoView(top);
+
     //clears the data so that the user can resubmit with new data.
     inputs = [];
 }
