@@ -6,6 +6,7 @@ Developed by Jeremy Simons
 [Link to live site](https://jeremyhsimons.github.io/CI_PP2_SavvySaver/)
 
 ## Introduction
+Many young people today enter adult life having no concept of how to manage their finances wisely. They have no experience saving money for large purchases and, in Western countries, are engulfed by one of the most consumerist cultures that has ever existed. This combination of factors means that many are adopting lifestyles that are not conducive to long-term financial stability. Savvy Saver is a website that aims to help people like this. It offers not only an easy-to-use and convenient calculator to check what their savings will be over a given period of time, but insights into their finances based on UK household cost averages and financial principles endorsed by experts.
 
 ## Contents
 * [Project Goals](#project-goals)<br>
