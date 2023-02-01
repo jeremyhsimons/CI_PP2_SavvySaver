@@ -1,13 +1,16 @@
+document.addEventListener('DOMContentLoaded', questionSetup)
+
+
 /**
  * The questions variable is an array containing the questions,
  * options, and answer for each question.
  */
 
-let questions = [
+const questions = [
 
     //Question 1
     {
-        question: 'According to financial guru Dave Ramsay, what is the maximum proportion of your income that should go towards your rent or mortgage costs?',
+        question: 'According to financial guru Dave Ramsey, what is the maximum proportion of your income that should go towards your rent or mortgage costs?',
         a: '30%',
         b: '10%',
         c: '50%',
@@ -56,11 +59,28 @@ let questions = [
     },
 ];
 
+let questionsSorted = [];
+let highScore;
+
 /**
  * A function to randomise the order of the questions before when the user
  * starts the game.
+ * 
+ * Array sorting statement found on javascript.info. Link in readme.
  */
 function questionSetup () {
+    questionsSorted = questions.sort(() => Math.random() - 0.5);
+
+    let firstQuestion = document.getElementById('first-question-text');
+    firstQuestion.innerHTML = questionsSorted[0].question;
+    let firstQuestionA = document.getElementById('1a');
+    firstQuestionA.innerHTML = questionsSorted [0].a;
+    let firstQuestionB = document.getElementById('1b');
+    firstQuestionB.innerHTML = questionsSorted [0].b;
+    let firstQuestionC = document.getElementById('1c');
+    firstQuestionC.innerHTML = questionsSorted [0].c;
+    let firstQuestionD = document.getElementById('1d');
+    firstQuestionD.innerHTML = questionsSorted [0].d;
 
 }
 
@@ -68,6 +88,13 @@ function questionSetup () {
  * A function to get and display the user's high score from session storage.
  */
 function getHighScore() {
+
+}
+
+/** A function to check that the users have checked a box for each question
+ * before they submit.
+ */
+function validateAnswers() {
 
 }
 
@@ -83,4 +110,6 @@ function checkAnswers() {
  * A function to set the user's new high score if it exceeds
  * the previous high score and store it in session storage. 
  */
+function setHighScore () {
 
+}

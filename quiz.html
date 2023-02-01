@@ -13,7 +13,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
 </head>
 <body>
     <header id="quiz-header">
@@ -28,17 +27,19 @@
             <form id="quiz">
                 <fieldset id="first-question" class="question-box">
                     <legend>Question 1</legend>
-                    <label for="first-question-option-a"></label>
+                    <p id="first-question-text"></p>
+                    <label id="1a" for="first-question-option-a"></label>
                     <input type="radio" id="first-question-option-a" name="first-question-radio" value="a">
-                    <label for="first-question-option-b"></label>
+                    <label id="1b" for="first-question-option-b"></label>
                     <input type="radio" id="first-question-option-b" name="first-question-radio" value="b">
-                    <label for="first-question-option-c"></label>
+                    <label id="1c" for="first-question-option-c"></label>
                     <input type="radio" id="first-question-option-c" name="first-question-radio" value="c">
-                    <label for="first-question-option-d"></label>
+                    <label id="1d" for="first-question-option-d"></label>
                     <input type="radio" id="first-question-option-d" name="first-question-radio" value="d">
                 </fieldset>
                 <fieldset id="second-question" class="question-box">
                     <legend>Question 2</legend>
+                    <p id="second-question-text"></p>
                     <label for="second-question-option-a"></label>
                     <input type="radio" id="second-question-option-a" name="second-question-radio" value="a">
                     <label for="second-question-option-b"></label>
@@ -50,6 +51,7 @@
                 </fieldset>
                 <fieldset id="third-question" class="question-box">
                     <legend>Question 3</legend>
+                    <p id="third-question-text"></p>
                     <label for="third-question-option-a"></label>
                     <input type="radio" id="third-question-option-a" name="third-question-radio" value="a">
                     <label for="third-question-option-b"></label>
@@ -61,6 +63,7 @@
                 </fieldset>
                 <fieldset id="fourth-question" class="question-box">
                     <legend>Question 4</legend>
+                    <p id="fourth-question-text"></p>
                     <label for="fourth-question-option-a"></label>
                     <input type="radio" id="fourth-question-option-a" name="fourth-question-radio" value="a">
                     <label for="fourth-question-option-b"></label>
@@ -72,6 +75,7 @@
                 </fieldset>
                 <fieldset id="fifth-question" class="question-box">
                     <legend>Question 5</legend>
+                    <p id="fifth-question-text"></p>
                     <label for="fifth-question-option-a"></label>
                     <input type="radio" id="fifth-question-option-a" name="fifth-question-radio" value="a">
                     <label for="fifth-question-option-b"></label>
@@ -81,8 +85,8 @@
                     <label for="fifth-question-option-d"></label>
                     <input type="radio" id="fifth-question-option-d" name="fifth-question-radio" value="d">
                 </fieldset>
-                <button id="submit" type="submit">Check Answers</button>
-                <button id="reset" type="reset">Clear Answers</button>
+                <button id="submit" type="button">Check Answers</button>
+                <button id="reset" type="reset">Try Again</button>
             </form>
         </section>
     </main>
@@ -104,7 +108,7 @@
     </footer>
 
     <!--Quiz script-->
-    <script src="quiz.js"></script>
+    <script src="assets/js/quiz.js"></script>
     <!--Fontawesome-->
     <script src="https://kit.fontawesome.com/7f6a607fdc.js" crossorigin="anonymous"></script>
 </body>
