@@ -239,9 +239,7 @@ function calcSavingChanges(actualSaving) {
 
     changeText = `<p>Additionally, with your current bank account 
                   you are only earning <strong>£${actualInterestEarned}</strong>
-                  in interest. If you wanted to achieve your savings goal by increasing
-                  interest earnings, you would need to earn 
-                  <strong>£${goalInterestEarned}.</strong> Consider changing your
+                  in interest. Consider changing your
                   bank account to get a better interest rate deal.</p>`
     addChange();
 }
@@ -414,4 +412,12 @@ function printPageResult() {
         document.body.innerHTML = pageContent;
         location.reload();
     }
+}
+
+/**
+ * A function to generate html to warn the user that printing will reset
+ * the calculator.
+ */
+function addPrintWarning() {
+
 }
