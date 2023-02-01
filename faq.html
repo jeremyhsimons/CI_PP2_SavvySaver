@@ -15,18 +15,20 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
 </head>
 <body>
-    <header>
+    <header id="faq-header">
         <h1>Frequently Asked Questions</h1>
         <h2>Your question is not answered here? Send us a message!</h2>
     </header>
     <main>
         <section id="faq-section">
-            <p>quesiton/answer 1</p>
-            <p>quesiton/answer 2</p>
-            <p>quesiton/answer 3</p>
-            <p>quesiton/answer 4</p>
-            <p>quesiton/answer 5</p>
-            <p>quesiton/answer 6</p>
+            <div id="faq-container">
+                <p>quesiton/answer 1</p>
+                <p>quesiton/answer 2</p>
+                <p>quesiton/answer 3</p>
+                <p>quesiton/answer 4</p>
+                <p>quesiton/answer 5</p>
+                <p>quesiton/answer 6</p>
+            </div>
         </section>
         <section id="contact-section">
             <form id="contact-form">
@@ -36,7 +38,7 @@
                 <label for="email">Email Address:</label>
                 <input id="email" name="email" type="text" placeholder="Email Address" required><br />
                 <label for="message">Your Message:</label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea><br />
+                <textarea name="message" id="message" cols="30" rows="7"></textarea><br />
                 <button id="contact-submit" type="submit" value="Send">Send</button>
             </form>
         </section>

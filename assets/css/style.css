@@ -103,8 +103,23 @@ footer > ul > li > a {
     text-transform: uppercase;
 }
 
-
 /*Styles for the calculator*/
+
+#faq-header {
+    background-color: #1D1B1B;
+}
+
+#faq-section {
+    background: url('../images/budget-money.jpg') no-repeat center center, #433D39;
+    background-size: 120%;
+    border: 5px solid #292d41;
+}
+
+#contact-section {
+    background: url('../images/dollar-bills.jpg')no-repeat center center, #A4C3BF;
+    background-size: 170%;
+    padding-bottom: 80px;
+}
 
 /*Calculator header style rules*/
 
