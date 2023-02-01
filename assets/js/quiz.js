@@ -1,4 +1,7 @@
-//Questions and answers data for the quiz.
+/**
+ * The questions variable is an array containing the questions,
+ * options, and answer for each question.
+ */
 
 let questions = [
 
@@ -51,4 +54,33 @@ let questions = [
         d: 'Take out a loan',
         answer: 'c',
     },
-]
+];
+
+/**
+ * A function to randomise the order of the questions before when the user
+ * starts the game.
+ */
+function questionSetup () {
+
+}
+
+/**
+ * A function to get and display the user's high score from session storage.
+ */
+function getHighScore() {
+
+}
+
+/**
+ * A function to check all the answers given by the user
+ * to see how many they got right.
+ */
+function checkAnswers() {
+
+}
+
+/**
+ * A function to set the user's new high score if it exceeds
+ * the previous high score and store it in session storage. 
+ */
+
