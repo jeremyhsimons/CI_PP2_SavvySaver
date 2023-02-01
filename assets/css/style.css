@@ -105,22 +105,6 @@ footer > ul > li > a {
 
 /*Styles for the calculator*/
 
-#faq-header {
-    background-color: #1D1B1B;
-}
-
-#faq-section {
-    background: url('../images/budget-money.jpg') no-repeat center center, #433D39;
-    background-size: 120%;
-    border: 5px solid #292d41;
-}
-
-#contact-section {
-    background: url('../images/dollar-bills.jpg')no-repeat center center, #A4C3BF;
-    background-size: 170%;
-    padding-bottom: 80px;
-}
-
 /*Calculator header style rules*/
 
 #header-calculator {
@@ -340,6 +324,60 @@ footer > ul > li > a {
 }
 
 /*Styles for the faq */
+
+#faq-header {
+    background-color: #1D1B1B;
+}
+
+#faq-section {
+    background: url('../images/budget-money.jpg') no-repeat center center, #433D39;
+    background-size: 120%;
+    border: 5px solid #292d41;
+    min-height: 300px;
+    padding-top: 25px;
+}
+
+#faq-container {
+    margin: auto;
+    background-color: #ebeecd;
+    border: 1px solid #292d41;
+    width: 90%;
+    padding: 5px;
+}
+
+#faq-container > p {
+    text-align: center;
+    color: #1D1B1B;
+    font-size: 90%;
+}
+
+#contact-section {
+    background: url('../images/dollar-bills.jpg')no-repeat center center, #A4C3BF;
+    background-size: 170%;
+    padding-bottom: 80px;
+}
+
+#contact-form {
+    background-color: #A4C3BF;
+    color: #1D1B1B;
+    width: 90%;
+    padding: 5px;
+    margin: auto;
+    border: 1px solid #1D1B1B;
+    min-height: 250px;
+}
+
+#contact-form > label {
+    font-size: 90%;
+}
+
+#contact-form > input, #contact-form > textarea {
+    font-family: Ubuntu, sans-serif;
+}
+
+#contact-form > fieldset {
+    border: 1px solid #1D1B1B;
+}
 
 /*Styles for the quiz*/
 
