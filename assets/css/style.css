@@ -350,6 +350,13 @@ fieldset {
     margin: auto;
     max-width: 500px;
     margin-top: 40px;
+    padding: 5px;
+}
+
+.question-box > p {
+    font-size: 120%;
+    color: #433D39;
+    margin-bottom: 2px;
 }
 
 .question-box > legend {
@@ -358,6 +365,13 @@ fieldset {
     color: #292d41;
 }
 
+.question-box > label {
+    color: #292d41;
+}
+
+.question-box > input {
+    color: #433D39;
+}
 /*Media Queries*/
 
 @media screen and (min-width: 600px) {

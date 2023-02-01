@@ -82,6 +82,50 @@ function questionSetup () {
     let firstQuestionD = document.getElementById('1d');
     firstQuestionD.innerHTML = questionsSorted [0].d;
 
+    let secondQuestion = document.getElementById('second-question-text');
+    secondQuestion.innerHTML = questionsSorted[1].question;
+    let secondQuestionA = document.getElementById('2a');
+    secondQuestionA.innerHTML = questionsSorted [1].a;
+    let secondQuestionB = document.getElementById('2b');
+    secondQuestionB.innerHTML = questionsSorted [1].b;
+    let secondQuestionC = document.getElementById('2c');
+    secondQuestionC.innerHTML = questionsSorted [1].c;
+    let secondQuestionD = document.getElementById('2d');
+    secondQuestionD.innerHTML = questionsSorted [1].d;
+
+    let thirdQuestion = document.getElementById('third-question-text');
+    thirdQuestion.innerHTML = questionsSorted[2].question;
+    let thirdQuestionA = document.getElementById('3a');
+    thirdQuestionA.innerHTML = questionsSorted [2].a;
+    let thirdQuestionB = document.getElementById('3b');
+    thirdQuestionB.innerHTML = questionsSorted [2].b;
+    let thirdQuestionC = document.getElementById('3c');
+    thirdQuestionC.innerHTML = questionsSorted [2].c;
+    let thirdQuestionD = document.getElementById('3d');
+    thirdQuestionD.innerHTML = questionsSorted [2].d;
+
+    let fourthQuestion = document.getElementById('fourth-question-text');
+    fourthQuestion.innerHTML = questionsSorted[3].question;
+    let fourthQuestionA = document.getElementById('4a');
+    fourthQuestionA.innerHTML = questionsSorted [3].a;
+    let fourthQuestionB = document.getElementById('4b');
+    fourthQuestionB.innerHTML = questionsSorted [3].b;
+    let fourthQuestionC = document.getElementById('4c');
+    fourthQuestionC.innerHTML = questionsSorted [3].c;
+    let fourthQuestionD = document.getElementById('4d');
+    fourthQuestionD.innerHTML = questionsSorted [3].d;
+
+    let fifthQuestion = document.getElementById('fifth-question-text');
+    fifthQuestion.innerHTML = questionsSorted[4].question;
+    let fifthQuestionA = document.getElementById('5a');
+    fifthQuestionA.innerHTML = questionsSorted [4].a;
+    let fifthQuestionB = document.getElementById('5b');
+    fifthQuestionB.innerHTML = questionsSorted [4].b;
+    let fifthQuestionC = document.getElementById('5c');
+    fifthQuestionC.innerHTML = questionsSorted [4].c;
+    let fifthQuestionD = document.getElementById('5d');
+    fifthQuestionD.innerHTML = questionsSorted [4].d;
+
 }
 
 /**
