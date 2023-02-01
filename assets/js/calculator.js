@@ -256,38 +256,36 @@ function calcSavingChanges(actualSaving) {
 function checkRecommemndations() {
 
     let html = `<p></p>`;
-    let recommendationDiv = document.getElementById('recommendations');
-    // functions to add a div child to the DOM after results are generated.
+    const recommendationDiv = document.getElementById('recommendations');
     
     function addRecommendationTitle() {
-        let recTitle = document.createElement('h2');
+        const recTitle = document.createElement('h2');
         recTitle.classList.add('rec-title');
         recTitle.innerHTML = `RECOMMENDATIONS:`;
         recommendationDiv.appendChild(recTitle);
     }
     
     function addGoodRecommendation () {
-        let recommendation = document.createElement('div');
+        const recommendation = document.createElement('div');
         recommendation.classList.add('good');
         recommendation.innerHTML = html;
         recommendationDiv.appendChild(recommendation);
     }
 
     function addOkRecommendation () {
-        let recommendation = document.createElement('div');
+        const recommendation = document.createElement('div');
         recommendation.classList.add('ok');
         recommendation.innerHTML = html;
         recommendationDiv.appendChild(recommendation);
     }
 
     function addBadRecommendation () {
-        let recommendation = document.createElement('div');
+        const recommendation = document.createElement('div');
         recommendation.classList.add('bad');
         recommendation.innerHTML = html;
         recommendationDiv.appendChild(recommendation);
     }
 
-    // A check to see if rent is under 25% of the income, or over 50%.
     let rent = inputs[1];
     let pay = inputs [0];
 
@@ -338,7 +336,6 @@ function checkRecommemndations() {
         throw `Unknown value ${utilities}`;
     }
 
-    // A check to see how high charitable giving is.
     let charity = inputs[4];
     if (charity > (pay / 10)) {
         html = `<p>Well done for being generous!
@@ -360,7 +357,6 @@ function checkRecommemndations() {
         throw `Unknown value ${charity}`;
     }
 
-    // A check to see if other expenses exceed rent/mortgage payments.
     let expense = inputs[5];
     if (expense > rent) {
         html = `<p>Your expenses currently exceed your rent/mortgage payments.
@@ -380,11 +376,9 @@ function checkRecommemndations() {
         throw `Unknown value ${expense}`;
     }
 
-    //Auto scrolls the user down to the results section of the page.
     let resultContainer = document.getElementById('result-container');
     resultContainer.scrollIntoView(top);
 
-    //clears the data so that the user can resubmit with new data.
     inputs = [];
 }
 
@@ -401,12 +395,12 @@ function clearDom() {
 /**
  * A function allowing the user to print their results
  * and save their financial insights.
+ * 
+ * This solution to printing an area of the page found
+ * at codexworld.com. Link to article in readme
  */
 
 function printPageResult() {
-//Original function just used window.print().
-//This more elegant solution was found on
-//codexworld.com. Link to article in readme.
     let printContent = document.getElementById('result-container').innerHTML;
     let pageContent = document.body.innerHTML;
     document.body.innerHTML = printContent;
