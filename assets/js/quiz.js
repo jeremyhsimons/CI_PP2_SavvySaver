@@ -148,40 +148,16 @@ function getHighScore() {
  * Document querySelector method found on GeeksforGeeks. Link in readme.
  */
 function validateAnswers() {
-    let firstCheck = document.querySelector('input[name = "first-question-radio"]:checked');
-    if (firstCheck === null) {
-        alert('You have left a blank answer. Please answer all questions before checking your answers.');
-    } else {
-        console.log('first question OK');
-    }
 
-    let secondCheck = document.querySelector('input[name = "second-question-radio"]:checked');
-    if (secondCheck === null) {
-        alert('You have left a blank answer. Please answer all questions before checking your answers.');
-    } else {
-        console.log('second question OK');
+    for (let i = 0; i <= 4; i++) {
+        let checkValid = document.querySelector(`input[name = "${i}"]:checked`);
+        if (checkValid === null) {
+            alert('You have left a blank answer. Please answer all questions before checking your answers.');
+        } else {
+            console.log(`Valid answer ${i + 1}`);
+        }
     }
-
-    let thirdCheck = document.querySelector('input[name = "third-question-radio"]:checked');
-    if (thirdCheck === null) {
-        alert('You have left a blank answer. Please answer all questions before checking your answers.');
-    } else {
-        console.log('third question OK');
-    }
-
-    let fourthCheck = document.querySelector('input[name = "fourth-question-radio"]:checked');
-    if (fourthCheck === null) {
-        alert('You have left a blank answer. Please answer all questions before checking your answers.');
-    } else {
-        console.log('fourth question OK');
-    }
-
-    let fifthCheck = document.querySelector('input[name = "fifth-question-radio"]:checked');
-    if (fifthCheck === null) {
-        alert('You have left a blank answer. Please answer all questions before checking your answers.');
-    } else {
-        console.log('fifth question OK');
-    }
+    
 }
 
 /**
@@ -189,6 +165,12 @@ function validateAnswers() {
  * to see how many they got right.
  */
 function checkAnswers() {
+    let ansCheckOne = document.querySelector('input[name = "first-question-radio"]:checked');
+    if (ansCheckOne.value === questionsSorted[0].answer) {
+        console.log('Hooray you got q1 right');
+    } else {
+        console.log('Uh oh... You got q1 wrong');
+    }
 
 }
 
