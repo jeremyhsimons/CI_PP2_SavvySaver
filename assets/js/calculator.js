@@ -65,7 +65,6 @@ function getInputs(event) {
 
     clearDom();
     validateInputs(inputs)
-
 }
 
 /**
@@ -306,7 +305,7 @@ function checkRecommemndations() {
             do not exceed 25% of your take-home pay.</p>`;
         addRecommendationTitle();
         addOkRecommendation();
-        console.log("ok rent")
+        console.log("ok rent");
     } else if (rent > pay / 2) {
         html = `<p>Your rent/mortgage is VERY high. 
             It's recommended that your accommodation payments do not exceed 
@@ -314,13 +313,13 @@ function checkRecommemndations() {
             or increase your income as soon as possible.</p>`;
         addRecommendationTitle();
         addBadRecommendation();
-        console.log("bad rent")
+        console.log("bad rent");
     } else if (rent < pay / 4 || rent === 0) {
         html = `<p>Your rent/mortgage payments are 
             healthy proportional to your income.</p>`;
         addRecommendationTitle();
         addGoodRecommendation();
-        console.log("good rent")
+        console.log("good rent");
     } else {
         alert(`Unknown value ${rent} Please fill in the form and try again.`);
         inputs = [];
@@ -375,7 +374,7 @@ function checkRecommemndations() {
             If you want to save money more effectively 
             you need to look for ways to cut back on your monthly costs.</p>`
         addBadRecommendation();
-        console.log("bad expense")
+        console.log("bad expense");
     } else if (expense <= rent || expense === 0) {
         html = `<p>Your expenses are currently at a healthy level proportional
         to your rent/mortgage payments.</p>`;
