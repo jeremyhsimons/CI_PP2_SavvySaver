@@ -19,13 +19,10 @@ document.addEventListener("DOMContentLoaded", function fillForm() {
 let calculate = document.getElementById('calc-submit');
 calculate.addEventListener('click', getInputs);
 
-//Reset form
-let resetForm = document.getElementById('reset-form');
-resetForm.addEventListener('click', clearDom);
-
 //Print results
 let printResult = document.getElementById('print');
 printResult.addEventListener('click', printPageResult);
+printResult.addEventListener('mouseover', addPrintWarning)
 
 //Global scope variables
 let inputs = [];
@@ -405,44 +402,16 @@ function clearDom() {
  */
 
 function printPageResult() {
-
     let resultsCheck = document.getElementById('results');
 
     if (resultsCheck.innerHTML === "" || resultsCheck.innerHTML === null || resultsCheck.innerHTML === undefined) {
         alert('You cannot print now. You have not generated any results. Please click the calculate button before printing.')
     } else {
-
         const printContent = document.getElementById('result-container').innerHTML;
         const pageContent = document.body.innerHTML;
         document.body.innerHTML = printContent;
         window.print();
         document.body.innerHTML = pageContent;
-
-        const incomeField = document.getElementById('income');
-        incomeField.value = inputsStored[0];
-
-        const rentField = document.getElementById('rent');
-        rentField.value = inputsStored[1];
-
-        const carField = document.getElementById('car');
-        carField.value = inputsStored[2];
-
-        const utilitiesField = document.getElementById('utilities');
-        utilitiesField.value = inputsStored[3];
-
-        const charityField = document.getElementById('charity');
-        charityField.value = inputsStored[4];
-
-        const expenseField = document.getElementById('expense');
-        expenseField.value = inputsStored[5];
-
-        const interestField = document.getElementById('interest');
-        interestField.value = inputsStored[6];
-
-        const monthsField = document.getElementById('months');
-        monthsField.value = inputsStored[7];
-
-        const goalField = document.getElementById('goal');
-        goalField.value = inputsStored[8];
+        location.reload();
     }
 }
