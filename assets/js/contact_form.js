@@ -8,15 +8,18 @@ document.getElementById('contact-form')
 
    btn.value = 'Sending...';
 
-   const serviceID = 'default_service';
+   const serviceID = 'service_pggv7y7';
    const templateID = 'template_5frzz6d';
+   const templateParams = {
+    from_name : document.getElementById('full-name').value,
+    email_id : document.getElementById('email').value,
+    message : document.getElementById('message').value
+   }
 
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
+   emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'd9-fGM2Z78DfQCMYa')
+   .then(function() {
+      console.log('SUCCESS!');
+   }, function() {
+      console.log('FAILED...');
+   });
 });
