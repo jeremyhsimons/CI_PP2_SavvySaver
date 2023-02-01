@@ -144,10 +144,44 @@ function getHighScore() {
 
 /** A function to check that the users have checked a box for each question
  * before they submit.
+ * 
+ * Document querySelector method found on GeeksforGeeks. Link in readme.
  */
 function validateAnswers() {
-    
+    let firstCheck = document.querySelector('input[name = "first-question-radio"]:checked');
+    if (firstCheck === null) {
+        alert('You have left a blank answer. Please answer all questions before checking your answers.');
+    } else {
+        console.log('first question OK');
+    }
 
+    let secondCheck = document.querySelector('input[name = "second-question-radio"]:checked');
+    if (secondCheck === null) {
+        alert('You have left a blank answer. Please answer all questions before checking your answers.');
+    } else {
+        console.log('second question OK');
+    }
+
+    let thirdCheck = document.querySelector('input[name = "third-question-radio"]:checked');
+    if (thirdCheck === null) {
+        alert('You have left a blank answer. Please answer all questions before checking your answers.');
+    } else {
+        console.log('third question OK');
+    }
+
+    let fourthCheck = document.querySelector('input[name = "fourth-question-radio"]:checked');
+    if (fourthCheck === null) {
+        alert('You have left a blank answer. Please answer all questions before checking your answers.');
+    } else {
+        console.log('fourth question OK');
+    }
+
+    let fifthCheck = document.querySelector('input[name = "fifth-question-radio"]:checked');
+    if (fifthCheck === null) {
+        alert('You have left a blank answer. Please answer all questions before checking your answers.');
+    } else {
+        console.log('fifth question OK');
+    }
 }
 
 /**
@@ -171,5 +205,6 @@ function setHighScore () {
  * so that the user can try the quiz again.
  */
 function clearAnswers() {
+    setHighScore();
     location.reload();
 }
