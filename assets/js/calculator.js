@@ -245,7 +245,6 @@ function calcSavingChanges(actualSaving) {
 
     // code to check what interest they have earned vs what interest they need to earn
     // to achieve their savings goal.
-    let goalInterestEarned = (goalTotal - (inputs[7] * monthlySum)) / 1000;
     let actualInterestEarned = actualSaving - (inputs[7] * monthlySum) / 1000 ;
     // Brian Ustas code.
     actualInterestEarned = Math.round((actualInterestEarned + Number.EPSILON) * 100) / 100;
