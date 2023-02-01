@@ -405,38 +405,44 @@ function clearDom() {
  */
 
 function printPageResult() {
-    const printContent = document.getElementById('result-container').innerHTML;
-    const pageContent = document.body.innerHTML;
-    document.body.innerHTML = printContent;
-    window.print();
-    document.body.innerHTML = pageContent;
 
-    const incomeField = document.getElementById('income');
-    incomeField.value = inputsStored[0];
+    let resultsCheck = document.getElementById('results');
 
-    const rentField = document.getElementById('rent');
-    rentField.value = inputsStored[1];
+    if (resultsCheck.innerHTML === "" || resultsCheck.innerHTML === null || resultsCheck.innerHTML === undefined) {
+        alert('You cannot print now. You have not generated any results. Please click the calculate button before printing.')
+    } else {
 
-    const carField = document.getElementById('car');
-    carField.value = inputsStored[2];
+        const printContent = document.getElementById('result-container').innerHTML;
+        const pageContent = document.body.innerHTML;
+        document.body.innerHTML = printContent;
+        window.print();
+        document.body.innerHTML = pageContent;
 
-    const utilitiesField = document.getElementById('utilities');
-    utilitiesField.value = inputsStored[3];
+        const incomeField = document.getElementById('income');
+        incomeField.value = inputsStored[0];
 
-    const charityField = document.getElementById('charity');
-    charityField.value = inputsStored[4];
+        const rentField = document.getElementById('rent');
+        rentField.value = inputsStored[1];
 
-    const expenseField = document.getElementById('expense');
-    expenseField.value = inputsStored[5];
+        const carField = document.getElementById('car');
+        carField.value = inputsStored[2];
 
-    const interestField = document.getElementById('interest');
-    interestField.value = inputsStored[6];
+        const utilitiesField = document.getElementById('utilities');
+        utilitiesField.value = inputsStored[3];
 
-    const monthsField = document.getElementById('months');
-    monthsField.value = inputsStored[7];
+        const charityField = document.getElementById('charity');
+        charityField.value = inputsStored[4];
 
-    const goalField = document.getElementById('goal');
-    goalField.value = inputsStored[8];
+        const expenseField = document.getElementById('expense');
+        expenseField.value = inputsStored[5];
 
-    //getInputs()
+        const interestField = document.getElementById('interest');
+        interestField.value = inputsStored[6];
+
+        const monthsField = document.getElementById('months');
+        monthsField.value = inputsStored[7];
+
+        const goalField = document.getElementById('goal');
+        goalField.value = inputsStored[8];
+    }
 }
