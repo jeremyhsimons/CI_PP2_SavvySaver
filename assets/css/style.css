@@ -326,6 +326,38 @@ footer > ul > li > a {
 
 /*Styles for the faq */
 
+/*Styles for the quiz*/
+
+#quiz-header {
+    background-color: #1d1b1b;
+}
+
+#quiz-section {
+    background-color: #ebeecd;
+    padding-bottom: 100px;
+    padding-top: 30px;
+}
+
+#high-score > p {
+    text-align: center;
+    font-weight: 700;
+    font-size: 120%;
+    color: #433D39;
+}
+
+fieldset {
+    border: 3px solid #292d41;
+    margin: auto;
+    max-width: 500px;
+    margin-top: 40px;
+}
+
+.question-box > legend {
+    font-size: 120%;
+    font-weight: 700;
+    color: #292d41;
+}
+
 /*Media Queries*/
 
 @media screen and (min-width: 600px) {
