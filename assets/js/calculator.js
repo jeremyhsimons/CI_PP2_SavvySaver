@@ -1,5 +1,4 @@
 //Event listener to pre-populate the calculator form when the DOM loads.
-
 document.addEventListener("DOMContentLoaded", function fillForm() {
     let fields = document.getElementsByTagName('input');
     let placeholders = [1500, 200, 50, 100, 150, 300, 1, 12, 8000];
@@ -14,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function fillForm() {
     fields[7].value = placeholders[7];
     fields[8].value = placeholders[8];
 })
+
 //EVENT LISTENERS
 //Form submission
 let calculate = document.getElementById('calc-submit');
@@ -27,7 +27,9 @@ resetForm.addEventListener('click', clearDom);
 let printResult = document.getElementById('print');
 printResult.addEventListener('click', printPageResult);
 
+//Global scope variables
 let inputs = [];
+let inputsStored = [];
 
 /**
  * A function to get all the user's inputs from the form and store them
@@ -379,6 +381,8 @@ function checkRecommemndations() {
     let resultContainer = document.getElementById('result-container');
     resultContainer.scrollIntoView(top);
 
+    inputsStored = inputs;
+    console.log(inputsStored);
     inputs = [];
 }
 
@@ -401,17 +405,38 @@ function clearDom() {
  */
 
 function printPageResult() {
-    let printContent = document.getElementById('result-container').innerHTML;
-    let pageContent = document.body.innerHTML;
+    const printContent = document.getElementById('result-container').innerHTML;
+    const pageContent = document.body.innerHTML;
     document.body.innerHTML = printContent;
     window.print();
     document.body.innerHTML = pageContent;
-}
 
-/**
- * A function to refill the form with the users
- * data when they close the print dialog.
- */
-function retainData() {
+    const incomeField = document.getElementById('income');
+    incomeField.value = inputsStored[0];
 
+    const rentField = document.getElementById('rent');
+    rentField.value = inputsStored[1];
+
+    const carField = document.getElementById('car');
+    carField.value = inputsStored[2];
+
+    const utilitiesField = document.getElementById('utilities');
+    utilitiesField.value = inputsStored[3];
+
+    const charityField = document.getElementById('charity');
+    charityField.value = inputsStored[4];
+
+    const expenseField = document.getElementById('expense');
+    expenseField.value = inputsStored[5];
+
+    const interestField = document.getElementById('interest');
+    interestField.value = inputsStored[6];
+
+    const monthsField = document.getElementById('months');
+    monthsField.value = inputsStored[7];
+
+    const goalField = document.getElementById('goal');
+    goalField.value = inputsStored[8];
+
+    //getInputs()
 }
