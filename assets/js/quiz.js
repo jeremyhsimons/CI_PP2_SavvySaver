@@ -67,7 +67,8 @@ const questions = [
 ];
 
 let questionsSorted = [];
-let highScore;
+let highScore = 0;
+let currentScore = 0;
 
 /**
  * A function to randomise the order of the questions before when the user
@@ -157,7 +158,8 @@ function validateAnswers() {
             console.log(`Valid answer ${i + 1}`);
         }
     }
-    
+
+    checkAnswers();
 }
 
 /**
@@ -165,13 +167,17 @@ function validateAnswers() {
  * to see how many they got right.
  */
 function checkAnswers() {
-    let ansCheckOne = document.querySelector('input[name = "first-question-radio"]:checked');
-    if (ansCheckOne.value === questionsSorted[0].answer) {
-        console.log('Hooray you got q1 right');
-    } else {
-        console.log('Uh oh... You got q1 wrong');
-    }
 
+    for(let k = 0; k <= 4; k++) {
+        let ansCheck = document.querySelector(`input[name = "${k}"]:checked`);
+        if (ansCheck.value === questionsSorted[k].answer) {
+            console.log(`Hooray you got question ${k + 1} right`);
+            currentScore += 1;
+        } else {
+            console.log(`Uh oh... You got question ${k + 1} wrong. The correct answer was ${questionsSorted[k].answer}`);
+        }
+    }
+    console.log(currentScore);
 }
 
 /**
