@@ -371,8 +371,13 @@ footer > ul > li > a {
     font-size: 90%;
 }
 
-#contact-form > input, #contact-form > textarea {
-    font-family: Ubuntu, sans-serif;
+#full-name, #email {
+    max-width: 40%;
+}
+
+#message {
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 #contact-form > fieldset {
