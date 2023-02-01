@@ -352,7 +352,7 @@ footer > ul > li > a {
 }
 
 #contact-section {
-    background: url('../images/dollar-bills.jpg')no-repeat center center, #A4C3BF;
+    background: url('../images/dollar-bills.jpg')no-repeat center center, #433D39;
     background-size: 170%;
     padding-bottom: 80px;
 }
@@ -365,6 +365,7 @@ footer > ul > li > a {
     margin: auto;
     border: 1px solid #1D1B1B;
     min-height: 250px;
+    text-align: center;
 }
 
 #contact-form > label {
@@ -373,15 +374,27 @@ footer > ul > li > a {
 
 #full-name, #email {
     max-width: 40%;
+    padding: 5px;
+    border: 1px solid #433D39;
 }
 
 #message {
     margin-top: 10px;
     margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid #433D39;
 }
 
 #contact-form > fieldset {
     border: 1px solid #1D1B1B;
+}
+
+#contact-submit {
+    padding: 5px;
+    border: 2px solid #433D39;
+    background-color: #ebeecd;
+    color: #1D1B1B;
+    font-weight: 700;
 }
 
 /*Styles for the quiz*/
