@@ -22,7 +22,8 @@ calculate.addEventListener('click', getInputs);
 //Print results
 let printResult = document.getElementById('print');
 printResult.addEventListener('click', printPageResult);
-printResult.addEventListener('mouseover', addPrintWarning)
+printResult.onmouseenter = addPrintWarning();
+printResult.onmouseleave = removePrintWarning();
 
 //Global scope variables
 let inputs = [];
@@ -419,5 +420,16 @@ function printPageResult() {
  * the calculator.
  */
 function addPrintWarning() {
+    const warningHtml = `<p>Are you sure you want to print? Printing results will reset the form.
+                        Make sure you have finished filling the form in before printing</p>`;
+    const warningDiv = document.createElement('div');
+    warningDiv.classList.add('warning-div');
+    warningDiv.innerHTML = warningHtml
+    const calcForm = document.getElementById('calculator-form');
+    calcForm.appendChild(warningDiv);
+}
 
+function removePrintWarning() {
+    const warningDiv = document.getElementsByClassName('warning-div') [0];
+    warningDiv.remove();
 }
