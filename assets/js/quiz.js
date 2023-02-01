@@ -1,4 +1,11 @@
+// Quiz event listeners
 document.addEventListener('DOMContentLoaded', questionSetup)
+
+let submitAnswers = document.getElementById('submit');
+submitAnswers.addEventListener('click', validateAnswers);
+
+let tryAgain = document.getElementById('reset')
+tryAgain.addEventListener('click', clearAnswers)
 
 
 /**
@@ -139,6 +146,7 @@ function getHighScore() {
  * before they submit.
  */
 function validateAnswers() {
+    
 
 }
 
@@ -156,4 +164,12 @@ function checkAnswers() {
  */
 function setHighScore () {
 
+}
+
+/**
+ * A function to clear the correct/incorrect feedback html
+ * so that the user can try the quiz again.
+ */
+function clearAnswers() {
+    location.reload();
 }

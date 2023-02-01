@@ -369,9 +369,6 @@ fieldset {
     color: #292d41;
 }
 
-.question-box > input {
-    color: #433D39;
-}
 /*Media Queries*/
 
 @media screen and (min-width: 600px) {
