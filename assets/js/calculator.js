@@ -22,8 +22,21 @@ calculate.addEventListener('click', getInputs);
 //Print results
 let printResult = document.getElementById('print');
 printResult.addEventListener('click', printPageResult);
-printResult.onmouseenter = addPrintWarning();
-printResult.onmouseleave = removePrintWarning();
+
+printResult.addEventListener('mouseover', function() {
+    const warningHtml = `<p>Are you sure you want to print? Printing results will reset the form.
+                        Make sure you have finished filling the form in before printing</p>`;
+    const warningDiv = document.createElement('div');
+    warningDiv.classList.add('warning-div');
+    warningDiv.innerHTML = warningHtml
+    const calcForm = document.getElementById('calculator-form');
+    calcForm.appendChild(warningDiv);
+});
+
+printResult.addEventListener('mouseout', function() {
+    const warningDiv = document.getElementsByClassName('warning-div') [0];
+    warningDiv.remove();
+});
 
 //Global scope variables
 let inputs = [];
@@ -413,23 +426,4 @@ function printPageResult() {
         document.body.innerHTML = pageContent;
         location.reload();
     }
-}
-
-/**
- * A function to generate html to warn the user that printing will reset
- * the calculator.
- */
-function addPrintWarning() {
-    const warningHtml = `<p>Are you sure you want to print? Printing results will reset the form.
-                        Make sure you have finished filling the form in before printing</p>`;
-    const warningDiv = document.createElement('div');
-    warningDiv.classList.add('warning-div');
-    warningDiv.innerHTML = warningHtml
-    const calcForm = document.getElementById('calculator-form');
-    calcForm.appendChild(warningDiv);
-}
-
-function removePrintWarning() {
-    const warningDiv = document.getElementsByClassName('warning-div') [0];
-    warningDiv.remove();
 }
