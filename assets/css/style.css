@@ -196,6 +196,16 @@ footer > ul > li > a {
     margin-bottom: 10px;
 }
 
+.warning-div {
+    max-height: 100px;
+    max-width: 250px;
+    background-color: lightgoldenrodyellow;
+    border: 2px solid orange;
+    color: maroon;
+    padding: 5px;
+    margin: auto;
+}
+
 /*Results section style rules*/
 
 #clear-div {
