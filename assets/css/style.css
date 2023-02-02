@@ -578,9 +578,20 @@ fieldset {
 /*Media Queries*/
 
 @media screen and (min-width: 600px) {
+    /* General */
+
+    footer > ul > li {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
     /* Home */
 
     /* Calculator */
+
+    #calculator-form {
+        text-align: center;
+    }
 
     /* FAQ */
 
@@ -603,6 +614,11 @@ fieldset {
 
     footer > ul > li {
         font-size: 150%;
+    }
+
+    footer > ul > li {
+        margin-left: 75px;
+        margin-right: 75px;
     }
 
     /* Home */
