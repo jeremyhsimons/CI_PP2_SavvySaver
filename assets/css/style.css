@@ -540,6 +540,25 @@ fieldset {
 
 /* styles for 404 page */
 
+#header-error {
+    background-color: #1D1B1B;
+    text-align: center;
+}
+
+#main-error {
+    background: url('../images/burn-money.jpg') no-repeat center center, #433D39;
+}
+
+#home-link {
+    max-width: 200px;
+    color: #A4C3BF;
+}
+
+#home-link:hover {
+    color: #ebeecd;
+    text-decoration: underline;
+}
+
 /*Media Queries*/
 
 @media screen and (min-width: 600px) {
