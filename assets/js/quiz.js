@@ -214,7 +214,6 @@ function checkAnswers() {
             console.log(`Uh oh... You got question ${k + 1} wrong. The correct answer was ${questionsSorted[k].answer}`);
         }
     }
-    setHighScore();
 }
 
 /**
@@ -236,5 +235,6 @@ function setHighScore () {
  * so that the user can try the quiz again.
  */
 function clearAnswers() {
+    setHighScore();
     location.reload();
 }
