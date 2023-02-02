@@ -521,5 +521,11 @@ fieldset {
     #quiz {
         border: 2px solid #292d41;
         padding: 10px;
+        background-color: #ebeecd;
+    }
+
+    #quiz-section {
+        background: url('../images/dollar-bills.jpg') top center, #A4C3BF;
+        background-size: 200%;
     }
 }
