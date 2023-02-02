@@ -156,9 +156,11 @@ function getHighScore() {
  */
 function displayHighScore() {
     let scoreNumber = `<p>${highScore}</p>`;
-    const scoreDiv = document.createElement('div')
+    const scoreDiv = document.createElement('div');
+    scoreDiv.classList.add('high-score-number');
+    scoreDiv.innerHTML = scoreNumber;
     const scoreContainer = document.getElementById('high-score');
-    scoreDiv.appendChild(scoreNumber);
+    scoreContainer.appendChild(scoreDiv);
 }
 
 /** A function to check that the users have checked a box for each question
