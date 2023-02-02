@@ -5,6 +5,7 @@ btn.addEventListener('click', sendMail);
 
 function sendMail() {
    btn.innerHTML = "Sending"
+   btn.style.backgroundColor = "#A4C3BF"
    const serviceID = 'service_pggv7y7';
    const templateID = 'template_5frzz6d';
    const templateParams = {

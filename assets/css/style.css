@@ -409,11 +409,40 @@ footer > ul > li > a {
     padding-top: 30px;
 }
 
+#quiz {
+    max-width: 500px;
+    margin: auto;
+}
+
+#high-score {
+    
+}
+
 #high-score > p {
     text-align: center;
     font-weight: 700;
     font-size: 120%;
-    color: #433D39;
+    color: #292d41;
+    background-color: #A4C3BF;
+    border: 2px solid #292d41;
+    max-width: 500px;
+}
+
+.high-score-number {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #1D1B1B;
+    color: #A4C3BF;
+    background-color: #433D39;
+    margin: auto;
+}
+
+.high-score-number > p {
+    font-size: 250%;
+    text-align: center;
+    margin-top: 30%;
+    font-weight: 700;
 }
 
 fieldset {
@@ -440,6 +469,21 @@ fieldset {
     color: #292d41;
 }
 
+#quiz > button {
+    background-color: #A4C3BF;
+    color: #1D1B1B;
+    border: 1px solid #1D1B1B;
+    padding: 5px;
+    margin: 20px;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 100%;
+}
+
+#quiz > button:hover {
+    border: 5px solid #433D39;
+}
+
 /*Media Queries*/
 
 @media screen and (min-width: 600px) {
@@ -451,5 +495,12 @@ fieldset {
     .data-field-left{
         float: right;
         width: 40%;
+    }
+
+    /*Quiz*/
+
+    #quiz {
+        border: 2px solid #292d41;
+        padding: 10px;
     }
 }
