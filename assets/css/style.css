@@ -652,6 +652,20 @@ fieldset {
         max-height: 30vh;
     }
 
+    #header-calculator-container {
+        max-width: 700px;
+        max-height: 500px;
+        padding: 30px;
+    }
+
+    #header-calculator-container > h1 {
+        font-size: 250%;
+    }
+
+    #header-calculator-container {
+        font-size: 160%;
+    }
+
     #form-container > h3 {
         font-size: 200%;
     }
@@ -665,5 +679,79 @@ fieldset {
         max-width: 300px;
         max-height: 150px;
         text-align: center;
+    }
+
+    .results-main {
+        margin: auto;
+        max-width: 700px;
+        background-color: #292d41;
+        color: #ebeecd;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .results-main > h2 {
+        font-size: 300%;
+    }
+    
+    .results-main > ul > li {
+        font-size: 120%;
+    }
+    
+    .results-main > p {
+        text-decoration: underline;
+        font-size: 120%;
+    }
+    
+    .change-title {
+        font-size: 200%;
+    }
+    
+    .change-text {
+        font-size: 120%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        max-width: 500px;
+        padding: 30px;
+    }
+
+    .good, .bad, .ok {
+        width: 500px;
+        font-size: 120%;
+    }
+
+    /* FAQ */
+
+    #faq-header > h1 {
+        font-size: 400%;
+    }
+
+    #faq-header > h2 {
+        font-size: 200%;
+    }
+
+    #faq-container {
+        max-width: 600px;
+    }
+
+    #contact-section {
+        padding-top: 30px;
+    }
+
+    #contact-form {
+        max-width: 700px;
+        padding: 30px;
+    }
+
+    #contact-form > h3 {
+        font-size: 200%;
+    }
+
+    #contact-form > p {
+        font-size: 150%;
+    }
+
+    #contact-form > fieldset {
+        padding: 20px;
     }
 }
