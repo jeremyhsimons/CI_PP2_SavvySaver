@@ -563,11 +563,15 @@ fieldset {
 
 #main-error {
     background: url('../images/burn-money.jpg') no-repeat center center, #433D39;
+    height: 100%;
 }
 
 #home-link {
     max-width: 200px;
     color: #A4C3BF;
+    font-size: 400%;
+    text-align: center;
+    padding-top: 30%;
 }
 
 #home-link:hover {
@@ -632,8 +636,9 @@ fieldset {
     }
 
     #instructions {
-        height: 40vh;
-        padding-top: 50px;
+        height: 50vh;
+        padding-top: 80px;
+        background-size: 90%;
     }
 
     #start-button {
