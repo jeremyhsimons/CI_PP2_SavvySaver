@@ -143,7 +143,7 @@ function questionSetup () {
  */
 function getHighScore() {
     let checkHighScore = sessionStorage.getItem('highscore');
-    if (checkHighScore === undefined) {
+    if (checkHighScore === undefined || checkHighScore === null) {
         highScore = 0;
     } else{
         highScore = checkHighScore;
