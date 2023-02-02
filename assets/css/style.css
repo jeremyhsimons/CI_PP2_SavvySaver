@@ -49,6 +49,7 @@ footer > ul > li {
     padding: 3%;
     color: #ebeecd;
     display: inline;
+    font-size: 110%;
 }
 
 footer > ul > li:hover {
@@ -74,18 +75,22 @@ footer > ul > li > a {
 #instructions {
     width: 100%;
     background: url(../images/coin-jar.jpg) no-repeat top center, #1D1B1B;
-    background-size: cover;
-    height: 100vh;
+    background-size: 200%;
+    background-position: top -50px;
+    height: 70vh;
     padding-top: 10%;
+    padding-bottom: 10%;
+    max-height: 100%;
 }
 
 .instruction {
     margin: auto;
     background-color: #433D39;
     text-align: center;
-    margin-bottom: 20px;
-    padding: 5%;
+    margin-bottom: 40px;
+    padding: 2% 5% 2% 5%;
     max-width: 250px;
+    max-height: 250px;
 }
 
 .instruction > p {
@@ -93,11 +98,21 @@ footer > ul > li > a {
     font-size: 150%;
 }
 
+#start-section {
+    background-color: #1D1B1B;
+    height: 20vh;
+    padding: 20px;
+    padding-bottom: 50px;
+
+}
+
 #start-button {
     margin: auto;
     background-color: #433D39;
-    width: 170px;
-    padding: 2%;
+    max-width: 120px;
+    padding: 5% 2% 0.5% 2%;
+    height: 40px;
+    text-align: center;
 }
 
 #start-button:hover {
@@ -107,9 +122,10 @@ footer > ul > li > a {
 #start-button > a {
     text-decoration: none;
     color: #A4C3BF;
-    text-align: center;
-    font-size: 160%;
+    font-size: 100%;
     text-transform: uppercase;
+    font-weight: 700;
+    margin: auto;
 }
 
 /*Styles for the calculator*/
