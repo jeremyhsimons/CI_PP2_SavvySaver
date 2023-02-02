@@ -93,11 +93,9 @@ footer > ul > li > a {
     background-color: #433D39;
     width: 170px;
     padding: 2%;
-    margin: 10px;
 }
 
 #start-button:hover {
-    margin: 8px;
     border: 2px solid #ebeecd;
 }
 
@@ -142,6 +140,7 @@ footer > ul > li > a {
 #form-section {
     background-color: #433D39;
     padding: 2%;
+    border-top;
 }
 
 #form-container {
@@ -149,6 +148,7 @@ footer > ul > li > a {
     border: 2px solid #A4C3BF;
     padding: 2%;
     margin: auto;
+    max-width: 600px;
 }
 
 #form-container > p {
@@ -181,6 +181,10 @@ footer > ul > li > a {
     font-size: 110%;
 }
 
+#calculator-form > input:hover {
+    border: 2px solid #ebeecd;
+}
+
 #calculator-form > label {
     color: #ebeecd;
     font-size: 100%;
@@ -203,6 +207,12 @@ footer > ul > li > a {
     border: 3px solid #433D39;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+#calculator-form > button:hover {
+    background-color: #1D1B1B;
+    color: #ebeecd;
+    border: 3px solid #A4C3BF;
 }
 
 .warning-div {
