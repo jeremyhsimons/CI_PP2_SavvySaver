@@ -52,9 +52,8 @@ footer > ul > li {
     font-size: 110%;
 }
 
-footer > ul > li:hover {
-    text-decoration: underline;
-    font-weight: 700;
+footer > ul > li > a:hover {
+    color: aquamarine;
 }
 
 footer > ul > li > a {
@@ -596,4 +595,15 @@ fieldset {
         background: url('../images/dollar-bills.jpg') top center, #A4C3BF;
         background-size: 200%;
     }
+}
+
+@media screen and (min-width: 900px) {
+    /* General */
+
+    footer > ul > li {
+        font-size: 150%;
+    }
+
+    /* Home */
+
 }
