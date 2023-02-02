@@ -251,6 +251,7 @@ footer > ul > li > a {
     color: maroon;
     padding: 5px;
     margin: auto;
+    text-align: center;
 }
 
 /*Results section style rules*/
@@ -629,5 +630,24 @@ fieldset {
         font-size: 150%;
     }
 
+    /*Calculator*/
 
+    #header-calculator {
+        max-height: 30vh;
+    }
+
+    #form-container > h3 {
+        font-size: 200%;
+    }
+
+    #calculator-form {
+        font-size: 120%;
+        padding-bottom: 100px;
+    }
+
+    .warning-div {
+        max-width: 300px;
+        max-height: 150px;
+        text-align: center;
+    }
 }
