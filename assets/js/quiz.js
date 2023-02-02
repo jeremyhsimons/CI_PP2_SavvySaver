@@ -1,11 +1,13 @@
 // Quiz event listeners
-document.addEventListener('DOMContentLoaded', questionSetup)
+document.addEventListener('DOMContentLoaded', questionSetup);
+
+document.addEventListener('DOMContentLoaded', getHighScore);
 
 let submitAnswers = document.getElementById('submit');
 submitAnswers.addEventListener('click', validateAnswers);
 
-let tryAgain = document.getElementById('reset')
-tryAgain.addEventListener('click', clearAnswers)
+let tryAgain = document.getElementById('reset');
+tryAgain.addEventListener('click', clearAnswers);
 
 
 /**
@@ -140,14 +142,23 @@ function questionSetup () {
  * A function to get and display the user's high score from session storage.
  */
 function getHighScore() {
-
+    let checkHighScore = sessionStorage.getItem('highscore');
+    if (checkHighScore === undefined) {
+        highScore = 0;
+    } else{
+        highScore = checkHighScore;
+    }
+    displayHighScore();
 }
 
 /**
  * A function that displays the user's high score when
  */
 function displayHighScore() {
-
+    let scoreNumber = `<p>${highScore}</p>`;
+    const scoreDiv = document.createElement('div')
+    const scoreContainer = document.getElementById('high-score');
+    scoreDiv.appendChild(scoreNumber);
 }
 
 /** A function to check that the users have checked a box for each question
