@@ -215,6 +215,8 @@ function checkAnswers() {
             console.log(`Uh oh... You got question ${k + 1} wrong. The correct answer was ${questionsSorted[k].answer}`);
         }
     }
+    let pageTop = document.getElementById('high-score');
+    pageTop.scrollIntoView(top);
 }
 
 /**

@@ -93,6 +93,12 @@ footer > ul > li > a {
     background-color: #433D39;
     width: 170px;
     padding: 2%;
+    margin: 10px;
+}
+
+#start-button:hover {
+    margin: 8px;
+    border: 2px solid #ebeecd;
 }
 
 #start-button > a {
