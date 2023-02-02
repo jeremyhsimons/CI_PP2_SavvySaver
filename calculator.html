@@ -27,25 +27,27 @@
                 <p> Hit 'calculate' to generate a personalised report on your finances. Please note: all reports will be generated in pounds sterling.</p><br>
                 <h3>Monthly:</h3>
                 <form id="calculator-form">
-                    <label for="income" class="data-field-left">Take home pay:</label>
-                    <input id="income" class="data-field-left" name="income" type="number" step="0.01" value="0" required><br><br>
-                    <label for="rent" class="data-field-left">Rent/Mortgage:</label>
-                    <input id="rent" class="data-field-left" name="rent" type="number" step="0.01" value="0" required><br><br>
-                    <label for="car" class="data-field-left">Car Costs:</label>
-                    <input id="car" class="data-field-left" name="car" type="number" step="0.01" value="0" required><br><br>
-                    <label for="utilities" class="data-field-left">Utilities</label>
-                    <input id="utilities" class="data-field-left" name="utilities" type="number" step="0.01" value="0" required><br><br>
-                    <label for="charity" class="data-field-left">Charitable Giving:</label>
-                    <input id="charity" class="data-field-left" name="charity" type="number" step="0.01" value="0" required><br><br>
-                    <label for="expense" class="data-field-right">Other Expenses:</label>
-                    <input id="expense" class="data-field-right" name="expense" type="number" step="0.01" value="0" required><br><br>
-                    <label for="interest" class="data-field-right">Bank Interest Rate:</label>
-                    <input id="interest" class="data-field-right" name="interest" type="number" step="0.01" value="0" required><br><br>
+                    <label for="income">Take home pay (£):</label>
+                    <input id="income" name="income" type="number" step="0.01" value="0" required><br><br>
+                    <label for="rent">Rent/Mortgage (£):</label>
+                    <input id="rent" name="rent" type="number" step="0.01" value="0" required><br><br>
+                    <label for="car">Car Costs (£):</label>
+                    <input id="car"  name="car" type="number" step="0.01" value="0" required><br><br>
+                    <label for="utilities">Utilities (£):</label>
+                    <input id="utilities" name="utilities" type="number" step="0.01" value="0" required><br><br>
+                    <label for="charity">Charitable Giving (£):</label>
+                    <input id="charity" name="charity" type="number" step="0.01" value="0" required><br><br>
+                    <label for="expense">Other Expenses (£):</label>
+                    <input id="expense" name="expense" type="number" step="0.01" value="0" required><br><br>
+                    <label for="interest">Interest Rate (%):</label>
+                    <input id="interest" name="interest" type="number" step="0.01" value="0" required><br>
+                    <p>(Assuming a monthly compounding of interest in your bank account.)</p><br>
                     <hr><br>
-                    <label for="months" class="data-field-right">Timescale:</label>
-                    <input id="months" class="data-field-right" name="months" type="number" step="1" value="0" required><br><br>
-                    <label for="goal" class="data-field-right">Savings Goal:</label>
-                    <input id="goal" class="data-field-right" name="goal" type="number" step="0.1" value="0" required><br><br>
+                    <label for="months">Timescale:</label>
+                    <input id="months" name="months" type="number" step="1" value="0" required><br>
+                    <p>(i.e. In how many months would you like to reach your savings goal?)</p><br>
+                    <label for="goal">Savings Goal (£):</label>
+                    <input id="goal" name="goal" type="number" step="0.1" value="0" required><br><br>
                     <button id="calc-submit" type="submit">Calculate</button>
                     <button id="print" type="button">Print Result & Reset</button>
                 </form>
