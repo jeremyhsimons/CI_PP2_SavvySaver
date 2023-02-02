@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', questionSetup);
 
 document.addEventListener('DOMContentLoaded', getHighScore);
 
+document.addEventListener('keydown', function(event){
+    if (event.key === "Enter"){
+        validateAnswers(event);
+    }
+})
+
 let submitAnswers = document.getElementById('submit');
 submitAnswers.addEventListener('click', validateAnswers);
 
