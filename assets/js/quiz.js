@@ -192,7 +192,7 @@ function checkAnswers() {
         let ansCheck = document.querySelector(`input[name = "${k}"]:checked`);
         if (ansCheck.value === questionsSorted[k].answer) {
             console.log(`Hooray you got question ${k + 1} right`);
-            marksText = `<p>Hooray you got question ${k + 1} right</p>`;
+            marksText = `<p>Hooray you got question ${k + 1} right!</p>`;
             function addMarksCorrect() {
                 const correctMarks = document.createElement('div');
                 correctMarks.classList.add('correct');
@@ -203,7 +203,7 @@ function checkAnswers() {
             addMarksCorrect();
             currentScore += 1;
         } else {
-            marksText = `<p>Uh oh... You got question ${k + 1} wrong. The correct answer was ${questionsSorted[k].answer}</p>`;
+            marksText = `<p>Uh oh... You got question ${k + 1} wrong. The correct answer was <strong>${questionsSorted[k].answer}</strong>!</p>`;
             function addMarksIncorrect() {
                 const incorrectMarks = document.createElement('div');
                 incorrectMarks.classList.add('incorrect');
