@@ -487,6 +487,21 @@ fieldset {
     margin: 18px;
 }
 
+.incorrect {
+    background-color: lightcoral;
+    border: 2px solid darkred;
+    color: darkred;
+    padding: 5px;
+    margin: 5px;
+}
+
+.correct {
+    background-color: lightgreen;
+    border: 2px solid darkgreen;
+    color: darkgreen;
+    padding: 5px;
+    margin: 5px;
+}
 /*Media Queries*/
 
 @media screen and (min-width: 600px) {
