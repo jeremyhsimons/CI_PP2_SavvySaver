@@ -606,4 +606,28 @@ fieldset {
 
     /* Home */
 
+    #header-home > h1 {
+        font-size: 500%;
+    }
+
+    #header-home > h2 {
+        font-size: 200%;
+    }
+
+    #instructions {
+        height: 40vh;
+        padding-top: 50px;
+    }
+
+    #start-button {
+        padding: 20px;
+        padding-bottom: 5px;
+        max-width: 200px;
+    }
+
+    #start-button > a {
+        font-size: 150%;
+    }
+
+
 }
