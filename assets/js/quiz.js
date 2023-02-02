@@ -178,7 +178,6 @@ function validateAnswers() {
             console.log(`Valid answer ${i + 1}`);
         }
     }
-
     checkAnswers();
 }
 
@@ -215,7 +214,7 @@ function checkAnswers() {
             console.log(`Uh oh... You got question ${k + 1} wrong. The correct answer was ${questionsSorted[k].answer}`);
         }
     }
-    console.log(currentScore);
+    setHighScore();
 }
 
 /**
@@ -223,6 +222,12 @@ function checkAnswers() {
  * the previous high score and store it in session storage. 
  */
 function setHighScore () {
+    if (currentScore <= highScore) {
+        alert(`You got ${currentScore} out of 5 questions right. Your high score is ${highScore}`);
+    } else {
+        alert(`Congratulations! You beat your high score of ${highScore}. Your new high score is ${currentScore}`);
+        sessionStorage.setItem('highscore', currentScore);
+    }
 
 }
 
@@ -231,6 +236,5 @@ function setHighScore () {
  * so that the user can try the quiz again.
  */
 function clearAnswers() {
-    setHighScore();
     location.reload();
 }
