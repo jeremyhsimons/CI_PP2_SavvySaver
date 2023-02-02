@@ -1,13 +1,10 @@
 //Code from EmailJS. Link to original in readme. 
 
-const btn = document.getElementById('contact-submit');
+let btn = document.getElementById('contact-submit');
+btn.addEventListener('click', sendMail);
 
-document.getElementById('contact-form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
-
-   btn.value = 'Sending...';
-
+function sendMail() {
+   btn.innerHTML = "Sending"
    const serviceID = 'service_pggv7y7';
    const templateID = 'template_5frzz6d';
    const templateParams = {
@@ -16,10 +13,14 @@ document.getElementById('contact-form')
     message : document.getElementById('message').value
    }
 
-   emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'd9-fGM2Z78DfQCMYa')
-   .then(function() {
-      console.log('SUCCESS!');
-   }, function() {
-      console.log('FAILED...');
-   });
-});
+   emailjs.send(serviceID, templateID, templateParams).then((res) => {
+      alert('Your message was sent successfully.');
+      btn.innerHTML = "Send"
+      document.getElementById('full-name').value = "";
+      document.getElementById('email').value = "";
+      document.getElementById('message').value = "";
+      console.log(res);
+   })
+   .catch((err) => console.log(err));
+}
+
