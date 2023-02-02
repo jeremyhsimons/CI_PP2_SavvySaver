@@ -561,7 +561,7 @@ fieldset {
     text-align: center;
 }
 
-#main-error {
+#error-container {
     background: url('../images/burn-money.jpg') no-repeat center center, #433D39;
     background-size: 70%;
     height: 100vh;
