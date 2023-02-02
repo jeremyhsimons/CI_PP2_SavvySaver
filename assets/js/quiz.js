@@ -143,10 +143,17 @@ function getHighScore() {
 
 }
 
+/**
+ * A function that displays the user's high score when
+ */
+function displayHighScore() {
+
+}
+
 /** A function to check that the users have checked a box for each question
  * before they submit.
  * 
- * Document querySelector method found on GeeksforGeeks. Link in readme.
+ * Document querySelector solution found on GeeksforGeeks. Link in readme.
  */
 function validateAnswers() {
 
@@ -167,13 +174,31 @@ function validateAnswers() {
  * to see how many they got right.
  */
 function checkAnswers() {
-
+    let marksText;
     for(let k = 0; k <= 4; k++) {
         let ansCheck = document.querySelector(`input[name = "${k}"]:checked`);
         if (ansCheck.value === questionsSorted[k].answer) {
             console.log(`Hooray you got question ${k + 1} right`);
+            marksText = `<p>Hooray you got question ${k + 1} right</p>`;
+            function addMarksCorrect() {
+                const correctMarks = document.createElement('div');
+                correctMarks.classList.add('correct');
+                correctMarks.innerHTML = marksText;
+                let questionBox = document.getElementById(`${k}`);
+                questionBox.appendChild(correctMarks);
+            }
+            addMarksCorrect();
             currentScore += 1;
         } else {
+            marksText = `<p>Uh oh... You got question ${k + 1} wrong. The correct answer was ${questionsSorted[k].answer}</p>`;
+            function addMarksIncorrect() {
+                const incorrectMarks = document.createElement('div');
+                incorrectMarks.classList.add('incorrect');
+                incorrectMarks.innerHTML = marksText;
+                let questionBox = document.getElementById(`${k}`);
+                questionBox.appendChild(incorrectMarks);
+            }
+            addMarksIncorrect();
             console.log(`Uh oh... You got question ${k + 1} wrong. The correct answer was ${questionsSorted[k].answer}`);
         }
     }

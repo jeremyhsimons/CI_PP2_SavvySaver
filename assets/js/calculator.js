@@ -136,8 +136,8 @@ function calcSaving(inputs) {
 function checkSaving(actualSaving) {
     let html = `<p></p>`;
     function addResults() {
-        let resultsDiv = document.createElement('div')
-        resultsDiv.classList.add('results-main')
+        let resultsDiv = document.createElement('div');
+        resultsDiv.classList.add('results-main');
         resultsDiv.innerHTML = html;
         let resultsMain = document.getElementById('results');
         resultsMain.appendChild(resultsDiv);
