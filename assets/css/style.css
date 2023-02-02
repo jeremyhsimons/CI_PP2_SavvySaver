@@ -36,18 +36,19 @@ footer {
     height: 40px;
     background-color: #292d41;
     text-align: center;
-    padding: 10px;
+    padding-top: 20px;
 }
 
 footer > ul {
     list-style: none;
-    padding: 1%;
+    max-width: 90%;
+    margin: auto;
 }
 
 footer > ul > li {
-    display: inline;
     padding: 3%;
     color: #ebeecd;
+    display: inline;
 }
 
 footer > ul > li > a {
@@ -167,8 +168,8 @@ footer > ul > li > a {
 }
 
 #calculator-form {
-    text-align: center;
-    padding: 20px;
+    text-align: right;
+    padding: 15px;
 }
 
 #calculator-form > input {
@@ -194,6 +195,13 @@ footer > ul > li > a {
 #calculator-form > hr {
     color: #ebeecd;
     border: 2px solid #ebeecd;
+}
+
+#calculator-form > p {
+    color: #ebeecd;
+    max-width: 200px;
+    font-size: 80%;
+    margin-top: 5px;
 }
 
 #calculator-form > button {
@@ -520,20 +528,19 @@ fieldset {
     padding: 5px;
     margin: 5px;
 }
+
+/* styles for 404 page */
+
 /*Media Queries*/
 
 @media screen and (min-width: 600px) {
-    .data-field-left{
-        float: left;
-        width: 40%;
-    }
+    /* Home */
 
-    .data-field-left{
-        float: right;
-        width: 40%;
-    }
+    /* Calculator */
 
-    /*Quiz*/
+    /* FAQ */
+
+    /* Quiz */
 
     #quiz {
         border: 2px solid #292d41;
