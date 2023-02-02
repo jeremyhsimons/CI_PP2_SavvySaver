@@ -140,7 +140,8 @@ footer > ul > li > a {
 #form-section {
     background-color: #433D39;
     padding: 2%;
-    border-top;
+    border-top: 5px solid #292d41;
+    border-bottom: 5px solid #292d41;
 }
 
 #form-container {
@@ -229,6 +230,7 @@ footer > ul > li > a {
 
 #clear-div {
     height: 60px;
+    background-color: #433D39;
 }
 
 #results {
@@ -289,7 +291,6 @@ footer > ul > li > a {
 
 #recommendations {
     background-color: #433D39;
-    padding-top: 20px;
 }
 
 .rec-title {

@@ -385,6 +385,13 @@ function checkRecommemndations() {
         throw `Unknown value ${expense}`;
     }
 
+    let resultsContainer = document.getElementById('results');
+    resultsContainer.style.padding = "20px";
+    let changesContainer = document.getElementById('changes');
+    changesContainer.style.padding = "20px";
+    let recommendationsContainer = document.getElementById('recommendations');
+    recommendationsContainer.style.paddingBottom = "20px";
+
     let resultContainer = document.getElementById('result-container');
     resultContainer.scrollIntoView(top);
 
