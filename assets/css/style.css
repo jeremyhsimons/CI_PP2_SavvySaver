@@ -74,8 +74,7 @@ footer > ul > li > a {
 #instructions {
     width: 100%;
     background: url(../images/coin-jar.jpg) no-repeat top center, #1D1B1B;
-    background-attachment: fixed;
-    background-size: 150%;
+    background-size: cover;
     height: 100vh;
     padding-top: 10%;
 }
@@ -120,7 +119,6 @@ footer > ul > li > a {
 #header-calculator {
     background: url(../images/calculate-money.jpg) no-repeat top center #1D1B1B;
     background-size: 150%;
-    background-attachment: fixed;
     height: 50vh;
     padding-top: 10%;
 }
@@ -207,6 +205,7 @@ footer > ul > li > a {
     max-width: 200px;
     font-size: 80%;
     margin-top: 5px;
+    margin: auto;
 }
 
 #calculator-form > button {
