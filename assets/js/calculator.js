@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", function fillForm() {
     fields[8].value = placeholders[8];
 })
 
+document.addEventListener('keydown', function(event){
+    if (event.key === "Enter"){
+        getInputs(event);
+    }
+})
+
 //EVENT LISTENERS
 //Form submission
 let calculate = document.getElementById('calc-submit');
