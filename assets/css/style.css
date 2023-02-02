@@ -426,6 +426,11 @@ footer > ul > li > a {
     font-weight: 700;
 }
 
+#contact-submit:hover {
+    background-color: #1D1B1B;
+    color: #ebeecd;
+}
+
 /*Styles for the quiz*/
 
 #quiz-header {
