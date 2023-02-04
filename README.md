@@ -12,7 +12,9 @@ Savvy Saver is a website that aims to help people like this. It offers three mai
 
 1. The savings calculator: a simple-to-use webform that calculates what you will save and offers a print-out of recommendations for your finances.
 2. The Quiz: a small game to test the user's knowledge of some basic principles of managing money.
-3. An FAQ page which seeks to answer some questions that users might have about finances, and a contact form with working email notification to submit questions that are not addressed. 
+3. An FAQ page which seeks to answer some questions that users might have about finances, and a contact form with working email notification to submit questions that are not addressed.
+
+These features aims to achieve the project goals below through offering an interactive and responsive website that gives regular visual feedback and notification of what their interactions with the site achieve.
 
 ## Contents
 * [Project Goals](#project-goals)<br>
