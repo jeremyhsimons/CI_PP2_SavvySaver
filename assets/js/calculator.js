@@ -330,7 +330,6 @@ function checkRecommemndations() {
         throw `Unknown value ${rent}`;
     }
 
-    // A check to see if utilities are over 300.
     let utilities = inputs[3];
     if (utilities > 300) {
         html = `<p>Your utilities bill is a quite high. 
