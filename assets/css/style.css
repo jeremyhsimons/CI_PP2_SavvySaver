@@ -656,7 +656,8 @@ fieldset {
     /*Calculator*/
 
     #header-calculator {
-        max-height: 30vh;
+        max-height: 40vh;
+        padding: 10%;
     }
 
     #header-calculator-container {

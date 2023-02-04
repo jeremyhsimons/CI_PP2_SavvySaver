@@ -31,7 +31,7 @@ printResult.addEventListener('click', printPageResult);
 
 printResult.addEventListener('mouseover', function() {
     const warningHtml = `<p>Are you sure you want to print? Printing results will reset the form.
-                        Make sure you have finished filling the form in before printing</p>`;
+                        Make sure you have finished filling the form in before printing.</p>`;
     const warningDiv = document.createElement('div');
     warningDiv.classList.add('warning-div');
     warningDiv.innerHTML = warningHtml
