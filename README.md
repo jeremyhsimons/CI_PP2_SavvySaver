@@ -6,7 +6,13 @@ Developed by Jeremy Simons
 [Link to live site](https://jeremyhsimons.github.io/CI_PP2_SavvySaver/)
 
 ## Introduction
-Many young people today enter adult life having no concept of how to manage their finances wisely. They have no experience saving money for large purchases and, in Western countries, are engulfed by one of the most consumerist cultures that has ever existed. This combination of factors means that many are adopting lifestyles that are not conducive to long-term financial stability. Savvy Saver is a website that aims to help people like this. It offers not only an easy-to-use and convenient calculator to check what their savings will be over a given period of time, but insights into their finances based on UK household cost averages and financial principles endorsed by experts.
+Many young people today enter adult life having no concept of how to manage their finances wisely. They have no experience saving money for large purchases and, in Western countries, are engulfed by one of the most consumerist cultures that has ever existed. This combination of factors means that many are adopting lifestyles that are not conducive to long-term financial stability. 
+
+Savvy Saver is a website that aims to help people like this. It offers three main features that can help young people and those wishing to learn more about saving:
+
+1. The savings calculator: a simple-to-use webform that calculates what you will save and offers a print-out of recommendations for your finances.
+2. The Quiz: a small game to test the user's knowledge of some basic principles of managing money.
+3. An FAQ page which seeks to answer some questions that users might have about finances, and a contact form with working email notification to submit questions that are not addressed. 
 
 ## Contents
 * [Project Goals](#project-goals)<br>
@@ -21,6 +27,7 @@ Many young people today enter adult life having no concept of how to manage thei
     * [Colour Scheme](#colour-scheme)
     * [Wireframes](#wireframes)
 * [Features](#features)
+    *[Feature Ideas for future development](#feature-ideas-for-future-development)
 * [Technologies Used](#technologies-used)
 * [Deployment & Local Development](#deployment--local-development)
 * [Testing](#testing)
@@ -87,6 +94,8 @@ The website has 7 pages and the features of each page are listed below:
         </li>
     </ul>
 </details><br>
+
+## Feature ideas for future development
 
 ## Technologies Used
 ### Languages used
