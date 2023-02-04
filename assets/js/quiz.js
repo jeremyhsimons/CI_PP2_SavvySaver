@@ -185,7 +185,9 @@ function validateAnswers() {
             console.log(`Valid answer ${i + 1}`);
         }
     }
-    checkAnswers();
+    if (i === 4) {
+        checkAnswers();
+    }
 }
 
 /**
@@ -234,6 +236,7 @@ function setHighScore () {
         alert(`You got ${currentScore} out of 5 questions right. Your high score is ${highScore}`);
     } else {
         alert(`Congratulations! You beat your high score of ${highScore}. Your new high score is ${currentScore}`);
+        sessionStorage.removeItem('highscore')
         sessionStorage.setItem('highscore', currentScore);
     }
 
