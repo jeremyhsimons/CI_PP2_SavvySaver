@@ -12,13 +12,13 @@ document.addEventListener("DOMContentLoaded", function fillForm() {
     fields[6].value = placeholders[6];
     fields[7].value = placeholders[7];
     fields[8].value = placeholders[8];
-})
+});
 
 document.addEventListener('keydown', function(event){
     if (event.key === "Enter"){
         getInputs(event);
     }
-})
+});
 
 //EVENT LISTENERS
 //Form submission
@@ -34,7 +34,7 @@ printResult.addEventListener('mouseover', function() {
                         Make sure you have finished filling the form in before printing.</p>`;
     const warningDiv = document.createElement('div');
     warningDiv.classList.add('warning-div');
-    warningDiv.innerHTML = warningHtml
+    warningDiv.innerHTML = warningHtml;
     const calcForm = document.getElementById('calculator-form');
     calcForm.appendChild(warningDiv);
 });
@@ -57,7 +57,7 @@ let inputsStored = [];
 function getInputs(event) {
     event.preventDefault();
     let fields = document.getElementsByTagName('input');
-    inputs = []
+    inputs = [];
 
     inputs.push(fields[0].value);
     inputs.push(fields[1].value);
@@ -70,7 +70,7 @@ function getInputs(event) {
     inputs.push(fields[8].value); 
 
     clearDom();
-    validateInputs(inputs)
+    validateInputs(inputs);
 }
 
 /**
@@ -84,7 +84,7 @@ function validateInputs () {
     for (let h = 0; h <= inputs.length; h++) {
         if (inputs[h] === "" || inputs[h] === null) {
             alert('You cannot submit this form with an empty field. Please try again.');
-            inputs = []
+            inputs = [];
         } else {
             console.log(`${inputs[h]} is a number`);
         }
@@ -115,8 +115,7 @@ function calcSaving(inputs) {
     let monthlySum = (inputs[0] - inputs[1] - inputs[2] - inputs[3] - inputs[4] - inputs[5]) * 1000;
     let interest = (1 + inputs[6] / 100) * 1000;
     let total = 0;
-
-    let i = 1
+    let i = 1;
 
     do {
         i += 1;
@@ -163,9 +162,9 @@ function checkSaving(actualSaving) {
                     <li>Bank interest rate of ${inputs[6]}%</li>
                     <li>Over ${inputs[7]} months</li>
                 </ul>
-                <h3>You will save <em>£${actualSaving}</em></h3>`
+                <h3>You will save <em>£${actualSaving}</em></h3>`;
         addResults();
-        console.log("results: saving success.")
+        console.log("results: saving success.");
     } else if (actualSaving < inputs[8]) {
         html = `<h2>RESULTS:</h2>
                 <h3>Sorry, you will not meet your savings goal of £${inputs[8]}.</h3>
@@ -181,9 +180,9 @@ function checkSaving(actualSaving) {
                     <li>Over ${inputs[7]} months</li>
                 </ul>
                 <h3>You will only save <em>£${actualSaving}.</em>
-                Here are some suggestions for how to meet your target:</h3>`
+                Here are some suggestions for how to meet your target:</h3>`;
         addResults();
-        console.log("results: saving failure.")
+        console.log("results: saving failure.");
         calcSavingChanges(actualSaving);
     } else {
         // Code for error handling borrowed from LoveMaths walkthrough.
@@ -246,7 +245,7 @@ function calcSavingChanges(actualSaving) {
 
     changeText = `<p>Alternatively, you could try to cut your total monthly costs. 
                  You would need to save <strong>£${deficit}</strong> per month in addition to what you
-                 currently save in order to meet your goal.</p>`
+                 currently save in order to meet your goal.</p>`;
     addChange();
 
     // code to check what interest they have earned vs what interest they need to earn
@@ -258,7 +257,7 @@ function calcSavingChanges(actualSaving) {
     changeText = `<p>Additionally, with your current bank account 
                   you are only earning <strong>£${actualInterestEarned}</strong>
                   in interest. Consider changing your
-                  bank account to get a better interest rate deal.</p>`
+                  bank account to get a better interest rate deal.</p>`;
     addChange();
 }
 
@@ -377,7 +376,7 @@ function checkRecommemndations() {
         html = `<p>Your expenses currently exceed your rent/mortgage payments.
             Your biggest expense is expercted to be for housing.
             If you want to save money more effectively 
-            you need to look for ways to cut back on your monthly costs.</p>`
+            you need to look for ways to cut back on your monthly costs.</p>`;
         addBadRecommendation();
         console.log("bad expense");
     } else if (expense <= rent || expense === 0) {
@@ -428,7 +427,7 @@ function printPageResult() {
     let resultsCheck = document.getElementById('results');
 
     if (resultsCheck.innerHTML === "" || resultsCheck.innerHTML === null || resultsCheck.innerHTML === undefined) {
-        alert('You cannot print now. You have not generated any results. Please click the calculate button before printing.')
+        alert('You cannot print now. You have not generated any results. Please click the calculate button before printing.');
     } else {
         const printContent = document.getElementById('result-container').innerHTML;
         const pageContent = document.body.innerHTML;
