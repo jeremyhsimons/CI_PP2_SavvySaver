@@ -387,7 +387,19 @@ footer > ul > li > a {
     background-color: #ebeecd;
     border: 1px solid #292d41;
     width: 90%;
-    padding: 5px;
+    padding: 10px;
+}
+.question-answer {
+    margin-bottom: 20px;
+    color: #1d1b1b;
+}
+
+.question-answer > hr {
+    border: 1px solid #433D39;
+}
+
+#q2, #q4 {
+    text-align: right;
 }
 
 #faq-container > p {
@@ -421,6 +433,8 @@ footer > ul > li > a {
     max-width: 40%;
     padding: 5px;
     border: 1px solid #433D39;
+    background-color: #ebeecd;
+    font-family:  Ubuntu, sans-serif;
 }
 
 #message {
@@ -428,6 +442,8 @@ footer > ul > li > a {
     margin-bottom: 5px;
     padding: 5px;
     border: 1px solid #433D39;
+    background-color: #ebeecd;
+    font-family:  Ubuntu, sans-serif;
 }
 
 #contact-form > fieldset {
@@ -740,6 +756,16 @@ fieldset {
 
     #faq-container {
         max-width: 600px;
+        padding: 30px;
+    }
+
+    .question-answer > h3 {
+        font-size: 130%;
+        margin-bottom: 10px;
+    }
+
+    .question-answer > p {
+        font-size: 110%;
     }
 
     #contact-section {
