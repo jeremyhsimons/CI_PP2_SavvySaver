@@ -638,8 +638,8 @@ fieldset {
     }
 
     #instructions {
-        height: 50vh;
-        padding-top: 80px;
+        height: 60vh;
+        padding-top: 10%;
         background-size: 90%;
     }
 
@@ -760,5 +760,15 @@ fieldset {
 
     #contact-form > fieldset {
         padding: 20px;
+    }
+
+    /* Quiz */
+
+    #quiz-header > h1 {
+        font-size: 400%;
+    }
+
+    #quiz-header > h2 {
+        font-size: 200%;
     }
 }
