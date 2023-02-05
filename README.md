@@ -228,6 +228,9 @@ The stylesheet for this website was validated using the W3C [Jigsaw](https://jig
 
 #### **JS**
 The three JavaScript files in this project were tested using JSHint and all passed with no errors. The warnings shown are all notifications that ES6 notation was used.
+<img src="readme-docs/validation/jshint-calc.png" alt="A screenshot of the jshint summary of the calculator.js file">
+<img src="readme-docs/validation/jshint-contact.png" alt="A screenshot of the jshint summary of the contact_form.js file">
+<img src="readme-docs/validation/jshint-quiz.png" alt="A screenshot of the jshint summary of the quiz.js file">
 
 
 #### **Accessibility**
@@ -304,4 +307,4 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 ### Acknowledgements
 * Thanks to my Mentor Mo Shami for his feedback, advice and encouragement throughout this project.
-* Thanks to the wonderful CI London Community
+* Thanks to the wonderful CI London Community for all the moral support!
