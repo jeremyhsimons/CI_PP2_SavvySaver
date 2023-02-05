@@ -175,8 +175,8 @@ function displayHighScore() {
  * Document querySelector solution found on GeeksforGeeks. Link in readme.
  */
 function validateAnswers() {
-
-    for (let i = 0; i <= 4; i++) {
+    let i;
+    for (i = 0; i <= 4; i++) {
         let checkValid = document.querySelector(`input[name = "${i}"]:checked`);
         if (checkValid === null) {
             alert('You have left a blank answer. Please answer all questions before checking your answers.');
@@ -185,7 +185,7 @@ function validateAnswers() {
             console.log(`Valid answer ${i + 1}`);
         }
     }
-    if (i === 4) {
+    if (i === 5) {
         checkAnswers();
     }
 }
