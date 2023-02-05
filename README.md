@@ -126,10 +126,40 @@ Each page subsequent to the landing page has a similar layout. Heading and page 
 
 The wireframes below were created using [figma](https://www.figma.com/). The layout for each of the pages has been designed to suit mobile, tablet, and desktop devices.
 
-#### **404**
+#### **Home page**
+<details>
+    <summary>Home page</summary>
+    <img src="readme-docs/wireframes/ss-mobile-home.png" alt="Home page wireframe mobile">
+    <img src="readme-docs/wireframes/ss-tablet-home.png" alt="Home page wireframe tablet">
+    <img src="readme-docs/wireframes/ss-desktop-home.png" alt="Home page wireframe desktop">
+</details><br>
+
+<details>
+    <summary>Calculator page</summary>
+    <img src="readme-docs/wireframes/ss-mobile-calc.png" alt="Calculator page wireframe mobile">
+    <img src="readme-docs/wireframes/ss-tablet-calc.png" alt="Calculator page wireframe tablet">
+    <img src="readme-docs/wireframes/ss-desktop-calca.png" alt="Calculator page wireframe desktop">
+</details><br>
+
+<details>
+    <summary>FAQ page</summary>
+    <img src="readme-docs/wireframes/ss-mobile-faq.png" alt="FAQ page wireframe mobile">
+    <img src="readme-docs/wireframes/ss-tablet-faq.png" alt="FAQ page wireframe tablet">
+    <img src="readme-docs/wireframes/ss-desktop-faq.png" alt="FAQ page wireframe desktop">
+</details><br>
+
+<details>
+    <summary>Quiz page</summary>
+    <img src="readme-docs/wireframes/ss-mobile-quiz.png" alt="quiz page wireframe mobile">
+    <img src="readme-docs/wireframes/ss-tablet-quiz.png" alt="quiz page wireframe tablet">
+    <img src="readme-docs/wireframes/ss-desktop-quiz.png" alt="quiz page wireframe desktop">
+</details><br>
+
 <details>
     <summary>404 page</summary>
-
+    <img src="readme-docs/wireframes/ss-mobile-404.png" alt="404 page wireframe mobile">
+    <img src="readme-docs/wireframes/ss-tablet-404.png" alt="404 page wireframe tablet">
+    <img src="readme-docs/wireframes/ss-desktop-404.png" alt="404 page wireframe desktop">
 </details><br>
 
 ## Features
