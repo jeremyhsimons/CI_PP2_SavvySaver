@@ -133,7 +133,7 @@ The wireframes below were created using [figma](https://www.figma.com/). The lay
 </details><br>
 
 ## Features
-The website has 7 pages and the features of each page are listed below:
+The website has 5 pages and the features of each page are listed below:
 
 <details>
     <summary>404 page</summary>
@@ -216,18 +216,19 @@ The site was tested on the following devices:
 #### **HTML**
 All HTML files were validated using the [w3c vaildation service](https://validator.w3.org/). All pages passed with no errors and no warnings.
 
-<details>
-    <summary>404 page</summary>
-    
-</details><br>
+[Home page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2F)
+[Calculator page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2Fcalculator.html)
+[FAQ page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2Ffaq.html)
+[Quiz page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2Fquiz.html)
+[404 page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2F404.html)
 
 #### **CSS**
 The stylesheet for this website was validated using the W3C [Jigsaw](https://jigsaw.w3.org/css-validator/) CSS validation service. The file contained no errors.
+[CSS Validation](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-<details>
-    <summary>CSS for whole site</summary>
-    
-</details>
+#### **JS**
+The three JavaScript files in this project were tested using JSHint and all passed with no errors. The warnings shown are all notifications that ES6 notation was used.
+
 
 #### **Accessibility**
 The site's accessibility was tested using the [WAVE](https://wave.webaim.org/) tool by webaim. All pages passed with no errors or contrast errors.
