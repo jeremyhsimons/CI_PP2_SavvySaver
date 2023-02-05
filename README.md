@@ -244,7 +244,22 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Home page</summary>
-    
+    <img src="readme-docs/validation/home-perf.png" alt="A screenshot of the home page lighthouse report">
+</details><br>
+
+<details>
+    <summary>Calculator page</summary>
+    <img src="readme-docs/validation/calc-perf.png" alt="A screenshot of the calculator page lighthouse report">
+</details><br>
+
+<details>
+    <summary>FAQ page</summary>
+    <img src="readme-docs/validation/faq-perf.png" alt="A screenshot of the FAQ page lighthouse report">
+</details><br>
+
+<details>
+    <summary>Home page</summary>
+    <img src="readme-docs/validation/quiz-perf.png" alt="A screenshot of the quiz page lighthouse report">
 </details><br>
 
 ### Testing user stories
