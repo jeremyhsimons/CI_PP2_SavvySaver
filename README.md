@@ -45,15 +45,31 @@ These features aims to achieve the project goals below through offering an inter
 ## Project Goals
 
 ### ...For the user
+* This project will be a helpful tool in checking whether they meet their savings goal.
+* This project will offer information/education about how to manage their finances/budget better.
+* Where either of these things is not achieved, This project will have a way for feedback to be given to the site owner about problems/questions.
 
 ### ...For the site owner
+* This project will help others who are looking to manage their money better.
+* This project will answer a good proportion of the questions that the user may have about the site itself and how to use it.
+* This project will showcase the site owner's development skills and direct users to their GitHub page.
 
 ## User Experience
 
 ### Target audience
 Potential users of the site may include, but are not limited to:
+* Young people, university students, or recent graduates who are entering the workplace.
+* People who may have been in the workplace for a while, but who are looking to improve how they manage their money.
+* People who are looking to save for a significant expense and want an easy way to find out how best to do it.
 
 ### User requirements
+* The features of the site work as expected and any interaction provides visual or information feedback/notification.
+* Users can calculate their savings.
+* Users can print off their results.
+* Users can send a message to site owner.
+* Users can complete a quiz and keep track of their highscore while on the tab.
+* Site content is accessible to users with visual impairments.
+* User can access the site on multiple kinds of devices/screen widths.
 
 ### User Stories
 #### As a first time user...
