@@ -166,15 +166,106 @@ The wireframes below were created using [figma](https://www.figma.com/). The lay
 The website has 5 pages and the features of each page are listed below:
 
 <details>
-    <summary>404 page</summary>
-    <p>The 404 page is where the user is directed if for whatever reason the site breaks and they cannot access a page as expected. It allows the user to navigate back to the rest of the site without clicking the back button in their browser.</p>
+    <summary>Home page</summary>
+    <p>The home page is the first thing the user sees. It gives insructions on how to use the calculator and directs the user to other features.</p>
+    <ul>
+        <li>
+            <p>Instructions for how to use the calculator feature on the site.</p>
+        </li>
+        <li>
+            <p>User story covered: 6, 13</p>
+            <img src="readme-docs/features/form-submit-message.png" alt="A screenshot of the thanks page.">
+        </li>
+        <li>
+            <p>Button directing the user to the calculator feature.</p>
+        </li>
+        <li>
+            <p>User story covered: 11</p>
+            <img src="readme-docs/features/form-submit-message.png" alt="A screenshot of the thanks page.">
+        </li>
+        <li>
+            <p>Navbar directing users to the rest of the site's features.</p>
+        </li>
+        <li>
+            <p>User story covered: 1, 11</p>
+            <img src="readme-docs/features/form-submit-message.png" alt="A screenshot of the thanks page.">
+        </li>
+    </ul>
+</details><br>
+
+<details>
+    <summary>Calculator page</summary>
+    <p>The 404 page notifies users that they have tried to access a page that does not exist, or a link has broken, or they have mistyped the url. It offers navigation back to the main content of the site without having to click the browser's back button.</p>
     <ul>
         <li>
             <p>Error message that appears in the event of a broken link or an error in the url in the browser's search bar.</p>
         </li>
         <li>
-            <p>User story covered: 6.</p>
-            <img src="readme-docs/features/form-submit-message.png" alt="A screenshot of the thanks page.">
+            <p>User story covered: 16</p>
+            <img src="readme-docs/features/form-submit-message.png" alt="A screenshot of the 404 page.">
+        </li>
+    </ul>
+</details><br>
+
+<details>
+    <summary>FAQ page</summary>
+    <p>The FAQ page offers extra information about how to manage savings and answers to common questions new users might have. It also features a contact form to reach the site owner with any questions or problems.</p>
+    <ul>
+        <li>
+            <p>Error message that appears in the event of a broken link or an error in the url in the browser's search bar.</p>
+        </li>
+        <li>
+            <p>User story covered: 16</p>
+            <img src="readme-docs/features/form-submit-message.png" alt="A screenshot of the 404 page.">
+        </li>
+    </ul>
+</details><br>
+
+<details>
+    <summary>Quiz page</summary>
+    <p>The quiz page is a small game that the user can play to test their knowledge of some of the principles explained in the calculator results.</p>
+    <ul>
+        <li>
+            <p>Score counter that records the user's best quiz score in the session.</p>
+        </li>
+        <li>
+            <p>User story covered: 4, 10</p>
+            <img src="readme-docs/features/form-submit-message.png" alt="A screenshot of the 404 page.">
+        </li>
+                <li>
+            <p>Quiz form that tests users' knowledge.</p>
+        </li>
+        <li>
+            <p>User story covered: 4, 10</p>
+            <img src="readme-docs/features/form-submit-message.png" alt="A screenshot of the 404 page.">
+        </li>
+                <li>
+            <p>Feedback on questions that appears after check answers button is clicked.</p>
+        </li>
+        <li>
+            <p>User story covered: 4, 10, 6</p>
+            <img src="readme-docs/features/form-submit-message.png" alt="A screenshot of the 404 page.">
+        </li>
+                <li>
+            <p>Alert that pops up if incomplete quiz is submitted</p>
+        </li>
+        <li>
+            <p>User story covered: 6, 12</p>
+            <img src="readme-docs/features/form-submit-message.png" alt="A screenshot of the 404 page.">
+        </li>
+    </ul>
+</details><br>
+
+<details>
+    <summary>404 page</summary>
+    <p>The 404 page notifies users that they have tried to access a page that does not exist, or a link has broken, or they have mistyped the url. It offers navigation back to the main content of the site without having to click the browser's back button.</p>
+    <ul>
+        <li>
+            <p>Error message that appears in the event of a broken link or an error in the url in the browser's search bar.</p>
+        </li>
+        <li>
+            <p>User story covered: 16</p>
+            <img src="readme-docs/features/form-submit-message.png" alt="A screenshot of the 404 page.">
         </li>
     </ul>
 </details><br>
