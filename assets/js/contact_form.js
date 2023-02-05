@@ -1,4 +1,4 @@
-//Code from EmailJS and code with Voran. Links to resources used in readme.
+//Code from EmailJS and Code With Voran. Links to resources used in readme.
 
 let btn = document.getElementById('contact-submit');
 btn.addEventListener('click', sendMail);

@@ -56,6 +56,27 @@ Potential users of the site may include, but are not limited to:
 ### User requirements
 
 ### User Stories
+#### As a first time user...
+* (1) I want to easily navigate the site to find both main features (i.e. savings and time-frame calculators). 
+* (2) I want to enter my take-home pay, expenses, interest rate, and savings target to find out how long it will take me (in months) to reach my financial goals. 
+* (3) I might not have a lot of experience in managing my finances and I want to find more information about saving/definitions of jargon terms.
+* (4) I want to interact with the Savvy Saver website and test my knowledge of managing personal finances. 
+* (5) I want to be able to contact the site owner to ask more questions that are not addressed in the site content. 
+* (6) I want the site to be intuitive to use/give me feedback on what my interactions with site elements will achieve.
+
+#### As a returning user... 
+* (7) I want to recalculate my savings or time-frame to reach my goals if my income/expenses/interest rate changes.
+* (8) I want the results of my calculation to be displayed in a clear, visually pleasing manner.
+* (9) I want to be able to save a copy of the information breakdown so that I can return to the data/compare it to new data in the future.
+* (10) I want to test my knowledge to see how my finances and attitudes to finances have improved.
+
+#### As the site owner...
+* (11) I want to direct users to the main calculator feature of the site, whilst also making it easy to access other features.
+* (12) I want all inputs/user actions to have error handling and warnings that log to the console to minimize the impact of user error and feedback to users the correct actions they should take.
+* (13) I want the features to be clear and self-explanatory in case the user does not have much experience managing their personal finances.
+* (14) I want the site to have an FAQ with links to external resources in case first-time users have additional questions about managing their finances. 
+* (15) I want a way for users to contact me and offer me feedback about the site/ask questions that are not addressed on the site. 
+* (16) I want to be sure that if users break the url or if a link in the site breaks they can get back to site content
 
 ## Design
 
