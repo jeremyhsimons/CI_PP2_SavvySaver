@@ -181,8 +181,6 @@ function validateAnswers() {
         if (checkValid === null) {
             alert('You have left a blank answer. Please answer all questions before checking your answers.');
             break;
-        } else {
-            console.log(`Valid answer ${i + 1}`);
         }
     }
     if (i === 5) {
@@ -199,7 +197,6 @@ function checkAnswers() {
     for(let k = 0; k <= 4; k++) {
         let ansCheck = document.querySelector(`input[name = "${k}"]:checked`);
         if (ansCheck.value === questionsSorted[k].answer) {
-            console.log(`Hooray you got question ${k + 1} right`);
             marksText = `<p>Hooray you got question ${k + 1} right!</p>`;
             function addMarksCorrect() {
                 const correctMarks = document.createElement('div');
@@ -220,7 +217,6 @@ function checkAnswers() {
                 questionBox.appendChild(incorrectMarks);
             }
             addMarksIncorrect();
-            console.log(`Uh oh... You got question ${k + 1} wrong. The correct answer was ${questionsSorted[k].answer}`);
         }
     }
     let pageTop = document.getElementById('high-score');
