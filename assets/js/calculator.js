@@ -46,7 +46,6 @@ printResult.addEventListener('mouseout', function() {
 
 //Global scope variables
 let inputs = [];
-let inputsStored = [];
 
 /**
  * A function to get all the user's inputs from the form and store them
@@ -85,53 +84,40 @@ function validateInputs () {
         if (inputs[h] === "" || inputs[h] === null) {
             alert('You cannot submit this form with an empty field. Please try again.');
             inputs = [];
-        } else {
-            console.log(`${inputs[h]} is a number`);
         }
     }
     if (inputs[0] < (1/100) || inputs[7] < 1 || inputs [8] < 1) {
         alert ('You cannot calculate your savings without an income, timeframe, or a goal. Please enter valid numbers.');
         inputs = [];
-    } else {
-        console.log('No erroneous zeros.');
     }
-
     let costs = parseInt(inputs[1]) + parseInt(inputs[2]) + parseInt(inputs[3]) + parseInt(inputs[4]) + parseInt(inputs[5]);
     if (inputs[0] < costs) {
         alert('Your costs are higher than your income. You will not save ANY money. Please make sure your costs are lower than your income and try again.');
         inputs = [];
     } else {
         calcSaving(inputs);
-        console.log('Income > costs OK');
     }
 }
 
 /**
  * A function to calculate the user's projected savings.
  * This function is called after the the inputs array is filled.
+ * 
+ * Code for rounding to 2dp accurately found on StackOverflow. Link to
+ * page in readme.
  */
 function calcSaving(inputs) {
-
     let monthlySum = (inputs[0] - inputs[1] - inputs[2] - inputs[3] - inputs[4] - inputs[5]) * 1000;
     let interest = (1 + inputs[6] / 100) * 1000;
     let total = 0;
     let i = 1;
-
     do {
         i += 1;
         total = ((total + monthlySum) * interest) / 1000;
     } while (i <= inputs[7]);
-
     let actualSaving = total / 1000;
-
-    //code on line directly below this comment is adapted from a 
-    //suggestion by Brian Ustas on
-    //Stack Overflow about how to round numbers to 2dp reliably.
-    //See credits section of readme for link to page.
     actualSaving = Math.round((actualSaving + Number.EPSILON) * 100) / 100;
-    console.log(actualSaving);
     checkSaving(actualSaving);
-    
 }
 
 /**
@@ -147,7 +133,6 @@ function checkSaving(actualSaving) {
         let resultsMain = document.getElementById('results');
         resultsMain.appendChild(resultsDiv);
     }
-
     if (actualSaving >= inputs[8]) {
         html = `<h2>RESULTS:</h2>
                 <h3>Congratulations! You will meet your savings goal of £${inputs[8]}.</h3>
@@ -164,7 +149,6 @@ function checkSaving(actualSaving) {
                 </ul>
                 <h3>You will save <em>£${actualSaving}</em></h3>`;
         addResults();
-        console.log("results: saving success.");
     } else if (actualSaving < inputs[8]) {
         html = `<h2>RESULTS:</h2>
                 <h3>Sorry, you will not meet your savings goal of £${inputs[8]}.</h3>
@@ -182,7 +166,6 @@ function checkSaving(actualSaving) {
                 <h3>You will only save <em>£${actualSaving}.</em>
                 Here are some suggestions for how to meet your target:</h3>`;
         addResults();
-        console.log("results: saving failure.");
         calcSavingChanges(actualSaving);
     } else {
         // Code for error handling borrowed from LoveMaths walkthrough.
@@ -199,20 +182,26 @@ function checkSaving(actualSaving) {
  * 
  * This function is only called if the checkSaving function finds
  * that the user's savings are below the user's goal.
+ * 
+ * First block generates html elements.
+ * 
+ * Second block checks how many months needed to meet goal.
+ * 
+ * Third block checks how much needed to cut expenses per month.
+ * 
+ * Fourth block checks how much interest earned.
  */
 function calcSavingChanges(actualSaving) {
 
     let changeTitleText = "CHANGES YOU COULD MAKE TO YOUR SAVING PLAN:";
     let changeText = `<p></p>`;
     let changeSection = document.getElementById('changes');
-
     function addChangeTitle() {
         let changeTitle = document.createElement('h2');
         changeTitle.classList.add('change-title');
         changeTitle.innerHTML = changeTitleText;
         changeSection.appendChild(changeTitle);
     }
-
     function addChange() {
         let newChange = document.createElement('div');
         newChange.classList.add('change-text');
@@ -220,8 +209,6 @@ function calcSavingChanges(actualSaving) {
         changeSection.appendChild(newChange);
     }
 
-    // code to check how many months needed to reach the savings goal
-    // at current rate of saving. k = no. of months.
     let monthlySum = (inputs[0] - inputs[1] - inputs[2] - inputs[3] - inputs[4] - inputs[5]) * 1000;
     let interest = (1 + inputs[6] / 100) * 1000;
     let goalTotal = inputs[8] * 1000; 
@@ -231,27 +218,20 @@ function calcSavingChanges(actualSaving) {
         k += 1;
         goalTotal = (goalTotal / interest) * 1000 - monthlySum;
     } while (goalTotal > 0);
-
     changeText = `<p>If you save for <strong>${k}</strong> months you will achieve your goal.</p>`;
     addChangeTitle();
     addChange();
 
-    // code to check how much the user would need to cut from total expenses.
     goalTotal = inputs[8] * 1000;
     let goalMonthlySum = (goalTotal/interest/inputs[7]) * 1000;
     let deficit = (goalMonthlySum - monthlySum) / 1000;
-    //Brian Ustas code.
     deficit = Math.round((deficit + Number.EPSILON) * 100) / 100;
-
     changeText = `<p>Alternatively, you could try to cut your total monthly costs. 
                  You would need to save <strong>£${deficit}</strong> per month in addition to what you
                  currently save in order to meet your goal.</p>`;
     addChange();
 
-    // code to check what interest they have earned vs what interest they need to earn
-    // to achieve their savings goal.
     let actualInterestEarned = actualSaving - (inputs[7] * monthlySum) / 1000 ;
-    // Brian Ustas code.
     actualInterestEarned = Math.round((actualInterestEarned + Number.EPSILON) * 100) / 100;
 
     changeText = `<p>Additionally, with your current bank account 
@@ -309,7 +289,6 @@ function checkRecommemndations() {
             do not exceed 25% of your take-home pay.</p>`;
         addRecommendationTitle();
         addOkRecommendation();
-        console.log("ok rent");
     } else if (rent > pay / 2) {
         html = `<p>Your rent/mortgage is VERY high. 
             It's recommended that your accommodation payments do not exceed 
@@ -317,13 +296,11 @@ function checkRecommemndations() {
             or increase your income as soon as possible.</p>`;
         addRecommendationTitle();
         addBadRecommendation();
-        console.log("bad rent");
     } else if (rent < pay / 4 || rent === 0) {
         html = `<p>Your rent/mortgage payments are 
             healthy proportional to your income.</p>`;
         addRecommendationTitle();
         addGoodRecommendation();
-        console.log("good rent");
     } else {
         alert(`Unknown value ${rent} Please fill in the form and try again.`);
         inputs = [];
@@ -337,12 +314,10 @@ function checkRecommemndations() {
             around £300. Consider getting a better deal, or
             find ways to cut down on your usage.</p>`;
         addOkRecommendation();
-        console.log("ok utilites");
     } else if (utilities < 300 || utilities === 0) {
         html = `<p>Your utilities bill is below
             the UK average.</p>`;
         addGoodRecommendation();
-        console.log("good utilities");
     } else {
         alert(`Unknown value ${utilities} Please fill in the form and try again.`);
         inputs = [];
@@ -357,13 +332,11 @@ function checkRecommemndations() {
             amount for sustainable generosity.
             Consider giivng less away if you want to save more.</p>`;
         addOkRecommendation();
-        console.log("ok charity");
     } else if (charity <= (pay / 10) || charity === 0) {
         html = `<p>Your giving is within the recommended 10% of 
             your total monthly income. It is more than acceptable to
             give more than 10%, but you won't save as much.</p>`;
         addGoodRecommendation();
-        console.log("good charity");
     } else {
         alert(`Unknown value ${charity} Please fill in the form and try again.`);
         inputs = [];
@@ -377,12 +350,10 @@ function checkRecommemndations() {
             If you want to save money more effectively 
             you need to look for ways to cut back on your monthly costs.</p>`;
         addBadRecommendation();
-        console.log("bad expense");
     } else if (expense <= rent || expense === 0) {
         html = `<p>Your expenses are currently at a healthy level proportional
         to your rent/mortgage payments.</p>`;
         addGoodRecommendation();
-        console.log("good expenses");
     } else {
         alert(`Unknown value ${expense} Please fill in the form and try again.`);
         inputs = [];
@@ -399,8 +370,6 @@ function checkRecommemndations() {
     let resultContainer = document.getElementById('result-container');
     resultContainer.scrollIntoView(top);
 
-    inputsStored = inputs;
-    console.log(inputsStored);
     inputs = [];
 }
 
