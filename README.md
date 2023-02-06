@@ -29,7 +29,7 @@ These features aims to achieve the project goals below through offering an inter
     * [Colour Scheme](#colour-scheme)
     * [Wireframes](#wireframes)
 * [Features](#features)
-    *[Feature Ideas for future development](#feature-ideas-for-future-development)
+    * [Feature Ideas for future development](#feature-ideas-for-future-development)
 * [Technologies Used](#technologies-used)
 * [Deployment & Local Development](#deployment--local-development)
 * [Testing](#testing)
@@ -373,19 +373,19 @@ The stylesheet for this website was validated using the W3C [Jigsaw](https://jig
 The three JavaScript files in this project were tested using JSHint and all passed with no errors. The warnings shown are all notifications that ES6 notation was used.
 
 <details>
-    <summary>calculator.js<summary>
+    <summary>calculator.js</summary>
     <img src="readme-docs/validation/jshint-calc.png" alt="A screenshot of the jshint summary of the calculator.js file">
-</details>
+</details><br>
 
 <details>
-    <summary>contact_form.js<summary>
+    <summary>contact_form.js</summary>
     <img src="readme-docs/validation/jshint-contact.png" alt="A screenshot of the jshint summary of the contact_form.js file">
-</details>
+</details><br>
 
 <details>
-    <summary>quiz.js<summary>
+    <summary>quiz.js</summary>
     <img src="readme-docs/validation/jshint-quiz.png" alt="A screenshot of the jshint summary of the quiz.js file">
-</details>
+</details><br>
 
 
 #### **Accessibility**
