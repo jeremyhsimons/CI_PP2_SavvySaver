@@ -358,31 +358,43 @@ The site was tested on the following devices:
 #### **HTML**
 All HTML files were validated using the [w3c vaildation service](https://validator.w3.org/). All pages passed with no errors and no warnings.
 
-[Home page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2F)
-[Calculator page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2Fcalculator.html)
-[FAQ page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2Ffaq.html)
-[Quiz page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2Fquiz.html)
-[404 page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2F404.html)
+* [Home page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2F)
+* [Calculator page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2Fcalculator.html)
+* [FAQ page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2Ffaq.html)
+* [Quiz page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2Fquiz.html)
+* [404 page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2F404.html)
 
 #### **CSS**
 The stylesheet for this website was validated using the W3C [Jigsaw](https://jigsaw.w3.org/css-validator/) CSS validation service. The file contained no errors.
-[CSS Validation](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* [CSS Validation](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 #### **JS**
 The three JavaScript files in this project were tested using JSHint and all passed with no errors. The warnings shown are all notifications that ES6 notation was used.
-<img src="readme-docs/validation/jshint-calc.png" alt="A screenshot of the jshint summary of the calculator.js file">
-<img src="readme-docs/validation/jshint-contact.png" alt="A screenshot of the jshint summary of the contact_form.js file">
-<img src="readme-docs/validation/jshint-quiz.png" alt="A screenshot of the jshint summary of the quiz.js file">
+
+<details>
+    <summary>calculator.js<summary>
+    <img src="readme-docs/validation/jshint-calc.png" alt="A screenshot of the jshint summary of the calculator.js file">
+</details>
+
+<details>
+    <summary>contact_form.js<summary>
+    <img src="readme-docs/validation/jshint-contact.png" alt="A screenshot of the jshint summary of the contact_form.js file">
+</details>
+
+<details>
+    <summary>quiz.js<summary>
+    <img src="readme-docs/validation/jshint-quiz.png" alt="A screenshot of the jshint summary of the quiz.js file">
+</details>
 
 
 #### **Accessibility**
 The site's accessibility was tested using the [WAVE](https://wave.webaim.org/) tool by webaim. All pages passed with no errors or contrast errors.
 
-<details>
-    <summary>Home page</summary>
-    <img>
-</details><br>
-
+* [Home page](https://wave.webaim.org/report#/https://jeremyhsimons.github.io/CI_PP2_SavvySaver/index.html)
+* [Calculator page](https://wave.webaim.org/report#/https://jeremyhsimons.github.io/CI_PP2_SavvySaver/calculator.html)
+* [FAQ page](https://wave.webaim.org/report#/https://jeremyhsimons.github.io/CI_PP2_SavvySaver/faq.html)
+* [Quiz page](https://wave.webaim.org/report#/https://jeremyhsimons.github.io/CI_PP2_SavvySaver/quiz.html)
+* [404 page](https://wave.webaim.org/report#/https://jeremyhsimons.github.io/CI_PP2_SavvySaver/404.html)
 
 #### **Performance**
 The performance of the website was tested using Lighthouse within Chrome developer tools. The tests below were for desktop devices and all pages acheived a score above 90/100 for the criteria of performance, accessibility, best practices, and SEO.
@@ -433,11 +445,18 @@ The performance of the website was tested using Lighthouse within Chrome develop
 * The 404 page was created with the help of GitHub's [instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site) on how to create a custom 404 page.
 
 ### 3rd party code used
+#### External APIs/libraries
 * [Google Fonts](https://fonts.google.com/) import link appears at the top of style.css.
 * [Fontawesome](https://fontawesome.com/) Characters. Script for this is included at the very bottom of the body element in every html file in the website.
 * [favicon.io](https://favicon.io/) code was used in the head elements to generate favicon, and images are stored in assets/images.
 * [EmailJS](https://www.emailjs.com/) code was used to make contact form submission function.
 
+#### Code found online when solving bugs in own code.
+* [StackOverflow](https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary) How to round to 2dp in JS, Brian Ustas.
+* [Codexworld](https://www.codexworld.com/print-page-area-javascript/#:~:text=JavaScript%20Code%3A&text=You%20can%20use%20this%20function,or%20full%20web%20page%20content.&text=Use%20the%20printPageArea()%20function,which%20you%20want%20to%20print.) How to print just a page area in JS.
+* [javascript.info](https://javascript.info/array-methods#shuffle-an-array) How to shuffle and array in JS.
+* [Geeks for Geeks](https://www.geeksforgeeks.org/how-to-check-whether-a-radio-button-is-selected-with-javascript/) How to find out if radio input is checked.
+* [Code with Voran](https://www.youtube.com/watch?v=dgcYOm8n8ME) How to get the EmailJS API to work.
 
 ### Media
 * [Unsplash](https://unsplash.com/)
@@ -450,3 +469,4 @@ The performance of the website was tested using Lighthouse within Chrome develop
 ### Acknowledgements
 * Thanks to my Mentor Mo Shami for his feedback, advice and encouragement throughout this project.
 * Thanks to the wonderful CI London Community for all the moral support!
+* Thanks to Katie McLaren for being my Rubber Ducky and for testing site features and offering feedback on how it feels to use!
