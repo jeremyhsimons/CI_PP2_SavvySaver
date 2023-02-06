@@ -36,6 +36,7 @@ These features aims to achieve the project goals below through offering an inter
     * [Validation](#validation)
         * [HTML](#html)
         * [CSS](#css)
+        * [JavaScript](#js)
         * [Accessibility](#accessibility)
         * [Performance](#performance)
     * [Testing user stories](#testing-user-stories)
@@ -423,6 +424,92 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 |User story|Feature|Test|Expected Result|Actual Result|
 |---|---|---|---|---|
+| 1. Navigate main features | Navigation bar | Starting at home page navigate to about page and reviews page. | Navigation elements lead to the expected pages. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+
+</details><br>
+
+| 2. Use calculator to see if I can reach my financial goals (first time user) | Calculator form | Enter details into form fields and click 'calculate' button | To be directed to the results of my calculation | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+
+</details><br>
+
+| 3. Find answers to questions I have (first time user) | FAQ | Navigate to FAQ page | To be directed to the FAQs | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+
+</details><br>
+
+| 4. Interact with the site and test my knowledge | Quiz | Navigate to the quiz and attempt it, submitting answers and clicking 'check answers'. | For quiz submission to result in feedback about how well I did in the quiz. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+
+</details><br>
+
+| 5. Contact the site owner if I have any questions/probelms to report. | Contact form | Navigate to the FAQ page and fill out the contact form, and click 'send'. | After submitting the form, feedback to be sent to the user notifying success/failure. Emails should also be sent successfully. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+
+</details><br>
+
+| 6. For the site to be intuitive/give feedback on user actions (first time user) | Calculator form print/reset | From the calculator page, submit form, then hover over the print/reset button. | When user hovers over this button they should be notified as to what the button will do (i.e. warned that this button will also reset the form fields that they have already taken the time to fill in.) | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+
+</details><br>
+
+| 7. Return and recalculate savings to see if finances have improved. | Calculator form | See user story 2 - same test | See user story 2 - same test | See user story 2 - same test |
+
+| 8. For the calculator results to be displayed in a clear, visually pleasing manner. | Results section generated after calculator submission | From the calculator page, submit form. | When the user submits the form the page should automatically scroll down to the results of their calculation which should appear in 3 clear sections. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+
+</details><br>
+
+| 9. To save a copy of user's results for future reference | Calculator form print/reset | From the calculator page, submit form, then click the print/reset button. | When user clicks this button, the print dialog should open, allowing them to save a pdf of the page to their local device. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+
+</details><br>
+
+| 10. To test the knowledge of the user and see if their knowledge has improved | Quiz/Score counter | From the quiz page, complete the quiz form and submit. Then, click 'try again'. After this, complete the form again, submit, and then click 'try again' a second time. | When user clicks try again the first time their score should be saved as the current high score. If their second attempt yields a higher score, the high score counter will save their new score as the high score. If not, the high score remains the same. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+
+</details><br>
+
+| 11. (site owner) To direct users to main feature and other features easily | Navigation bar | See user story 1 - same test | See user story 1 - same test | See user story 1 - same test |
+
+| 12. (site owner) For user error to be caught by the site and for appropriate feedback to be given | Calculator | From the calculator page, fill out the form with an empty field | When the user submits the form with an empty field, the site should alert them to the fact that they have submitted erroneously and suggest actions that they should take. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+
+</details><br>
+
+| 13. (site owner) For site features to be self explanatory | Calculator | From the home page, read instructions. Then on calculator page, read extra information given in the form. | When the user reads the instructions they should be able to grasp that see that a) the form has template answers pre-filled, b) the interest is assumed to be compounded each month c) the timescale should also be measured in months.| Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+
+</details><br>
+
+| 14. (site owner) For the site to have an FAQ for users who have questions. | FAQ | See user story 3 - same test. | See user story 3 - same test. | See user story 3 - same test. |
+
+| 15. (site owner) For the site to have a contact page for users to reach owner with any questions/problems | Contact form | See user story 5 - same test. | See user story 5 - same test. | See user story 5 - same test. |
+
+| 16. (site owner) For the site to have a 404 page to manage users mistyping urls or links breaking. | 404 page | From home page, access the url bar in browser and break the url. | When the url is broken, the user should be directed to a custom 404 page from which they can re-navigate back to the site. | works as expected. |
 
 <details>
     <summary>Screenshots</summary>
