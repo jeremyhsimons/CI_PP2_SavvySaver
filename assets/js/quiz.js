@@ -81,7 +81,6 @@ let currentScore = 0;
 /**
  * A function to randomise the order of the questions before when the user
  * starts the game.
- * 
  * Array sorting statement found on javascript.info. Link in readme.
  */
 function questionSetup () {
@@ -193,30 +192,31 @@ function validateAnswers() {
  * to see how many they got right.
  */
 function checkAnswers() {
+    let k;
+    function addMarksCorrect() {
+        const correctMarks = document.createElement('div');
+        correctMarks.classList.add('correct');
+        correctMarks.innerHTML = marksText;
+        let questionBox = document.getElementById(`${k}`);
+        questionBox.appendChild(correctMarks);
+    }
+    function addMarksIncorrect() {
+        const incorrectMarks = document.createElement('div');
+        incorrectMarks.classList.add('incorrect');
+        incorrectMarks.innerHTML = marksText;
+        let questionBox = document.getElementById(`${k}`);
+        questionBox.appendChild(incorrectMarks);
+    }
     let marksText;
-    for(let k = 0; k <= 4; k++) {
+    for(k = 0; k <= 4; k++) {
         let ansCheck = document.querySelector(`input[name = "${k}"]:checked`);
         if (ansCheck.value === questionsSorted[k].answer) {
             marksText = `<p>Hooray you got question ${k + 1} right!</p>`;
-            function addMarksCorrect() {
-                const correctMarks = document.createElement('div');
-                correctMarks.classList.add('correct');
-                correctMarks.innerHTML = marksText;
-                let questionBox = document.getElementById(`${k}`);
-                questionBox.appendChild(correctMarks);
-            }
-            addMarksCorrect();
+            addMarksCorrect(k);
             currentScore += 1;
         } else {
             marksText = `<p>Uh oh... You got question ${k + 1} wrong. The correct answer was <strong>${questionsSorted[k].answer}</strong>!</p>`;
-            function addMarksIncorrect() {
-                const incorrectMarks = document.createElement('div');
-                incorrectMarks.classList.add('incorrect');
-                incorrectMarks.innerHTML = marksText;
-                let questionBox = document.getElementById(`${k}`);
-                questionBox.appendChild(incorrectMarks);
-            }
-            addMarksIncorrect();
+            addMarksIncorrect(k);
         }
     }
     let pageTop = document.getElementById('high-score');
