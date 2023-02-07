@@ -50,7 +50,6 @@ let inputs = [];
 /**
  * A function to get all the user's inputs from the form and store them
  * in an array called inputs.
- * 
  * This function is called by form submission event.
  */
 function getInputs(event) {
@@ -102,9 +101,9 @@ function validateInputs () {
 /**
  * A function to calculate the user's projected savings.
  * This function is called after the the inputs array is filled.
- * 
  * Code for rounding to 2dp accurately found on StackOverflow. Link to
  * page in readme.
+ * @param inputs [The array of numbers representing the user's form submission.]
  */
 function calcSaving(inputs) {
     let monthlySum = (inputs[0] - inputs[1] - inputs[2] - inputs[3] - inputs[4] - inputs[5]) * 1000;
@@ -123,6 +122,7 @@ function calcSaving(inputs) {
 /**
  * A function to check whether the user's projected saving
  * is greater than or equal to the savings goal.
+ * @param actualSaving [The user's projected savings as calculated by calcSaving]
  */
 function checkSaving(actualSaving) {
     let html = `<p></p>`;
@@ -168,7 +168,6 @@ function checkSaving(actualSaving) {
         addResults();
         calcSavingChanges(actualSaving);
     } else {
-        // Code for error handling borrowed from LoveMaths walkthrough.
         alert(`Unknown value ${actualSaving} Please fill in the form and try again.`);
         throw `Unknown value ${actualSaving}`;
     }
@@ -179,17 +178,13 @@ function checkSaving(actualSaving) {
  * A function that goes through the user's inputs and calculates
  * the revised figures needed for the user to meet their
  * savings goal.
- * 
  * This function is only called if the checkSaving function finds
  * that the user's savings are below the user's goal.
- * 
  * First block generates html elements.
- * 
  * Second block checks how many months needed to meet goal.
- * 
  * Third block checks how much needed to cut expenses per month.
- * 
  * Fourth block checks how much interest earned.
+ * @param actualSaving [The user's projected savings as calculated by calcSaving]
  */
 function calcSavingChanges(actualSaving) {
 
@@ -244,7 +239,6 @@ function calcSavingChanges(actualSaving) {
 /**
  * A function that checks each of the user's inputs against
  * pre-determined recommended figures and outputs HMTL accordingly.
- * 
  * This function is called after the Inputs array is filled.
  */
 function checkRecommemndations() {
@@ -386,7 +380,6 @@ function clearDom() {
 /**
  * A function allowing the user to print their results
  * and save their financial insights.
- * 
  * This solution to printing an area of the page found
  * at codexworld.com. Link to article in readme
  */

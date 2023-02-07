@@ -17,8 +17,8 @@ tryAgain.addEventListener('click', clearAnswers);
 
 
 /**
- * The questions variable is an array containing the questions,
- * options, and answer for each question.
+ * The questions variable is an array containing objects which are 
+ * the questions, options, and answer for each question.
  */
 
 const questions = [
