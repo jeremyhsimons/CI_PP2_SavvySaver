@@ -65,12 +65,12 @@
                     <input id="full-name" name="name" type="text" placeholder="Full Name" required><br>
                     <br>
                     <label for="email">Email Address:</label>
-                    <input id="email" name="email" type="text" placeholder="Email Address" required><br>
+                    <input id="email" name="email" type="email" placeholder="Email Address" required><br>
                     <br>
                     <label for="message">Your Message:</label>
                     <br>
-                    <textarea name="message" id="message" cols="30" rows="7" placeholder="Write your message here."></textarea><br>
-                    <button id="contact-submit" type="button" value="Send">Send</button>
+                    <textarea name="message" id="message" cols="30" rows="7" placeholder="Write your message here." required></textarea><br>
+                    <button id="contact-submit" type="submit" value="Send">Send</button>
                 </fieldset>
             </form>
         </section>
@@ -96,8 +96,6 @@
     <script src="https://kit.fontawesome.com/7f6a607fdc.js" crossorigin="anonymous"></script>
     <!--EmailJS Script-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-      emailjs.init('d9-fGM2Z78DfQCMYa')
-    </script>
+    <script type="text/javascript"></script>
 </body>
 </html>

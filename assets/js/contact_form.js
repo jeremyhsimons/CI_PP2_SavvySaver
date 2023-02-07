@@ -3,7 +3,8 @@
 let btn = document.getElementById('contact-submit');
 btn.addEventListener('click', sendMail);
 
-function sendMail() {
+function sendMail(event) {
+   event.preventDefault;
    btn.innerHTML = "Sending";
    btn.style.backgroundColor = "#A4C3BF";
    const serviceID = 'service_pggv7y7';
@@ -13,7 +14,7 @@ function sendMail() {
     email_id : document.getElementById('email').value,
     message : document.getElementById('message').value
    };
-
+   emailjs.init('d9-fGM2Z78DfQCMYa');
    emailjs.send(serviceID, templateID, templateParams).then((res) => {
       alert('Your message was sent successfully.');
       btn.innerHTML = "Send";
