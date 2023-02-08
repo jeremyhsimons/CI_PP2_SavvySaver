@@ -128,7 +128,6 @@ Each page subsequent to the landing page has a similar layout. Heading and page 
 
 The wireframes below were created using [figma](https://www.figma.com/). The layout for each of the pages has been designed to suit mobile, tablet, and desktop devices.
 
-#### **Home page**
 <details>
     <summary>Home page</summary>
     <img src="readme-docs/wireframes/ss-mobile-home.png" alt="Home page wireframe mobile">
@@ -424,7 +423,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
 </details><br>
 
 <details>
-    <summary>Home page</summary>
+    <summary>Quiz page</summary>
     <img src="readme-docs/validation/quiz-perf.png" alt="A screenshot of the quiz page lighthouse report">
 </details><br>
 
@@ -656,6 +655,6 @@ The performance of the website was tested using Lighthouse within Chrome develop
     * Jp Valery [Burning money](https://unsplash.com/photos/mQTTDA_kY_8)
 
 ### Acknowledgements
-* Thanks to my Mentor Mo Shami for his feedback, advice and encouragement throughout this project.
+* Thanks to my Mentor Mo Shami for his <strong>immensely valuable</strong> feedback, advice and encouragement throughout this project!
 * Thanks to the wonderful CI London Community for all the moral support!
 * Thanks to Katie McLaren for being my Rubber Ducky and for testing site features and offering feedback on how it feels to use!
