@@ -1,10 +1,11 @@
 //Code from EmailJS and Code With Voran. Links to resources used in readme.
 
-let btn = document.getElementById('contact-submit');
-btn.addEventListener('submit', sendMail);
+let contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', sendMail);
 
 function sendMail(event) {
-   event.preventDefault;
+   event.preventDefault();
+   let btn = document.getElementById("contact-submit");
    btn.innerHTML = "Sending";
    btn.style.backgroundColor = "#A4C3BF";
    const serviceID = 'service_pggv7y7';
