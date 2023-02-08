@@ -71,6 +71,7 @@ footer {
     height: 40px;
     background-color: #292d41;
     text-align: center;
+    color: #ebeecd;
     padding-top: 20px;
 }
 
@@ -84,7 +85,11 @@ footer > ul > li {
     padding: 3%;
     color: #ebeecd;
     display: inline;
-    font-size: 110%;
+    font-size: 120%;
+}
+
+footer > ul > li > p {
+    display: inline;
 }
 
 footer > ul > li > a:hover {
@@ -637,13 +642,13 @@ fieldset {
     /* General */
 
     nav > ul > li {
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     
     footer > ul > li {
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     /* Home */
@@ -678,8 +683,8 @@ fieldset {
     }
 
     nav > ul > li {
-        margin-left: 75px;
-        margin-right: 75px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
     
     footer > ul > li {
@@ -687,8 +692,8 @@ fieldset {
     }
 
     footer > ul > li {
-        margin-left: 75px;
-        margin-right: 75px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
     /* Home */
