@@ -1,7 +1,7 @@
 //Code from EmailJS and Code With Voran. Links to resources used in readme.
 
 let btn = document.getElementById('contact-submit');
-btn.addEventListener('click', sendMail);
+btn.addEventListener('submit', sendMail);
 
 function sendMail(event) {
    event.preventDefault;
