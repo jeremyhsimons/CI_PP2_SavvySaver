@@ -436,7 +436,13 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-
+    <img src="readme-docs/testing-user-stories/us1-1.png" alt="A screenshot of the home page"><br>
+    <img src="readme-docs/testing-user-stories/us1-2.png" alt="A screenshot of the calculator nav element highlighted"><br>
+    <img src="readme-docs/testing-user-stories/us1-3.png" alt="A screenshot of the calculator page"><br>
+    <img src="readme-docs/testing-user-stories/us1-4.png" alt="A screenshot of the faq nav element highlighted"><br>
+    <img src="readme-docs/testing-user-stories/us1-5.png" alt="A screenshot of faq page"><br>
+    <img src="readme-docs/testing-user-stories/us1-6.png" alt="A screenshot of quiz nav element highlighted"><br>
+    <img src="readme-docs/testing-user-stories/us1-7.png" alt="A screenshot of quiz page">
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -446,7 +452,9 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-
+    <img src="readme-docs/testing-user-stories/us2-1.png" alt="A screenshot of the calculator form"><br>
+    <img src="readme-docs/testing-user-stories/us2-2.png" alt="A screenshot of the calculate button highlighted"><br>
+    <img src="readme-docs/testing-user-stories/us2-3.png" alt="A screenshot of the calculator results section"><br>
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -455,7 +463,9 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-
+    <img src="readme-docs/testing-user-stories/us1-1.png" alt="A screenshot of the home page"><br>
+    <img src="readme-docs/testing-user-stories/us1-4.png" alt="A screenshot of the faq nav element highlighted"><br>
+    <img src="readme-docs/testing-user-stories/us1-5.png" alt="A screenshot of faq page"><br>
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -464,6 +474,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
+    <img src="" alt="A screenshot of">
 
 </details><br>
 
@@ -473,6 +484,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
+    <img src="" alt="A screenshot of">
 
 </details><br>
 
@@ -482,6 +494,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
+    <img src="" alt="A screenshot of">
 
 </details><br>
 
@@ -495,6 +508,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
+    <img src="" alt="A screenshot of">
 
 </details><br>
 
@@ -504,6 +518,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
+    <img src="" alt="A screenshot of">
 
 </details><br>
 
@@ -513,6 +528,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
+    <img src="" alt="A screenshot of">
 
 </details><br>
 
@@ -526,6 +542,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
+    <img src="" alt="A screenshot of">
 
 </details><br>
 
@@ -535,6 +552,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
+    <img src="" alt="A screenshot of">
 
 </details><br>
 
@@ -552,6 +570,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
+    <img src="" alt="A screenshot of">
 
 </details><br>
 
@@ -561,6 +580,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
+    <img src="" alt="A screenshot of">
 
 </details><br>
 
