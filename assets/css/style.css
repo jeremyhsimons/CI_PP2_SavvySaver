@@ -38,6 +38,7 @@ nav {
     background-color: #292d41;
     text-align: center;
     padding-top: 20px;
+    border-bottom: 1px solid #A4C3BF;
 }
 
 nav > ul {
@@ -73,6 +74,8 @@ footer {
     text-align: center;
     color: #ebeecd;
     padding-top: 20px;
+    border-top: 1px solid #A4C3BF;
+
 }
 
 footer > ul {
