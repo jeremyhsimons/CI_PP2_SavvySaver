@@ -474,8 +474,8 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-    <img src="" alt="A screenshot of">
-
+    <img src="readme-docs/testing-user-stories/us4-1.png" alt="A screenshot of the quiz completed and check answers button highlighted.">
+    <img src="readme-docs/testing-user-stories/us4-2.png" alt="A screenshot of the quiz answers displayed.">
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -485,7 +485,14 @@ The performance of the website was tested using Lighthouse within Chrome develop
 <details>
     <summary>Screenshots</summary>
     <img src="" alt="A screenshot of">
-
+    <p>Form filled out</p>
+    <img src="readme-docs/testing-user-stories/us5-1.png" alt="A screenshot of the contact form filled out.">
+    <p>Form successfully submitted.</p>
+    <img src="readme-docs/testing-user-stories/us5-2.png" alt="A screenshot of the contact form success notification.">
+    <p>Email received from Savvy Saver site.</p>
+    <img src="readme-docs/testing-user-stories/us5-3.png" alt="A screenshot of the email received to the site owner's inbox from the website.">
+    <p>Auto reset after sending success.</p>
+    <img src="readme-docs/testing-user-stories/us5-4.png" alt="A screenshot of the form which has automatic reset after sending message.">
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -494,8 +501,9 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-    <img src="" alt="A screenshot of">
-
+    <img src="readme-docs/testing-user-stories/us1-3.png" alt="A screenshot of the calc page.">
+    <p>The popup displayed by hovering over the print/reset button</p>
+    <img src="readme-docs/testing-user-stories/us6-1.png" alt="A screenshot of the print/reset button popup.">
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
