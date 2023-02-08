@@ -357,7 +357,7 @@ The site was tested on the following devices:
 
 ### Validation
 #### **HTML**
-All HTML files were validated using the [w3c vaildation service](https://validator.w3.org/). All pages passed with no errors and no warnings.
+All HTML files were validated using the [w3c vaildation service](https://validator.w3.org/). All pages passed with no errors. The only warning is on the FAQ page and pertains to the script tag from the EmailJS API (not my code).
 
 * [Home page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2F)
 * [Calculator page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2Fcalculator.html)
