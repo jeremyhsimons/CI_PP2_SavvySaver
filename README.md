@@ -571,11 +571,11 @@ The performance of the website was tested using Lighthouse within Chrome develop
 <details>
     <summary>Screenshots</summary>
     <p>Instructions for the user</p>
-    <img src="readme-docs/testing-user-stories/us13-1.png" alt="A screenshot of the home page instructions">
+    <img src="readme-docs/testing-user-stories/us13-1.png" alt="A screenshot of the home page instructions"><br>
     <p>Information for the user about how the form is laid out and what results they can expect.</p>
-    <img src="readme-docs/testing-user-stories/us13-2.png" alt="A screenshot of the calculator form info">
+    <img src="readme-docs/testing-user-stories/us13-2.png" alt="A screenshot of the calculator form info"><br>
     <p>Info clarifying what inputs they need to enter.</p>
-    <img src="readme-docs/testing-user-stories/us13-3.png" alt="A screenshot of extra text under interest and timescale fields">
+    <img src="readme-docs/testing-user-stories/us13-3.png" alt="A screenshot of extra text under interest and timescale fields"><br>
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -592,8 +592,10 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-    <img src="" alt="A screenshot of">
-
+    <p>User breaks url</p>
+    <img src="readme-docs/testing-user-stories/us16-1.png" alt="A screenshot of broken url."><br>
+    <p>404 page displayed</p>
+    <img src="readme-docs/testing-user-stories/us16-1.png" alt="A screenshot of 404 page."><br>
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -602,8 +604,18 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-    <img src="" alt="A screenshot of">
-
+    <p>Facebook clicked.</p>
+    <img src="readme-docs/testing-user-stories/us17-1.png" alt="A screenshot of the socials footer with FB clicked on"><br>
+    <p>Facebook opens in a new tab.</p>
+    <img src="readme-docs/testing-user-stories/us17-2.png" alt="A screenshot of the site owner's facebook page"><br> 
+    <p>GitHub clicked.</p>
+    <img src="readme-docs/testing-user-stories/us17-3.png" alt="A screenshot of the socials footer with FB clicked on"><br>
+    <p>GitHub repo opens in a new tab.</p>
+    <img src="readme-docs/testing-user-stories/us17-4.png" alt="A screenshot of the site owner's GitHub repo for this website"><br> 
+    <p>LinkedIn clicked.</p>
+    <img src="readme-docs/testing-user-stories/us17-5.png" alt="A screenshot of the socials footer with FB clicked on"><br>
+    <p>LinkedIn opens in a new tab.</p>
+    <img src="readme-docs/testing-user-stories/us17-6.png" alt="A screenshot of the site owner's LinkedIn page"><br> 
 </details><br>
 
 ### Bugs
