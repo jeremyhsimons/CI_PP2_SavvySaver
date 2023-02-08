@@ -595,7 +595,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
     <p>User breaks url</p>
     <img src="readme-docs/testing-user-stories/us16-1.png" alt="A screenshot of broken url."><br>
     <p>404 page displayed</p>
-    <img src="readme-docs/testing-user-stories/us16-1.png" alt="A screenshot of 404 page."><br>
+    <img src="readme-docs/testing-user-stories/us16-2.png" alt="A screenshot of 404 page."><br>
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -628,7 +628,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
 |Calculator Page would freeze if users costs field totalled more than the income sum. | Added another conditional statement to the validation function to check if income < costs and alert the user that they will not save money with this current budget, and need to re-organise it before using the calculator feature. |
 |Print button would remove the user's values from the fields and reset to default "0" that is coded as the value attribute in the form's html. | Added `location.reload()` to make the print function reload the page to the default values. The print button now works as a reset button as well. |#
 |EmailJS would work but would not display the user's email address and name when submitted. | Re-copied the existing code from emailjs.com and added a templateParams object to get these elements from the DOM and send them with the API. |
-|Quiz feature would still mark the questions that had been submitted if the user submitted an incomplete form. | Wrap the checkAnswers function in the following if statement after the validation loop to check that all question fields had been validated: `if (i === 4) { checkAnswers(); }` |
+|Quiz feature would still mark the questions that had been submitted if the user submitted an incomplete form. | Wrap the checkAnswers function in the following if statement after the validation loop to check that all question fields had been validated: `if (i === 5) { checkAnswers(); }` |
 
 ## Credits
 * The 404 page was created with the help of GitHub's [instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site) on how to create a custom 404 page.
