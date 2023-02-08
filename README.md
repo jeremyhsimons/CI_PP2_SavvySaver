@@ -94,6 +94,7 @@ Potential users of the site may include, but are not limited to:
 * (14) I want the site to have an FAQ with links to external resources in case first-time users have additional questions about managing their finances. 
 * (15) I want a way for users to contact me and offer me feedback about the site/ask questions that are not addressed on the site. 
 * (16) I want to be sure that if users break the url or if a link in the site breaks they can get back to site content
+* (17) I want to advertise my social media pages and GitHub account.
 
 ## Design
 
@@ -190,6 +191,13 @@ The website has 5 pages and the features of each page are listed below:
         <li>
             <p>User story covered: 1, 11</p>
             <img src="readme-docs/features/navbar-home.png" alt="A screenshot of the navigation bar">
+        </li>
+                <li>
+            <p>Footer directing users to the site owner's social media pages.</p>
+        </li>
+        <li>
+            <p>User story covered: 17</p>
+            <img src="readme-docs/features/footer-home.png" alt="A screenshot of the socials footer">
         </li>
     </ul>
 </details><br>
@@ -431,13 +439,18 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 </details><br>
 
-| 2. Use calculator to see if I can reach my financial goals (first time user) | Calculator form | Enter details into form fields and click 'calculate' button | To be directed to the results of my calculation | Works as expected. |
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
+| 2. Use calculator to see if I can reach my financial goals (first time user)  | Calculator form | Enter details into form fields and click 'calculate' button | To be directed to the results of my calculation | Works as expected. |
+
 
 <details>
     <summary>Screenshots</summary>
 
 </details><br>
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 3. Find answers to questions I have (first time user) | FAQ | Navigate to FAQ page | To be directed to the FAQs | Works as expected. |
 
 <details>
@@ -445,6 +458,8 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 </details><br>
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 4. Interact with the site and test my knowledge | Quiz | Navigate to the quiz and attempt it, submitting answers and clicking 'check answers'. | For quiz submission to result in feedback about how well I did in the quiz. | Works as expected. |
 
 <details>
@@ -452,6 +467,8 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 </details><br>
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 5. Contact the site owner if I have any questions/probelms to report. | Contact form | Navigate to the FAQ page and fill out the contact form, and click 'send'. | After submitting the form, feedback to be sent to the user notifying success/failure. Emails should also be sent successfully. | Works as expected. |
 
 <details>
@@ -459,6 +476,8 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 </details><br>
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 6. For the site to be intuitive/give feedback on user actions (first time user) | Calculator form print/reset | From the calculator page, submit form, then hover over the print/reset button. | When user hovers over this button they should be notified as to what the button will do (i.e. warned that this button will also reset the form fields that they have already taken the time to fill in.) | Works as expected. |
 
 <details>
@@ -466,8 +485,12 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 </details><br>
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 7. Return and recalculate savings to see if finances have improved. | Calculator form | See user story 2 - same test | See user story 2 - same test | See user story 2 - same test |
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 8. For the calculator results to be displayed in a clear, visually pleasing manner. | Results section generated after calculator submission | From the calculator page, submit form. | When the user submits the form the page should automatically scroll down to the results of their calculation which should appear in 3 clear sections. | Works as expected. |
 
 <details>
@@ -475,6 +498,8 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 </details><br>
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 9. To save a copy of user's results for future reference | Calculator form print/reset | From the calculator page, submit form, then click the print/reset button. | When user clicks this button, the print dialog should open, allowing them to save a pdf of the page to their local device. | Works as expected. |
 
 <details>
@@ -482,6 +507,8 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 </details><br>
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 10. To test the knowledge of the user and see if their knowledge has improved | Quiz/Score counter | From the quiz page, complete the quiz form and submit. Then, click 'try again'. After this, complete the form again, submit, and then click 'try again' a second time. | When user clicks try again the first time their score should be saved as the current high score. If their second attempt yields a higher score, the high score counter will save their new score as the high score. If not, the high score remains the same. | Works as expected. |
 
 <details>
@@ -489,8 +516,12 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 </details><br>
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 11. (site owner) To direct users to main feature and other features easily | Navigation bar | See user story 1 - same test | See user story 1 - same test | See user story 1 - same test |
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 12. (site owner) For user error to be caught by the site and for appropriate feedback to be given | Calculator | From the calculator page, fill out the form with an empty field | When the user submits the form with an empty field, the site should alert them to the fact that they have submitted erroneously and suggest actions that they should take. | Works as expected. |
 
 <details>
@@ -498,6 +529,8 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 </details><br>
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 13. (site owner) For site features to be self explanatory | Calculator | From the home page, read instructions. Then on calculator page, read extra information given in the form. | When the user reads the instructions they should be able to grasp that see that a) the form has template answers pre-filled, b) the interest is assumed to be compounded each month c) the timescale should also be measured in months.| Works as expected. |
 
 <details>
@@ -505,11 +538,26 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 </details><br>
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 14. (site owner) For the site to have an FAQ for users who have questions. | FAQ | See user story 3 - same test. | See user story 3 - same test. | See user story 3 - same test. |
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 15. (site owner) For the site to have a contact page for users to reach owner with any questions/problems | Contact form | See user story 5 - same test. | See user story 5 - same test. | See user story 5 - same test. |
 
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
 | 16. (site owner) For the site to have a 404 page to manage users mistyping urls or links breaking. | 404 page | From home page, access the url bar in browser and break the url. | When the url is broken, the user should be directed to a custom 404 page from which they can re-navigate back to the site. | works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+
+</details><br>
+
+|User story|Feature|Test|Expected Result|Actual Result|
+|---|---|---|---|---|
+| 17. (site owner) For the site to advertise social media pages | Site footer | From any page, click all the social media icons in the footer | The social media icons direct user to the expected pages. | Works as expected. |
 
 <details>
     <summary>Screenshots</summary>
