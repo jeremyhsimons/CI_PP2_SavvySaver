@@ -516,8 +516,7 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-    <img src="" alt="A screenshot of">
-
+    <img src="readme-docs/testing-user-stories/us8-1.png" alt="A screenshot of the 3 results sections.">
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -526,8 +525,10 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-    <img src="" alt="A screenshot of">
-
+    <p>Clicking the print/reset button</p>
+    <img src="readme-docs/testing-user-stories/us6-1.png" alt="A screenshot of the print/reset button">
+    <p>Print dialog opens.</p>
+    <img src="readme-docs/testing-user-stories/us9-1.png" alt="A screenshot of the print dialog">
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -536,8 +537,14 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-    <img src="" alt="A screenshot of">
-
+    <p>quiz filled out and clicking the check answers button.</p>
+    <img src="readme-docs/testing-user-stories/us10-1.png" alt="A screenshot of the quiz filled out and clicking the check answers button">
+    <img src="readme-docs/testing-user-stories/us10-2.png" alt="A screenshot of answers checked">
+    <p>clicking the try again button.</p>
+    <img src="readme-docs/testing-user-stories/us10-3.png" alt="A screenshot of user clicking the try again button">
+    <img src="readme-docs/testing-user-stories/us10-4.png" alt="A screenshot of alert of new high score">
+    <p>New high score displayed.</p>
+    <img src="readme-docs/testing-user-stories/us10-5.png" alt="A screenshot of high score displayed in the high score section">
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
