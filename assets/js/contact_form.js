@@ -18,6 +18,7 @@ function sendMail(event) {
    emailjs.send(serviceID, templateID, templateParams).then((res) => {
       alert('Your message was sent successfully.');
       btn.innerHTML = "Send";
+      btn.style.backgroundColor = "#EBEECD";
       document.getElementById('full-name').value = "";
       document.getElementById('email').value = "";
       document.getElementById('message').value = "";
