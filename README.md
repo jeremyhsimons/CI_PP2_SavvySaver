@@ -370,7 +370,7 @@ The stylesheet for this website was validated using the W3C [Jigsaw](https://jig
 * [CSS Validation](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjeremyhsimons.github.io%2FCI_PP2_SavvySaver%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 #### **JS**
-The three JavaScript files in this project were tested using JSHint and all passed with no errors. The warnings shown are all notifications that ES6 notation was used.
+The three JavaScript files in this project were tested using JSHint and all passed with no errors. The contact.js file had one undefined variable (`emailjs`) from the EmailJS API code.
 
 <details>
     <summary>calculator.js</summary>
