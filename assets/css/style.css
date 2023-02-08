@@ -55,6 +55,7 @@ nav > ul > li {
 
 nav > ul > li > a:hover {
     color: aquamarine;
+    text-decoration: underline;
 }
 
 nav > ul > li > a {
@@ -635,6 +636,11 @@ fieldset {
 @media screen and (min-width: 600px) {
     /* General */
 
+    nav > ul > li {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
     footer > ul > li {
         margin-left: 40px;
         margin-right: 40px;
@@ -667,6 +673,15 @@ fieldset {
 @media screen and (min-width: 900px) {
     /* General */
 
+    nav > ul > li {
+        font-size: 150%;
+    }
+
+    nav > ul > li {
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+    
     footer > ul > li {
         font-size: 150%;
     }
