@@ -474,8 +474,8 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-    <img src="readme-docs/testing-user-stories/us4-1.png" alt="A screenshot of the quiz completed and check answers button highlighted.">
-    <img src="readme-docs/testing-user-stories/us4-2.png" alt="A screenshot of the quiz answers displayed.">
+    <img src="readme-docs/testing-user-stories/us4-1.png" alt="A screenshot of the quiz completed and check answers button highlighted."><br>
+    <img src="readme-docs/testing-user-stories/us4-2.png" alt="A screenshot of the quiz answers displayed."><br>
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -484,15 +484,14 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-    <img src="" alt="A screenshot of">
     <p>Form filled out</p>
-    <img src="readme-docs/testing-user-stories/us5-1.png" alt="A screenshot of the contact form filled out.">
+    <img src="readme-docs/testing-user-stories/us5-1.png" alt="A screenshot of the contact form filled out."><br>
     <p>Form successfully submitted.</p>
-    <img src="readme-docs/testing-user-stories/us5-2.png" alt="A screenshot of the contact form success notification.">
+    <img src="readme-docs/testing-user-stories/us5-2.png" alt="A screenshot of the contact form success notification."><br>
     <p>Email received from Savvy Saver site.</p>
-    <img src="readme-docs/testing-user-stories/us5-3.png" alt="A screenshot of the email received to the site owner's inbox from the website.">
+    <img src="readme-docs/testing-user-stories/us5-3.png" alt="A screenshot of the email received to the site owner's inbox from the website."><br>
     <p>Auto reset after sending success.</p>
-    <img src="readme-docs/testing-user-stories/us5-4.png" alt="A screenshot of the form which has automatic reset after sending message.">
+    <img src="readme-docs/testing-user-stories/us5-4.png" alt="A screenshot of the form which has automatic reset after sending message."><br>
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -501,9 +500,9 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-    <img src="readme-docs/testing-user-stories/us1-3.png" alt="A screenshot of the calc page.">
+    <img src="readme-docs/testing-user-stories/us1-3.png" alt="A screenshot of the calc page."><br>
     <p>The popup displayed by hovering over the print/reset button</p>
-    <img src="readme-docs/testing-user-stories/us6-1.png" alt="A screenshot of the print/reset button popup.">
+    <img src="readme-docs/testing-user-stories/us6-1.png" alt="A screenshot of the print/reset button popup."><br>
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -526,9 +525,9 @@ The performance of the website was tested using Lighthouse within Chrome develop
 <details>
     <summary>Screenshots</summary>
     <p>Clicking the print/reset button</p>
-    <img src="readme-docs/testing-user-stories/us6-1.png" alt="A screenshot of the print/reset button">
+    <img src="readme-docs/testing-user-stories/us6-1.png" alt="A screenshot of the print/reset button"><br>
     <p>Print dialog opens.</p>
-    <img src="readme-docs/testing-user-stories/us9-1.png" alt="A screenshot of the print dialog">
+    <img src="readme-docs/testing-user-stories/us9-1.png" alt="A screenshot of the print dialog"><br>
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -538,13 +537,13 @@ The performance of the website was tested using Lighthouse within Chrome develop
 <details>
     <summary>Screenshots</summary>
     <p>quiz filled out and clicking the check answers button.</p>
-    <img src="readme-docs/testing-user-stories/us10-1.png" alt="A screenshot of the quiz filled out and clicking the check answers button">
-    <img src="readme-docs/testing-user-stories/us10-2.png" alt="A screenshot of answers checked">
+    <img src="readme-docs/testing-user-stories/us10-1.png" alt="A screenshot of the quiz filled out and clicking the check answers button"><br>
+    <img src="readme-docs/testing-user-stories/us10-2.png" alt="A screenshot of answers checked"><br>
     <p>clicking the try again button.</p>
-    <img src="readme-docs/testing-user-stories/us10-3.png" alt="A screenshot of user clicking the try again button">
-    <img src="readme-docs/testing-user-stories/us10-4.png" alt="A screenshot of alert of new high score">
+    <img src="readme-docs/testing-user-stories/us10-3.png" alt="A screenshot of user clicking the try again button"><br>
+    <img src="readme-docs/testing-user-stories/us10-4.png" alt="A screenshot of alert of new high score"><br>
     <p>New high score displayed.</p>
-    <img src="readme-docs/testing-user-stories/us10-5.png" alt="A screenshot of high score displayed in the high score section">
+    <img src="readme-docs/testing-user-stories/us10-5.png" alt="A screenshot of high score displayed in the high score section"><br>
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -557,8 +556,12 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-    <img src="" alt="A screenshot of">
-
+    <p>Missing income field.</p>
+    <img src="readme-docs/testing-user-stories/us12-1.png" alt="A screenshot of calculator with empty field."><br>
+    <p>'calculate' is clicked.</p>
+    <img src="readme-docs/testing-user-stories/us12-2.png" alt="A screenshot of calculate button clicked."><br>
+    <p>Notification that user cannot submit if there is an empty field.</p>
+    <img src="readme-docs/testing-user-stories/us12-3.png" alt="A screenshot of notifcation of missing input."><br>
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
@@ -567,8 +570,12 @@ The performance of the website was tested using Lighthouse within Chrome develop
 
 <details>
     <summary>Screenshots</summary>
-    <img src="" alt="A screenshot of">
-
+    <p>Instructions for the user</p>
+    <img src="readme-docs/testing-user-stories/us13-1.png" alt="A screenshot of the home page instructions">
+    <p>Information for the user about how the form is laid out and what results they can expect.</p>
+    <img src="readme-docs/testing-user-stories/us13-2.png" alt="A screenshot of the calculator form info">
+    <p>Info clarifying what inputs they need to enter.</p>
+    <img src="readme-docs/testing-user-stories/us13-3.png" alt="A screenshot of extra text under interest and timescale fields">
 </details><br>
 
 |User story|Feature|Test|Expected Result|Actual Result|
