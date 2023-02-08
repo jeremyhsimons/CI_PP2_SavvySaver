@@ -1,7 +1,7 @@
 # **Savvy Saver**
 Developed by Jeremy Simons
 
-<img src="readme-docs/design/am-i-responsive-pp2.png">
+<img src="readme-docs/design/ss-amiresponsive2.png" alt="A screenshot of Am I Responsive representation of the website">
 
 [Link to live site](https://jeremyhsimons.github.io/CI_PP2_SavvySaver/)
 
